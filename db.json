@@ -1,0 +1,82 @@
+{
+  "UserDetails": [
+    {
+      "firstName": "shivam",
+      "lastName": "hirpara",
+      "mobileNo": "1234567896",
+      "emailAddress": "shivam123@gmial.com",
+      "password": "shivam3920e",
+      "id": 2
+    },
+    {
+      "firstName": "meet",
+      "lastName": "rathod",
+      "mobileNo": "5432167898",
+      "emailAddress": "meety123@gmial.com",
+      "password": "meet123",
+      "id": 3
+    },
+    {
+      "firstName": "om",
+      "lastName": "rathod",
+      "mobileNo": "7890654231",
+      "emailAddress": "om123@gmail.com",
+      "password": "om123",
+      "id": 4
+    }
+  ],
+  "StapperUserDetails": [
+    {
+      "firstName": "utsav",
+      "lastName": "hirpara",
+      "mobileNo": "1234567891",
+      "emailAddress": "utsav123@gmiail.com",
+      "password": "utsav2948t",
+      "State": "india",
+      "City": "junagadh",
+      "pinCode": "361001",
+      "Area": "joshipara",
+      "lendMark": "swaminarayan gurukul",
+      "id": 1
+    },
+    {
+      "firstName": "meet",
+      "lastName": "rathod",
+      "mobileNo": "1234567891",
+      "emailAddress": "meet123@gmial.com",
+      "password": "meet234567890",
+      "State": "india",
+      "City": "junagadh",
+      "pinCode": "362001",
+      "Area": "joshipara",
+      "lendMark": "swaminarayan gurukul,joshipara",
+      "id": 2
+    },
+    {
+      "firstName": "shivam",
+      "lastName": " hirpara",
+      "mobileNo": "1234567898",
+      "emailAddress": "shivam123@gmail.com",
+      "password": "shivam4920t",
+      "State": "india",
+      "City": "junagadh",
+      "pinCode": "362001",
+      "Area": "joshipara",
+      "lendMark": "swaminarayan gurukul",
+      "id": 3
+    },
+    {
+      "firstName": "jenil",
+      "lastName": "rathod",
+      "mobileNo": "4321567898",
+      "emailAddress": "jenil123@gmial.com",
+      "password": "jenil@@##",
+      "State": "india",
+      "City": "junagadh",
+      "pinCode": "361001",
+      "Area": "joshipara",
+      "lendMark": "swaminarayan gurukul",
+      "id": 4
+    }
+  ]
+}

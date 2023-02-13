@@ -1,0 +1,203 @@
+<div class="full-body">
+    <div class="grid">
+        <div class="cards card1">
+            <form [formGroup]="form1">
+                <!----- Fiest Name Field ----->
+                <p class="heading">Simple Recative Form</p>
+                <mat-form-field class="example-full-width">
+                    <mat-label>First Name</mat-label>
+                    <input type="text" matInput formControlName="firstName" placeholder="Enter First Name">
+                    <mat-error
+                        *ngIf="form1.controls['firstName'].hasError('firstName') && !form1.controls['firstName'].hasError('required')">
+                        Please enter a valid First Name
+                    </mat-error>
+                    <mat-error *ngIf="form1.controls['firstName'].hasError('required')">
+                        First Name is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+
+                <!----- Last Name Field ----->
+                <mat-form-field class="example-full-width">
+                    <mat-label>Last Name</mat-label>
+                    <input type="text" matInput formControlName="lastName" placeholder="Enter Last Name">
+                    <mat-error
+                        *ngIf="form1.controls['lastName'].hasError('email') && !form1.controls['lastName'].hasError('required')">
+                        Please enter a valid Last Name
+                    </mat-error>
+                    <mat-error *ngIf="form1.controls['lastName'].hasError('required')">
+                        Last Name is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+
+                <!----- Mobile Number Field ----->
+                <mat-form-field class="example-full-width">
+                    <mat-label>Mobile Number</mat-label>
+                    <input type="text" matInput formControlName="mobileNo" placeholder="Enter Mobile Number">
+                    <mat-error
+                        *ngIf="form1.controls['mobileNo'].hasError('email') && !form1.controls['mobileNo'].hasError('required')">
+                        Please enter a valid Mobile Number
+                    </mat-error>
+                    <mat-error *ngIf="form1.controls['mobileNo'].hasError('required')">
+                        Mobile Number is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+
+                <!----- Emial Address Field ----->
+                <mat-form-field class="example-full-width">
+                    <mat-label>Email Address</mat-label>
+                    <input type="text" matInput formControlName="emailAddress" placeholder="Enter Mobile Number">
+                    <mat-error
+                        *ngIf="form1.controls['emailAddress'].hasError('email') && !form1.controls['emailAddress'].hasError('required')">
+                        Please enter a valid Email Address
+                    </mat-error>
+                    <mat-error *ngIf="form1.controls['emailAddress'].hasError('required')">
+                        Email Address is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+
+                <!----- Password Field ----->
+                <mat-form-field class="example-full-width">
+                    <mat-label>Password</mat-label>
+                    <input type="password" matInput formControlName="password" placeholder="Enter Mobile Number">
+                    <mat-error
+                        *ngIf="form1.controls['password'].hasError('email') && !form1.controls['password'].hasError('required')">
+                        Please enter a valid Password
+                    </mat-error>
+                    <mat-error *ngIf="form1.controls['password'].hasError('required')">
+                        Password is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+
+                <div class="Submit-btn-section">
+                    <button mat-raised-button color="primary" class="button" (click)="SubmitForm1()"
+                        [disabled]="form1.invalid">Submit</button>
+                </div>
+            </form>
+        </div>
+        <div class="cards card2">
+
+            <form [formGroup]="form2">
+                <p class="heading">Recative Form with Crud</p>
+                <!----- Fiest Name Field ----->
+                <mat-form-field class="example-full-width" *ngIf="FormFields">
+                    <mat-label>First Name</mat-label>
+                    <input type="text" matInput formControlName="firstName" [(ngModel)]="usersobj.firstName"
+                        placeholder="Enter First Name">
+                    <mat-error
+                        *ngIf="form1.controls['firstName'].hasError('firstName') && !form1.controls['firstName'].hasError('required')">
+                        Please enter a valid First Name
+                    </mat-error>
+                    <mat-error *ngIf="form1.controls['firstName'].hasError('required')">
+                        First Name is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+
+                <!----- Last Name Field ----->
+                <mat-form-field class="example-full-width" *ngIf="FormFields">
+                    <mat-label>Last Name</mat-label>
+                    <input type="text" matInput formControlName="lastName" [(ngModel)]="usersobj.lastName"
+                        placeholder="Enter Last Name">
+                    <mat-error
+                        *ngIf="form1.controls['lastName'].hasError('email') && !form1.controls['lastName'].hasError('required')">
+                        Please enter a valid Last Name
+                    </mat-error>
+                    <mat-error *ngIf="form1.controls['lastName'].hasError('required')">
+                        Last Name is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+
+                <!----- Mobile Number Field ----->
+                <mat-form-field class="example-full-width" *ngIf="FormFields">
+                    <mat-label>Mobile Number</mat-label>
+                    <input type="text" matInput formControlName="mobileNo" [(ngModel)]="usersobj.mobileNo"
+                        placeholder="Enter Mobile Number">
+                    <mat-error
+                        *ngIf="form1.controls['mobileNo'].hasError('email') && !form1.controls['mobileNo'].hasError('required')">
+                        Please enter a valid Mobile Number
+                    </mat-error>
+                    <mat-error *ngIf="form1.controls['mobileNo'].hasError('required')">
+                        Mobile Number is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+
+                <!----- Emial Address Field ----->
+                <mat-form-field class="example-full-width" *ngIf="FormFields">
+                    <mat-label>Email Address</mat-label>
+                    <input type="text" matInput formControlName="emailAddress" [(ngModel)]="usersobj.emailAddress"
+                        placeholder="Enter Mobile Number">
+                    <mat-error
+                        *ngIf="form1.controls['emailAddress'].hasError('email') && !form1.controls['emailAddress'].hasError('required')">
+                        Please enter a valid Email Address
+                    </mat-error>
+                    <mat-error *ngIf="form1.controls['emailAddress'].hasError('required')">
+                        Email Address is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+
+                <!----- Password Field ----->
+                <mat-form-field class="example-full-width" *ngIf="FormFields">
+                    <mat-label>Password</mat-label>
+                    <input type="password" matInput formControlName="password" [(ngModel)]="usersobj.password"
+                        placeholder=" Enter Mobile Number">
+                    <mat-error
+                        *ngIf="form1.controls['password'].hasError('email') && !form1.controls['password'].hasError('required')">
+                        Please enter a valid Password
+                    </mat-error>
+                    <mat-error *ngIf="form1.controls['password'].hasError('required')">
+                        Password is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+
+                <!----- Photo Field ----->
+                <!-- <input type="file" formControlName="password" [(ngModel)]="usersobj.password"
+                    placeholder=" Enter Mobile Number"> -->
+
+                <div class="Submit-btn-section d-flex" *ngIf="FormFields">
+                    <button mat-raised-button color="primary" class="button"
+                        (click)="SubmitForm2() ;addUser(); resetForm()" *ngIf="SubmitButton"
+                        [disabled]="form2.invalid">Submit</button>
+                    <button mat-raised-button color="primary" class="button" (click)="updateUserDetails(); resetForm()"
+                        *ngIf="UpdateButton" [disabled]="form2.invalid">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- <div class="cards card3">
+        <p>card-3</p>
+        <table class="table table-light table-striped rounded">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Mobile No</th>
+                    <th>Email Address</th>
+                    <th>Password</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let data of databaseValue">
+                    <td>{{data.id}}</td>
+                    <td>{{data.firstName}}</td>
+                    <td>{{data.lastName}}</td>
+                    <td>{{data.mobileNo}}</td>
+                    <td>{{data.emailAddress}}</td>
+                    <td>{{data.password}}</td>
+                    <td class="d-flex">
+                        <button mat-mini-fab class="btn btn-danger" class="mx-3"
+                            aria-label="Example icon button with a menu icon" (click)="deleteUser(data.id)">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                        <button mat-mini-fab color="primary" aria-label="Example icon button with a menu icon"
+                            (click)="editUserDetails(data)">
+                            <mat-icon>
+                                <mat-icon> border_color</mat-icon>
+                            </mat-icon>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div> -->
+</div>

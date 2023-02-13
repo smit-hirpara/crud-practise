@@ -1,0 +1,130 @@
+<div class="full-body">
+    <table class="table table-light table-striped">
+        <thead>
+            <tr>
+                <th colspan="7" class="text-center table-header">Reactive Form User Details</th>
+            </tr>
+            <tr>
+                <th>id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Mobile No</th>
+                <th>Email Address</th>
+                <th>Password</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of databaseValue">
+                <td>{{data.id}}</td>
+                <td>{{data.firstName}}</td>
+                <td>{{data.lastName}}</td>
+                <td>{{data.mobileNo}}</td>
+                <td>{{data.emailAddress}}</td>
+                <td>{{data.password}}</td>
+                <td class="d-flex">
+                    <button mat-mini-fab class="btn btn-danger" class="mx-3"
+                        aria-label="Example icon button with a menu icon" (click)="deleteUser(data.id)">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                    <button mat-mini-fab color="primary" aria-label="Example icon button with a menu icon"
+                        (click)="editUserDetails(data)" routerLink="/update/{{data.id}}">
+                        <mat-icon>
+                            <mat-icon> border_color</mat-icon>
+                        </mat-icon>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="button-section mb-5">
+        <div class="flex-item">
+            <button mat-mini-fab color="primary" aria-label="Example icon button with a delete icon"
+                (click)="addNewData1()">
+                <mat-icon>add</mat-icon>
+            </button>
+        </div>
+    </div>
+
+    <table class="table table-light table-striped">
+        <thead>
+            <tr>
+                <th colspan="12" class="text-center table-header">Reactive Form With Stapper User Details</th>
+            </tr>
+            <tr>
+                <th>id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Mobile No</th>
+                <th>Email Address</th>
+                <th>Password</th>
+                <th>State</th>
+                <th>City</th>
+                <th>Pin Code</th>
+                <th>Area</th>
+                <th>Lend Mark</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- <tr *ngFor="let data2 of databaseValue2">
+                <td>{{data2.id}}</td>
+                <td>{{data2.value1.firstName}}</td>
+                <td>{{data2.value1.lastName}}</td>
+                <td>{{data2.value1.mobileNo}}</td>
+                <td>{{data2.value1.emailAddress}}</td>
+                <td>{{data2.value1.password}}</td>
+                <td>{{data2.value2.State}}</td>
+                <td>{{data2.value2.City}}</td>
+                <td>{{data2.value2.pinCode}}</td>
+                <td>{{data2.value2.Area}}</td>
+                <td>{{data2.value2.lendMark}}</td>
+                <td class="d-flex">
+                    <button mat-mini-fab class="btn btn-danger" class="mx-3"
+                        aria-label="Example icon button with a menu icon" (click)="deleteUser2(data2.id)">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                    <button mat-mini-fab color="primary" aria-label="Example icon button with a menu icon"
+                        (click)="editUserDetilas2(data2)" routerLink="/update2/{{data2.id}}">
+                        <mat-icon>
+                            <mat-icon> border_color</mat-icon>
+                        </mat-icon>
+                    </button>
+                </td>
+            </tr> -->
+            <tr *ngFor="let data2 of databaseValue2">
+                <td>{{data2.id}}</td>
+                <td>{{data2.firstName}}</td>
+                <td>{{data2.lastName}}</td>
+                <td>{{data2.mobileNo}}</td>
+                <td>{{data2.emailAddress}}</td>
+                <td>{{data2.password}}</td>
+                <td>{{data2.State}}</td>
+                <td>{{data2.City}}</td>
+                <td>{{data2.pinCode}}</td>
+                <td>{{data2.Area}}</td>
+                <td>{{data2.lendMark}}</td>
+                <td class="d-flex">
+                    <button mat-mini-fab class="btn btn-danger" class="mx-3"
+                        aria-label="Example icon button with a menu icon" (click)="deleteUser2(data2.id)">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                    <button mat-mini-fab color="primary" aria-label="Example icon button with a menu icon"
+                        (click)="editUserDetilas2(data2)" routerLink="/update2/{{data2.id}}">
+                        <mat-icon>
+                            <mat-icon> border_color</mat-icon>
+                        </mat-icon>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="button-section">
+        <div class="flex-item">
+            <button mat-mini-fab color="primary" aria-label="Example icon button with a delete icon"
+                (click)="addNewData2()">
+                <mat-icon>add</mat-icon>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,154 @@
+<div class="full-body">
+    <mat-stepper labelPosition="bottom" #stepper linear>
+        <mat-step [stepControl]="firstFormGroup">
+            <form [formGroup]="firstFormGroup">
+                <ng-template matStepLabel>Fill out your name</ng-template>
+                <div class="formfields-group">
+                    <!------ Fist Name Field ------->
+                    <mat-form-field class="stapperFormFields ">
+                        <mat-label>First Name</mat-label>
+                        <input type="text" matInput formControlName="firstName" placeholder="Enter First Name">
+                        <mat-error *ngIf="firstFormGroup.controls['firstName'].hasError('required')">
+                            First Name is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                    <!------ Last Name Field ------->
+                    <mat-form-field class="stapperFormFields">
+                        <mat-label>Last Name</mat-label>
+                        <input type="text" matInput formControlName="lastName" placeholder="Enter Last Name">
+                        <mat-error *ngIf="firstFormGroup.controls['lastName'].hasError('required')">
+                            Last Name is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                    <!------ Mobile Number Field ------->
+                    <mat-form-field class="stapperFormFields">
+                        <mat-label>Mobile Number</mat-label>
+                        <input type="text" matInput formControlName="mobileNo" placeholder="Enter Mobile Number">
+                        <mat-error *ngIf="firstFormGroup.controls['mobileNo'].hasError('required')">
+                            Mobile Number is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                    <!------ Email Address Field ------->
+                    <mat-form-field class="stapperFormFields" style="grid-column: span 2;">
+                        <mat-label>Email Address</mat-label>
+                        <input type="email" matInput formControlName="emailAddress" placeholder="Enter Email Address">
+                        <mat-error
+                            *ngIf="firstFormGroup.controls['emailAddress'].hasError('email') && !firstFormGroup.controls['emailAddress'].hasError('required')">
+                            Please enter a valid email address
+                        </mat-error>
+                        <mat-error *ngIf="firstFormGroup.controls['emailAddress'].hasError('required')">
+                            Email Address is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                    <!------ Password Field ------->
+                    <mat-form-field class="stapperFormFields">
+                        <mat-label>Password</mat-label>
+                        <input type="password" matInput formControlName="password" placeholder="Enter Password">
+                        <mat-error *ngIf="firstFormGroup.controls['password'].hasError('required')">
+                            Password is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <button mat-button matStepperNext class="button text-light"
+                        (click)="SubmitFirstForm()">Next</button>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step [stepControl]="secondFormGroup">
+            <form [formGroup]="secondFormGroup">
+                <ng-template matStepLabel>Fill out your address</ng-template>
+                <div class="formfields-group">
+
+                    <!------ State Field ------->
+                    <mat-form-field class="stapperFormFields">
+                        <mat-label>State</mat-label>
+                        <input type="text" matInput formControlName="State" placeholder="Enter State">
+                        <mat-error *ngIf="secondFormGroup.controls['State'].hasError('required')">
+                            State is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                    <!------ City Field ------->
+                    <mat-form-field class="stapperFormFields">
+                        <mat-label>City</mat-label>
+                        <input type="text" matInput formControlName="City" placeholder="Enter City">
+                        <mat-error *ngIf="secondFormGroup.controls['City'].hasError('required')">
+                            City is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                    <!------ Pin Cod Field ------->
+                    <mat-form-field class="stapperFormFields">
+                        <mat-label>Pin Code</mat-label>
+                        <input type="text" matInput formControlName="pinCode" placeholder="Enter Pin Code">
+                        <mat-error *ngIf="secondFormGroup.controls['pinCode'].hasError('required')">
+                            Pin Code is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                    <!------ Area Field ------->
+                    <mat-form-field class="stapperFormFields">
+                        <mat-label>Area</mat-label>
+                        <input type="text" matInput formControlName="Area" placeholder="Enter Area">
+                        <mat-error *ngIf="secondFormGroup.controls['Area'].hasError('required')">
+                            Area is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                    <!------ Area Field ------->
+                    <mat-form-field class="stapperFormFields" style="grid-column: span 2;">
+                        <mat-label>Lend Mark</mat-label>
+                        <input type="text" matInput formControlName="lendMark" placeholder="Enter Pend Mark">
+                        <mat-error *ngIf="secondFormGroup.controls['lendMark'].hasError('required')">
+                            Lend Mark is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="d-flex">
+                    <div class="buttons-section">
+                        <button mat-button matStepperPrevious class="button text-light">Back</button>
+                    </div>
+                    <div class="buttons-section">
+                        <button mat-button matStepperNext class="button text-light"
+                            (click)="SubmitSecondForm()">Next</button>
+                    </div>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step>
+            <ng-template matStepLabel>Done</ng-template>
+            <p>You are now done.</p>
+            <div class="formsvalues">
+                <p>First Name:- {{firstname}}</p>
+                <p>Last Name:- {{lastname}}</p>
+                <p>Mobile Number:- {{mobilenumber}}</p>
+                <p>Email Address:- {{emailaddress}}</p>
+                <p>Password:- {{password}}</p>
+                <p>State:- {{state}}</p>
+                <p>City:- {{city}}</p>
+                <p>PinCode:- {{pincode}}</p>
+                <p>Area:- {{area}}</p>
+                <p>Lend Mark:- {{lendmark}}</p>
+            </div>
+            <div class="d-flex">
+                <div class="buttons-section">
+                    <button mat-button matStepperPrevious class="button text-light">Back</button>
+                </div>
+                <div class="buttons-section">
+                    <button mat-button (click)="stepper.reset()" class="button text-light">Reset</button>
+                </div>
+                <div class="buttons-section" *ngIf="SubmitButton">
+                    <button mat-button (click)="addUser()" class="button text-light">Submit</button>
+                </div>
+                <div class="buttons-section" *ngIf="UpdateButton">
+                    <button mat-button (click)="updateUser()" class="button text-light">Update</button>
+                </div>
+            </div>
+        </mat-step>
+    </mat-stepper>
+</div>
