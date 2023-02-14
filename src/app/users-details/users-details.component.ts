@@ -13,6 +13,9 @@ export class UsersDetailsComponent {
   constructor(private service: ReactiveFormService, private route: Router) { }
   ngOnInit() {
     this.getUsers();
+
+    /******** Scroll Top Default *********/
+    window.scroll({ top: 0, behavior: 'smooth', });
   }
   /***************************************************** Table 1 ***********************************************************/
   /***** Get Users Form Data Base *****/
@@ -65,8 +68,6 @@ export class UsersDetailsComponent {
   usersobj2: UsersDetails2 = new UsersDetails2();
   editUserDetilas2(values1: any) {
     this.usersobj2.id = values1.id;
-    this.service.editUserDetils2();
   }
-
 }
 

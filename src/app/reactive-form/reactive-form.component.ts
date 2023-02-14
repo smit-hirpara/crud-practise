@@ -13,7 +13,7 @@ export class ReactiveFormComponent {
   form1!: FormGroup;
   form2!: FormGroup;
   usersid: any;
-  FormFields = true;
+
   ngOnInit() {
 
     /********************************** Form 1 *******************************/
@@ -78,8 +78,16 @@ export class ReactiveFormComponent {
   email2?: any;
   pass2?: any;
 
+  /********** Submit And update Button ***********/
   SubmitButton = this.service.submitUser;
   UpdateButton = this.service.updateButton;
+
+  /********* Form Fields ************/
+  FormFields = true;
+
+  /******** Submit And Update Message **********/
+  SubmitSuccessfullyLogo = false;
+  UpdtaeSuccessfullyLogo = false;
 
 
   /***** Submit Function *****/
@@ -95,7 +103,6 @@ export class ReactiveFormComponent {
     console.warn('mobile number = ', this.mobile2);
     console.warn('email address = ', this.email2);
     console.warn('password = ', this.pass2);
-    this.router.navigate(['/userdetails']);
   }
 
   resetForm() {
@@ -121,17 +128,28 @@ export class ReactiveFormComponent {
     this.service.addUserDetails(this.form2.value).subscribe((res) => {
       this.getUsers();
     });
+    this.FormFields = false;
+    this.SubmitSuccessfullyLogo = true;
+    this.UpdtaeSuccessfullyLogo = false;
+    setTimeout(() => {
+      this.router.navigate(['/userdetails']);
+    }, 2000);
   }
 
   /********* Update User Form Data Base **********/
   updateUserDetails() {
     this.service.updateUser(this.reoute.snapshot.params['id'], this.form2.value).subscribe((res) => {
       this.getUsers();
-      alert("user update successfully" + res);
-      this.router.navigate(['/userdetails']);
-    })
+      setTimeout(() => {
+        this.router.navigate(['/userdetails']);
+      }, 2000);
+    });
     this.SubmitButton = true;
     this.UpdateButton = false;
+
+    this.FormFields = false;
+    this.SubmitSuccessfullyLogo = false;
+    this.UpdtaeSuccessfullyLogo = true;
   }
 
 

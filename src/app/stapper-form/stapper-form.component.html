@@ -1,5 +1,5 @@
 <div class="full-body">
-    <mat-stepper labelPosition="bottom" #stepper linear>
+    <mat-stepper labelPosition="bottom" #stepper>
         <mat-step [stepControl]="firstFormGroup">
             <form [formGroup]="firstFormGroup">
                 <ng-template matStepLabel>Fill out your name</ng-template>
@@ -122,8 +122,25 @@
         </mat-step>
         <mat-step>
             <ng-template matStepLabel>Done</ng-template>
-            <p>You are now done.</p>
-            <div class="formsvalues">
+            <div class="svg-container" *ngIf="SubmitSuccessfullyLogo">
+                <p>User Submit SuccessFully</p>
+                <svg class="ft-green-tick" xmlns="http://www.w3.org/2000/svg" height="100" width="100"
+                    viewBox="0 0 48 48" aria-hidden="true">
+                    <circle class="circle" fill="#5bb543" cx="24" cy="24" r="22" />
+                    <path class="tick" fill="none" stroke="#FFF" stroke-width="6" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-miterlimit="10" d="M14 27l5.917 4.917L34 17" />
+                </svg>
+            </div>
+            <div class="svg-container" *ngIf="UpdtaeSuccessfullyLogo">
+                <p>User Updated SuccessFully</p>
+                <svg class="ft-green-tick" xmlns="http://www.w3.org/2000/svg" height="100" width="100"
+                    viewBox="0 0 48 48" aria-hidden="true">
+                    <circle class="circle" fill="#5bb543" cx="24" cy="24" r="22" />
+                    <path class="tick" fill="none" stroke="#FFF" stroke-width="6" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-miterlimit="10" d="M14 27l5.917 4.917L34 17" />
+                </svg>
+            </div>
+            <div class="formsvalues" *ngIf="UserDetails">
                 <p>First Name:- {{firstname}}</p>
                 <p>Last Name:- {{lastname}}</p>
                 <p>Mobile Number:- {{mobilenumber}}</p>

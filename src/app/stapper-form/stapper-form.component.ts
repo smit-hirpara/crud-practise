@@ -15,8 +15,16 @@ export class StapperFormComponent {
   firstFormGroup!: FormGroup;
   secondFormGroup!: FormGroup;
   usersid2: any;
+  /********* Submit And Update Button **********/
   SubmitButton = this.service.submitstapperbutton;
   UpdateButton = this.service.updatstapperebutton;
+
+  /********* Submit And Update Message **********/
+  SubmitSuccessfullyLogo = false;
+  UpdtaeSuccessfullyLogo = false;
+
+  /*********** User Details Section **************/
+  UserDetails = true;
 
   /***************************************** First Form Group *****************************************/
   /******* Form Values Store Variables ********/
@@ -38,6 +46,9 @@ export class StapperFormComponent {
   }
 
   ngOnInit() {
+
+    /******** Scroll Top Default *********/
+    window.scroll({ top: 0, behavior: 'smooth', });
 
     /************ Form Fields Group ***************/
     this.firstFormGroup = this._formBuilder.group({
@@ -86,15 +97,16 @@ export class StapperFormComponent {
 
   /*********** Add User In Data Base **************/
   addUser() {
-    // let fulldetails = this.firstFormGroup;
-    // let fulldetails2 = this.secondFormGroup;
-    // let fulldetails3 = [fulldetails, fulldetails2];
     this.service.addUserDetils2(this.firstFormGroup.value, this.secondFormGroup.value).subscribe((res) => {
       console.warn(res);
-      alert('User Addes Successfully');
     });
-    this.route.navigate(['/userdetails']);
     this.getUser();
+    setTimeout(() => {
+      this.route.navigate(['/userdetails']);
+    }, 2000);
+    this.SubmitSuccessfullyLogo = true;
+    this.UpdtaeSuccessfullyLogo = false;
+    this.UserDetails = false;
   }
 
   /********** Get User Form Data Base ***********/
@@ -110,12 +122,15 @@ export class StapperFormComponent {
     let fullDetails = { ...this.firstFormGroup.value, ...this.secondFormGroup.value };
     this.service.updateUserDetails2(this.activateroute.snapshot.params['id'], fullDetails).subscribe((res) => {
       this.getUser();
-      alert('user Update Successfully');
     });
-    this.route.navigate(['/userdetails']);
+    setTimeout(() => {
+      this.route.navigate(['/userdetails']);
+    }, 2000);
+    this.SubmitSuccessfullyLogo = false;
+    this.UpdtaeSuccessfullyLogo = true;
+    this.UserDetails = false;
   }
 }
-
 
 export class UsersDetails2 {
   id?: any;
