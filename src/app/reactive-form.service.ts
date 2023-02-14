@@ -7,10 +7,17 @@ import { concat } from 'rxjs';
 })
 export class ReactiveFormService {
   constructor(private http: HttpClient) { }
+  /******* Reactive Form Submit And Update Button **********/
   submitUser = true;
   updateButton = false;
+
+  /****** Stapper Form Submit And UPdate Button *******/
   submitstapperbutton = true;
   updatstapperebutton = false;
+
+  /****** Stapper Form Submit And UPdate Message *******/
+  submitusermessage = false;
+  updateusermessage = false;
 
 
   /******************************************************* Reactive Form Service ******************************************************/
@@ -51,7 +58,7 @@ export class ReactiveFormService {
 
 
 
-  /************************************************* REactive Form With Stapper Form Service *****************************************************/
+  /************************************************* Reactive Form With Stapper Form Service *****************************************************/
   /******* Data Base Url **********/
   DatabaseUrl2 = "http://localhost:3000/StapperUserDetails";
 
@@ -59,6 +66,10 @@ export class ReactiveFormService {
   addUserDetils2(value1: any, value2: any) {
     let fullDetails = { ...value1, ...value2 };
     return this.http.post(this.DatabaseUrl2, fullDetails);
+  }
+  addStpperUser() {
+    this.submitusermessage = true;
+    this.updateusermessage = false;
   }
 
   /************ Get All User From Data Base ***************/
@@ -80,6 +91,10 @@ export class ReactiveFormService {
   /********** Update User Form Data Base ************/
   updateUserDetails2(id: any, value1: any) {
     return this.http.put(this.DatabaseUrl2 + '/' + id, value1);
+  }
+  updateStapperUser() {
+    this.updateusermessage = true;
+    this.submitusermessage = false;
   }
 
   /************ Get Data By Id *************/
