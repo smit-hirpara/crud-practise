@@ -25,11 +25,11 @@
       "id": 3
     },
     {
-      "firstName": "om",
-      "lastName": "rathod",
-      "mobileNo": "7890654231",
-      "emailAddress": "om123@gmail.com",
-      "password": "om123",
+      "firstName": "smit",
+      "lastName": "hirpara",
+      "mobileNo": "1234567898",
+      "emailAddress": "smit123@gmil.com",
+      "password": "gujvhgk",
       "id": 4
     }
   ],
@@ -85,32 +85,6 @@
       "Area": "joshipara",
       "lendMark": "swaminarayan gurukul",
       "id": 4
-    },
-    {
-      "firstName": "meet",
-      "lastName": "rathod",
-      "mobileNo": "1234567898",
-      "emailAddress": "Meet123@gmial.com",
-      "password": "meet1223",
-      "State": "india",
-      "City": "junagadh",
-      "pinCode": "362001",
-      "Area": "joshipara",
-      "lendMark": "swaminarayan gurukul",
-      "id": 5
-    },
-    {
-      "firstName": "om",
-      "lastName": "rathod",
-      "mobileNo": "4321567986",
-      "emailAddress": "om123@gmail.com",
-      "password": "om123",
-      "State": "india",
-      "City": "junagadh",
-      "pinCode": "362001",
-      "Area": "joshipara",
-      "lendMark": "swaminarayan gurukul",
-      "id": 6
     }
   ]
 }

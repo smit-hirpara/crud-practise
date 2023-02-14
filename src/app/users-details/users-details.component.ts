@@ -68,6 +68,7 @@ export class UsersDetailsComponent {
   usersobj2: UsersDetails2 = new UsersDetails2();
   editUserDetilas2(values1: any) {
     this.usersobj2.id = values1.id;
+    this.service.editUserDetils2();
   }
 }
 

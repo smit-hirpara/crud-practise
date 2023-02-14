@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ReactiveFormService } from '../reactive-form.service';
 
@@ -9,6 +9,7 @@ import { ReactiveFormService } from '../reactive-form.service';
   styleUrls: ['./reactive-form.component.scss']
 })
 export class ReactiveFormComponent {
+  submitted?: boolean;
   constructor(private fb: FormBuilder, private service: ReactiveFormService, private reoute: ActivatedRoute, private router: Router) { }
   form1!: FormGroup;
   form2!: FormGroup;
@@ -53,6 +54,7 @@ export class ReactiveFormComponent {
   mobile1: any;
   email1: any;
   pass1: any;
+  image: any;
 
   /***** Submit Function *****/
   SubmitForm1() {
@@ -194,9 +196,8 @@ export class ReactiveFormComponent {
   //   this.SubmitButton = true;
   //   this.UpdateButton = false;
   // }
+
 }
-
-
 export class UsersDetails {
   id?: any;
   firstName?: any;
