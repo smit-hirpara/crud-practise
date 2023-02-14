@@ -1,12 +1,20 @@
 {
   "UserDetails": [
     {
+      "firstName": "utsav",
+      "lastName": "hirpaa",
+      "mobileNo": "1234567897",
+      "emailAddress": "utsav123@gmial.com",
+      "password": "utsav14820f",
+      "id": 1
+    },
+    {
       "firstName": "shivam",
       "lastName": "hirpara",
       "mobileNo": "1234567896",
       "emailAddress": "shivam123@gmial.com",
       "password": "shivam3920e",
-      "id": 1
+      "id": 2
     },
     {
       "firstName": "meet",
@@ -14,7 +22,7 @@
       "mobileNo": "5432167898",
       "emailAddress": "meety123@gmial.com",
       "password": "meet123",
-      "id": 2
+      "id": 3
     },
     {
       "firstName": "om",
@@ -22,14 +30,6 @@
       "mobileNo": "7890654231",
       "emailAddress": "om123@gmail.com",
       "password": "om123",
-      "id": 3
-    },
-    {
-      "firstName": "smit",
-      "lastName": "hirpara",
-      "mobileNo": "1234567898",
-      "emailAddress": "smit123@gmil.com",
-      "password": "gujvhgk",
       "id": 4
     }
   ],
@@ -48,19 +48,6 @@
       "id": 1
     },
     {
-      "firstName": "meet",
-      "lastName": "rathod",
-      "mobileNo": "1234567891",
-      "emailAddress": "meet123@gmial.com",
-      "password": "meet234567890",
-      "State": "india",
-      "City": "junagadh",
-      "pinCode": "362001",
-      "Area": "joshipara",
-      "lendMark": "swaminarayan gurukul,joshipara",
-      "id": 2
-    },
-    {
       "firstName": "shivam",
       "lastName": " hirpara",
       "mobileNo": "1234567898",
@@ -71,6 +58,19 @@
       "pinCode": "362001",
       "Area": "joshipara",
       "lendMark": "swaminarayan gurukul",
+      "id": 2
+    },
+    {
+      "firstName": "meet",
+      "lastName": "rathod",
+      "mobileNo": "1234567891",
+      "emailAddress": "meet123@gmial.com",
+      "password": "meet234567890",
+      "State": "india",
+      "City": "junagadh",
+      "pinCode": "362001",
+      "Area": "joshipara",
+      "lendMark": "swaminarayan gurukul,joshipara",
       "id": 3
     },
     {

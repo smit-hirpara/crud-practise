@@ -54,6 +54,7 @@ export class UsersDetailsComponent {
   /**************************************************** Table 2 *********************************************/
   /************ Add New User With Reactive Form With Stapper Form **************/
   addNewData2() {
+    this.service.addStpperUser();
     this.route.navigate(['/stapperForm']);
   }
 

@@ -15,9 +15,11 @@ export class StapperFormComponent {
   firstFormGroup!: FormGroup;
   secondFormGroup!: FormGroup;
   usersid2: any;
+
   /********* Submit And Update Button **********/
-  SubmitButton = this.service.submitstapperbutton;
-  UpdateButton = this.service.updatstapperebutton;
+  SubmitButton?: boolean;
+  UpdateButton?: boolean;
+
 
   /********* Submit And Update Message **********/
   SubmitSuccessfullyLogo = false;
@@ -46,6 +48,10 @@ export class StapperFormComponent {
   }
 
   ngOnInit() {
+
+    /********* Submit And Update Button **********/
+    this.SubmitButton = this.service.submitstapperbutton;
+    this.UpdateButton = this.service.updatstapperebutton;
 
     /******** Scroll Top Default *********/
     window.scroll({ top: 0, behavior: 'smooth', });
@@ -126,6 +132,7 @@ export class StapperFormComponent {
     setTimeout(() => {
       this.route.navigate(['/userdetails']);
     }, 2000);
+    this.service.addStpperUser();
     this.SubmitSuccessfullyLogo = false;
     this.UpdtaeSuccessfullyLogo = true;
     this.UserDetails = false;

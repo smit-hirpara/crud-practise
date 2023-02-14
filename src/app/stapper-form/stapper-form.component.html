@@ -1,5 +1,5 @@
 <div class="full-body">
-    <mat-stepper labelPosition="bottom" #stepper>
+    <mat-stepper labelPosition="bottom" #stepper linear="false">
         <mat-step [stepControl]="firstFormGroup">
             <form [formGroup]="firstFormGroup">
                 <ng-template matStepLabel>Fill out your name</ng-template>
@@ -32,7 +32,7 @@
                     </mat-form-field>
 
                     <!------ Email Address Field ------->
-                    <mat-form-field class="stapperFormFields" style="grid-column: span 2;">
+                    <mat-form-field class="stapperFormFields email-field">
                         <mat-label>Email Address</mat-label>
                         <input type="email" matInput formControlName="emailAddress" placeholder="Enter Email Address">
                         <mat-error
@@ -45,7 +45,7 @@
                     </mat-form-field>
 
                     <!------ Password Field ------->
-                    <mat-form-field class="stapperFormFields">
+                    <mat-form-field class="stapperFormFields password-field">
                         <mat-label>Password</mat-label>
                         <input type="password" matInput formControlName="password" placeholder="Enter Password">
                         <mat-error *ngIf="firstFormGroup.controls['password'].hasError('required')">
@@ -160,10 +160,12 @@
                     <button mat-button (click)="stepper.reset()" class="button text-light">Reset</button>
                 </div>
                 <div class="buttons-section" *ngIf="SubmitButton">
-                    <button mat-button (click)="addUser()" class="button text-light">Submit</button>
+                    <button mat-button (click)="addUser()" class="button text-light"
+                        [disabled]="firstFormGroup.invalid && secondFormGroup.invalid">Submit</button>
                 </div>
                 <div class="buttons-section" *ngIf="UpdateButton">
-                    <button mat-button (click)="updateUser()" class="button text-light">Update</button>
+                    <button mat-button (click)="updateUser()" class="button text-light"
+                        [disabled]="firstFormGroup.invalid && secondFormGroup.invalid">Update</button>
                 </div>
             </div>
         </mat-step>

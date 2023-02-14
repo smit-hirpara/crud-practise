@@ -1,7 +1,5 @@
 .full-body {
     padding: 10px;
-    background-color: rgb(160, 179, 179);
-    height: 92.5vh;
 }
 
 .mat-mdc-form-field {
@@ -16,6 +14,11 @@
 
 .stapperFormFields {
     margin: 0 10px;
+    width: auto;
+}
+
+.email-field {
+    grid-column: span 2;
 }
 
 .buttons-section {
@@ -91,14 +94,25 @@
     }
 }
 
-
-
-
-
-
-
-
 // Styles
 :root {
     --theme-color: var(--color-purple);
+}
+
+@media screen and (max-width:600px) {
+    .formfields-group {
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    .formsvalues {
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    .email-field {
+        grid-column: span 1;
+    }
+
+    .password-field {
+        grid-column: span 2;
+    }
 }
