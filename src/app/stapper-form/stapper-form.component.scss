@@ -23,13 +23,14 @@
 
 .buttons-section {
     padding: 0 10px;
-    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .button {
-    background-color: #3f51b5;
     color: white;
-    width: 100%;
+    width: 20%;
+    margin: 0 10px
 }
 
 .formsvalues {
@@ -124,5 +125,9 @@
 
     .password-field {
         grid-column: span 2;
+    }
+
+    .button {
+        width: 40%;
     }
 }

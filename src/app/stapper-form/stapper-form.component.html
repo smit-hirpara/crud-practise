@@ -53,9 +53,9 @@
                         </mat-error>
                     </mat-form-field>
                 </div>
-                <div>
-                    <button mat-button matStepperNext class="button text-light" (click)="SubmitFirstForm()"
-                        matTooltip="Next Section">Next</button>
+                <div class="buttons-section">
+                    <button mat-raised-button color="primary" matStepperNext class="button" (click)="SubmitFirstForm()"
+                        [disabled]="firstFormGroup.invalid" matTooltip="Next Section">Next</button>
                 </div>
             </form>
         </mat-step>
@@ -109,14 +109,10 @@
                         </mat-error>
                     </mat-form-field>
                 </div>
-                <div class="d-flex">
-                    <div class="buttons-section">
-                        <button mat-button matStepperPrevious class="button text-light">Back</button>
-                    </div>
-                    <div class="buttons-section">
-                        <button mat-button matStepperNext class="button text-light"
-                            (click)="SubmitSecondForm()">Next</button>
-                    </div>
+                <div class="buttons-section">
+                    <button mat-raised-button color="primary" matStepperPrevious class="button">Back</button>
+                    <button mat-raised-button color="primary" matStepperNext class="button" (click)="SubmitSecondForm()"
+                        [disabled]="secondFormGroup.invalid">Next</button>
                 </div>
             </form>
         </mat-step>
@@ -152,21 +148,13 @@
                 <p>Area:- {{area}}</p>
                 <p>Lend Mark:- {{lendmark}}</p>
             </div>
-            <div class="d-flex">
-                <div class="buttons-section">
-                    <button mat-button matStepperPrevious class="button text-light">Back</button>
-                </div>
-                <div class="buttons-section">
-                    <button mat-button (click)="stepper.reset()" class="button text-light">Reset</button>
-                </div>
-                <div class="buttons-section" *ngIf="SubmitButton">
-                    <button mat-button (click)="addUser()" class="button text-light"
-                        [disabled]="firstFormGroup.invalid && secondFormGroup.invalid">Submit</button>
-                </div>
-                <div class="buttons-section" *ngIf="UpdateButton">
-                    <button mat-button (click)="updateUser()" class="button text-light"
-                        [disabled]="firstFormGroup.invalid && secondFormGroup.invalid">Update</button>
-                </div>
+            <div class="buttons-section">
+                <button mat-raised-button color="primary" matStepperPrevious class="button">Back</button>
+                <button mat-raised-button color="primary" (click)="stepper.reset()" class="button">Reset</button>
+                <button mat-raised-button color="primary" (click)="addUser()" class="button"
+                    [disabled]="firstFormGroup.invalid && secondFormGroup.invalid" *ngIf="SubmitButton">Submit</button>
+                <button mat-raised-button color="primary" (click)="updateUser()" class="button"
+                    [disabled]="firstFormGroup.invalid && secondFormGroup.invalid" *ngIf="UpdateButton">Update</button>
             </div>
         </mat-step>
     </mat-stepper>
