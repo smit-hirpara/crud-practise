@@ -60,18 +60,18 @@ export class StapperFormComponent {
     this.firstFormGroup = this._formBuilder.group({
       firstName: ['', Validators.compose([Validators.required])],
       lastName: ['', Validators.compose([Validators.required])],
-      mobileNo: ['', Validators.compose([Validators.required])],
-      emailAddress: ['', Validators.compose([Validators.required])],
-      password: ['', Validators.compose([Validators.required])],
+      mobileNo: ['', Validators.compose([Validators.required, Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")])],
+      emailAddress: ['', Validators.compose([Validators.required, Validators.email])],
+      password: ['', Validators.compose([Validators.required, Validators.minLength(4)])],
     });
 
     /******* Form Fileds Group ********/
     this.secondFormGroup = this._formBuilder.group({
-      State: ['', Validators.required],
-      City: ['', Validators.required],
-      pinCode: ['', Validators.required],
-      Area: ['', Validators.required],
-      lendMark: ['', Validators.required],
+      State: ['', Validators.compose([Validators.required])],
+      City: ['', Validators.compose([Validators.required])],
+      pinCode: ['', Validators.compose([Validators.required, Validators.pattern("^((\\+91-?)|0)?[0-9]{6}$")])],
+      Area: ['', Validators.compose([Validators.required])],
+      lendMark: ['', Validators.compose([Validators.required])],
     });
 
     this.usersid2 = this.activateroute.snapshot.params['id'];

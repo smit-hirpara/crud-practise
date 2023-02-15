@@ -85,19 +85,6 @@
       "Area": "joshipara",
       "lendMark": "swaminarayan gurukul",
       "id": 4
-    },
-    {
-      "firstName": "om",
-      "lastName": "rathod",
-      "mobileNo": "1234567879",
-      "emailAddress": "om123@gmail.com",
-      "password": "om123",
-      "State": "india",
-      "City": "junagadh",
-      "pinCode": "362001",
-      "Area": "joshipara",
-      "lendMark": "swaminarayan gurukul",
-      "id": 5
     }
   ]
 }
