@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { OwlDatePickersComponent } from './owl-date-pickers/owl-date-pickers.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { StapperFormComponent } from './stapper-form/stapper-form.component';
 import { UsersDetailsComponent } from './users-details/users-details.component';
@@ -10,7 +11,8 @@ const routes: Routes = [
   { path: 'userdetails', component: UsersDetailsComponent },
   { path: 'update/:id', component: ReactiveFormComponent },
   { path: 'stapperForm', component: StapperFormComponent },
-  { path: 'update2/:id', component: StapperFormComponent }
+  { path: 'update2/:id', component: StapperFormComponent },
+  { path: 'owl-date-picker', component: OwlDatePickersComponent }
 ];
 
 @NgModule({

@@ -1,20 +1,19 @@
 <mat-toolbar color="primary">
-  <button mat-icon-button class="example-icon">
-    <mat-icon>menu</mat-icon>
-  </button>
   <span>My App</span>
   <span class="example-spacer"></span>
-  <button mat-icon-button class="example-icon favorite-icon">
-    <mat-icon>favorite</mat-icon>
+  <button mat-icon-button class="example-icon navbar-buttons" routerLink="owl-date-picker"
+    routerLinkActive="active-button">
+    <i class="material-icons">&#xe916;</i>
   </button>
-  <button mat-icon-button class="example-icon" routerLink="reactiveForm">
+  <button mat-icon-button class="example-icon navbar-buttons" routerLink="reactiveForm"
+    routerLinkActive="active-button">
     <i class="material-icons">&#xe7fe;</i>
   </button>
-  <button mat-icon-button class="example-icon" routerLink="stapperForm">
+  <button mat-icon-button class="example-icon navbar-buttons" routerLink="stapperForm" routerLinkActive="active-button">
     <i class="material-icons">&#xef65;</i>
   </button>
-  <button mat-icon-button class="example-icon" routerLink="userdetails">
-    <mat-icon>supervised_user_circle</mat-icon>
+  <button mat-icon-button class="example-icon navbar-buttons" routerLink="userdetails" routerLinkActive="active-button">
+    <i class="material-icons">&#xe853;</i>
   </button>
 </mat-toolbar>
 <router-outlet></router-outlet>

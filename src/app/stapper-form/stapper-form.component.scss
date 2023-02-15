@@ -37,6 +37,16 @@
     grid-template-columns: repeat(3, 33.33%);
 }
 
+.input-group {
+    height: 50%;
+}
+
+.time-picker-text {
+    position: relative;
+    top: -30px;
+    left: 90%;
+}
+
 .svg-container {
     text-align: center;
     margin: 20px auto;

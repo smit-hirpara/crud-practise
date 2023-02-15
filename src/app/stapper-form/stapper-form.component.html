@@ -1,5 +1,5 @@
 <div class="full-body">
-    <mat-stepper labelPosition="bottom" #stepper linear="false">
+    <mat-stepper sm-labelPosition="bottom" #stepper linear="false">
         <mat-step [stepControl]="firstFormGroup">
             <form [formGroup]="firstFormGroup">
                 <ng-template matStepLabel>Fill out your name</ng-template>
@@ -54,8 +54,8 @@
                     </mat-form-field>
                 </div>
                 <div>
-                    <button mat-button matStepperNext class="button text-light"
-                        (click)="SubmitFirstForm()">Next</button>
+                    <button mat-button matStepperNext class="button text-light" (click)="SubmitFirstForm()"
+                        matTooltip="Next Section">Next</button>
                 </div>
             </form>
         </mat-step>
