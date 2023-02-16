@@ -19,6 +19,7 @@ import { UsersDetailsComponent } from './users-details/users-details.component';
 import { StapperFormComponent } from './stapper-form/stapper-form.component';
 import { OwlDatePickersComponent } from './owl-date-pickers/owl-date-pickers.component';
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
+import { FlexBoxExamplesComponent } from './flex-box-examples/flex-box-examples.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
     UsersDetailsComponent,
     StapperFormComponent,
     OwlDatePickersComponent,
+    FlexBoxExamplesComponent,
   ],
   imports: [
     BrowserModule,

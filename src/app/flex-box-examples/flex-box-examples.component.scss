@@ -1,0 +1,295 @@
+.flex-boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 33.33%);
+}
+
+.headig {
+    background-color: #3f51b5;
+    margin: 10px 0;
+    text-align: center;
+    color: #fff;
+    border-radius: 10px;
+}
+
+/******** Flex Box 3 **********/
+.flex-box-body-1 {
+    display: grid;
+    grid-template-columns: repeat(3, 33.33%);
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid white;
+}
+
+.flex-box-1-item-1 {
+    background-color: aqua;
+    padding: 50px;
+    text-align: center;
+    margin: 10px;
+}
+
+.flex-box-1-item-2 {
+    background-color: gray;
+    padding: 50px;
+    text-align: center;
+    margin: 10px;
+}
+
+/******** Flex Box 3 **********/
+.flex-box-body-2 {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid white;
+}
+
+.flex-box-2-item-1 {
+    background-color: aqua;
+    padding: 50px;
+    text-align: center;
+    margin: 10px;
+}
+
+.flex-box-2-item-2 {
+    background-color: gray;
+    padding: 50px;
+    text-align: center;
+    margin: 10px;
+}
+
+.flex-box-2-item-2-custom {
+    background-color: gray;
+    padding: 50px;
+    text-align: center;
+    margin: 10px;
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+/******** Flex Box 3 **********/
+.flex-box-body-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 33.33%);
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid white;
+}
+
+.flex-box-3-item-1 {
+    background-color: aqua;
+    padding: 50px;
+    text-align: center;
+    margin: 10px;
+}
+
+.flex-box-3-item-2 {
+    background-color: gray;
+    padding: 50px;
+    text-align: center;
+    margin: 10px;
+}
+
+.flex-box-3-item-2-custom {
+    background-color: gray;
+    padding: 50px;
+    text-align: center;
+    margin: 10px;
+    grid-column: span 3;
+}
+
+
+/******** Flex Box 4 **********/
+.flex-box-body-4 {
+    display: grid;
+    grid-template-columns: repeat(3, 33.33%);
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid white;
+    align-items: center;
+}
+
+.flex-box-4-item-1 {
+    background-color: aqua;
+    height: 200px;
+    padding: 50px;
+    text-align: center;
+    margin: 10px;
+}
+
+.flex-box-4-item-2 {
+    background-color: gray;
+    height: 100px;
+    padding: 50px;
+    text-align: center;
+    margin: 10px;
+}
+
+.flex-box-4-item-3 {
+    background-color: pink;
+    height: 150px;
+    padding: 50px;
+    text-align: center;
+    margin: 10px;
+}
+
+.flex-box-4-item-4 {
+    background-color: pink;
+    height: 100px;
+    padding: 50px;
+    text-align: center;
+    margin: 10px;
+}
+
+.flex-box-4-item-5 {
+    background-color: gray;
+    height: 200px;
+    padding: 50px;
+    text-align: center;
+    margin: 10px;
+}
+
+.flex-box-4-item-6 {
+    background-color: aqua;
+    height: 100px;
+    padding: 50px;
+    text-align: center;
+    margin: 10px;
+}
+
+/******** Flex Box 5 **********/
+.flex-box-body-5 {
+    display: grid;
+    grid-template-columns: repeat(3, 33.33%);
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid white;
+    align-items: end;
+}
+
+/******** Flex Box 5 **********/
+.flex-box-body-6 {
+    display: grid;
+    grid-template-columns: repeat(3, 33.33%);
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid white;
+    align-items: start;
+}
+
+
+/********************************* Cards Body 1 *************************************/
+.cards-group {
+    display: grid;
+    grid-template-columns: repeat(3, 33.33%);
+    border: 1px solid white;
+}
+
+.cards {
+    box-shadow: 1px 2px 5px rgb(104, 101, 101);
+    margin: 10px;
+    background-color: white;
+}
+
+.iamge-section {
+    background-color: pink;
+    padding: 40px;
+    text-align: center;
+}
+
+/*********************************** Cards Body 1 **********************************/
+.cards-custom {
+    box-shadow: 1px 2px 5px rgb(104, 101, 101);
+    margin: 10px;
+    background-color: white;
+    grid-row: span 2;
+}
+
+/*********************************** Cards Body 2 **********************************/
+.cards-custom-2 {
+    box-shadow: 1px 2px 5px rgb(104, 101, 101);
+    margin: 10px;
+    background-color: white;
+    grid-column: span 2;
+}
+
+/*********************************** Cards Body 3 **********************************/
+.cards-custom-3 {
+    box-shadow: 1px 2px 5px rgb(104, 101, 101);
+    margin: 10px;
+    background-color: white;
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.card-titles {
+    background-color: white;
+    padding: 10px;
+}
+
+
+/************************************* Form Layout ***********************************/
+.form-body {
+    padding: 10px;
+    display: grid;
+}
+
+@media screen and (max-width: 1200px) {
+    .flex-box-body-1 {
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    .flex-box-body-2 {
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    .flex-box-body-3 {
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    .flex-box-body-4 {
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    .flex-box-body-5 {
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    .flex-box-body-6 {
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    .cards-group {
+        grid-template-columns: repeat(2, 50%);
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .flex-box-body-1 {
+        grid-template-columns: repeat(1, 100%);
+    }
+
+    .flex-box-body-2 {
+        grid-template-columns: repeat(1, 100%);
+    }
+
+    .flex-box-body-3 {
+        grid-template-columns: repeat(1, 100%);
+    }
+
+    .flex-box-body-4 {
+        grid-template-columns: repeat(1, 100%);
+    }
+
+    .flex-box-body-5 {
+        grid-template-columns: repeat(1, 100%);
+    }
+
+    .flex-box-body-6 {
+        grid-template-columns: repeat(1, 100%);
+    }
+
+    .cards-group {
+        grid-template-columns: repeat(1, 100%);
+    }
+}

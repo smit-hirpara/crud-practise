@@ -23,12 +23,11 @@
                 <td>{{data.emailAddress}}</td>
                 <td>{{data.password}}</td>
                 <td class="d-flex">
-                    <button mat-mini-fab class="btn btn-danger" class="mx-3"
-                        aria-label="Example icon button with a menu icon" (click)="deleteUser(data.id)">
+                    <button mat-mini-fab class="btn btn-danger" class="mx-3" (click)="deleteUser(data.id)">
                         <i class="material-icons">&#xe872;</i>
                     </button>
-                    <button mat-mini-fab color="primary" aria-label="Example icon button with a menu icon"
-                        (click)="editUserDetails(data)" routerLink="/update/{{data.id}}">
+                    <button mat-mini-fab color="primary" (click)="editUserDetails(data)"
+                        routerLink="/update/{{data.id}}">
                         <i class="material-icons">&#xe3c9;</i>
                     </button>
                 </td>
@@ -37,8 +36,7 @@
     </table>
     <div class="button-section">
         <div class="flex-item">
-            <button mat-mini-fab color="primary" aria-label="Example icon button with a delete icon"
-                (click)="addNewData1()">
+            <button mat-mini-fab color="primary" (click)="addNewData1()">
                 <i class="material-icons">&#xe145;</i>
             </button>
         </div>
@@ -78,12 +76,11 @@
                 <td>{{data2.Area}}</td>
                 <td>{{data2.lendMark}}</td>
                 <td class="d-flex">
-                    <button mat-mini-fab class="btn btn-danger" class="mx-3"
-                        aria-label="Example icon button with a menu icon" (click)="deleteUser2(data2.id)">
+                    <button mat-mini-fab class="btn btn-danger small-buttons mx-3" (click)="deleteUser2(data2.id)">
                         <i class="material-icons">&#xe872;</i>
                     </button>
-                    <button mat-mini-fab color="primary" aria-label="Example icon button with a menu icon"
-                        (click)="editUserDetilas2(data2)" routerLink="/update2/{{data2.id}}">
+                    <button mat-mini-fab color="primary" class="small-buttons" (click)="editUserDetilas2(data2)"
+                        routerLink="/update2/{{data2.id}}">
                         <i class="material-icons">&#xe3c9;</i>
                     </button>
                 </td>
@@ -92,8 +89,7 @@
     </table>
     <div class="button-section">
         <div class="flex-item">
-            <button mat-mini-fab color="primary" aria-label="Example icon button with a delete icon"
-                (click)="addNewData2()">
+            <button mat-mini-fab color="primary" (click)="addNewData2()">
                 <i class="material-icons">&#xe145;</i>
             </button>
         </div>

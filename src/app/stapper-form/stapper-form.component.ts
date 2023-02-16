@@ -92,6 +92,7 @@ export class StapperFormComponent {
   area?: any;
   lendmark?: any;
 
+
   /******* Submit Function ********/
   SubmitSecondForm() {
     this.state = this.secondFormGroup.controls['State'].value;
