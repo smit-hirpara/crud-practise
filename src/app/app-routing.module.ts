@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'stapperForm', component: StapperFormComponent },
   { path: 'update2/:id', component: StapperFormComponent },
   { path: 'owl-date-picker', component: OwlDatePickersComponent },
-  { path: 'Flex-box-example', component: FlexBoxExamplesComponent }
+  { path: 'Flex-box-example', component: FlexBoxExamplesComponent },
 ];
 
 @NgModule({

@@ -347,7 +347,29 @@
             </div>
         </div>
     </div>
-    <!-- <div class="boxes">
-        <owl-date-time-inline [pickerType]="'calendar'"></owl-date-time-inline>
-    </div> -->
+    <div class="boxes">
+        <div class="title">Custom Date & Time Picker</div>
+        <hr class="custom-hr">
+        <div class="input-group my-1 custom-date-picker">
+            <input [owlDateTime]="dt37" [owlDateTimeTrigger]="dt37" placeholder="Date Time"
+                class="form-control form-control-sm custom-date-picker-input">
+            <owl-date-time #dt37></owl-date-time>
+            <div class="input-group-append" [owlDateTimeTrigger]="dt37">
+                <span class="input-group-text date-picker-text" style="margin: 0; padding:0 10px;"><i
+                        class="material-icons date-icon" style="font-size: 24px;">&#xe192;</i></span>
+            </div>
+        </div>
+
+        <!----------- Display Only Time -------------->
+        <div class="input-group my-1">
+            <input [owlDateTime]="dt38" [owlDateTimeTrigger]="dt38" placeholder="Date Time"
+                class="form-control form-control-sm custom-date-picker-input-2">
+            <owl-date-time #dt38></owl-date-time>
+            <div class="input-group-append" [owlDateTimeTrigger]="dt38">
+                <span class="input-group-text" style="margin: 0; padding:0 10px;">
+                    <i class="material-icons date-icon" style="font-size: 24px;">&#xe192;</i>
+                </span>
+            </div>
+        </div>
+    </div>
 </div>

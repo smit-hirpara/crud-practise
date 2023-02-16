@@ -10,6 +10,7 @@
     padding: 10px;
     border-radius: 10px;
     box-shadow: 1px 2px 5px rgb(104, 101, 101);
+    height: max-content;
 }
 
 .title {
@@ -46,6 +47,19 @@
 
 .time-icon .date-icon {
     color: rgb(184, 183, 183);
+}
+
+.custom-date-picker-input {
+    text-indent: -69px; /////////////////////////////////////////////////////////////////////////////////////////
+    border: 0;
+}
+
+.custom-date-picker-input-2 {
+    text-indent: -69px; /////////////////////////////////////////////////////////////////////////////////////////
+}
+
+.custom-date-picker-input-2 {
+    text-indent: -69px; /////////////////////////////////////////////////////////////////////////////////////////
 }
 
 @media screen and (max-width:'1450px') {
