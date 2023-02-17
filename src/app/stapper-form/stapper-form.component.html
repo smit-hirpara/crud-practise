@@ -22,6 +22,19 @@
                         </mat-error>
                     </mat-form-field>
 
+                    <!-------- Birth Date ---------->
+                    <mat-form-field class="example-full-width-1 stapperFormFields">
+                        <mat-label>Barth Date</mat-label>
+                        <input type="text" matInput formControlName="birthDate" [owlDateTime]="dt42"
+                            [owlDateTimeTrigger]="dt42" placeholder="DD/MM/YYYY">
+                        <i class="material-icons time-icon-section time-icon" style="font-size: 24px;"
+                            [owlDateTimeTrigger]="dt42">&#xe916;</i>
+                        <owl-date-time #dt42 [pickerType]="'calendar'"></owl-date-time>
+                        <mat-error *ngIf="firstFormGroup.controls['birthDate'].hasError('required')">
+                            Barth Date is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
                     <!------ Mobile Number Field ------->
                     <mat-form-field class="stapperFormFields">
                         <mat-label>Mobile Number</mat-label>

@@ -34,6 +34,11 @@
     margin: 10px;
 }
 
+.flex-box-1-item-2:hover {
+    margin-top: -10px;
+    transition: all 0.5s ease-in-out;
+}
+
 /******** Flex Box 3 **********/
 .flex-box-body-2 {
     display: grid;
@@ -182,6 +187,7 @@
     display: grid;
     grid-template-columns: repeat(3, 33.33%);
     border: 1px solid white;
+    margin: 10px;
 }
 
 .cards {

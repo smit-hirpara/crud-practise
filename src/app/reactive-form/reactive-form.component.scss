@@ -87,6 +87,19 @@
     align-items: center;
 }
 
+.example-full-width {
+    width: 100%;
+    position: relative;
+}
+
+.time-icon-section {
+    position: absolute;
+    right: 0;
+    left: 95%;
+    top: 15px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
 @supports (animation: grow .5s cubic-bezier(.25, .25, .25, 1) forwards) {
     .tick {
         stroke-opacity: 0;

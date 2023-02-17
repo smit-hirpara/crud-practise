@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-owl-date-pickers',
@@ -47,4 +48,6 @@ export class OwlDatePickersComponent {
     this.date3.setMinutes(horMin[1]);
     this.date3.setSeconds(0)
   }
+
+
 }

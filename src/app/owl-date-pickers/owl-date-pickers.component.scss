@@ -54,7 +54,9 @@
     border: 0;
 }
 
-input:hover {
+.custom-date-picker-input:hover,
+.custom-date-picker-input-2,
+.custom-date-picker-input-3 {
     box-shadow: 0;
     border: 1px solid #59b2c9;
 }
@@ -97,6 +99,24 @@ input:hover {
 .date-picker-box {
     text-indent: -50px;
 }
+
+
+/********************************* Angular Maerial Custom Date Picker ********************************************/
+.example-full-width {
+    width: 100%;
+    position: relative;
+}
+
+.time-icon-section {
+    position: absolute;
+    right: 0;
+    left: 90%;
+    top: 15px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+/*******************************************************************************************************************/
+
 
 @media screen and (max-width:'1450px') {
     .grid {

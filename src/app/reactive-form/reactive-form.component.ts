@@ -21,6 +21,7 @@ export class ReactiveFormComponent {
     this.form1 = this.fb.group({
       firstName: ['', Validators.compose([Validators.required])],
       lastName: ['', Validators.compose([Validators.required])],
+      birthDate: ['', Validators.compose([Validators.required])],
       mobileNo: ['', Validators.compose([Validators.required])],
       emailAddress: ['', Validators.compose([Validators.required])],
       password: ['', Validators.compose([Validators.required])],
@@ -31,6 +32,7 @@ export class ReactiveFormComponent {
     this.form2 = this.fb.group({
       firstName: ['', Validators.compose([Validators.required])],
       lastName: ['', Validators.compose([Validators.required])],
+      birthDate: ['', Validators.compose([Validators.required])],
       mobileNo: ['', Validators.compose([Validators.required])],
       emailAddress: ['', Validators.compose([Validators.required])],
       password: ['', Validators.compose([Validators.required])],
@@ -51,6 +53,7 @@ export class ReactiveFormComponent {
   /***** Form 1 Value Store Variable *****/
   fname1: any;
   lname1: any;
+  birthdate1: any;
   mobile1: any;
   email1: any;
   pass1: any;
@@ -60,12 +63,14 @@ export class ReactiveFormComponent {
   SubmitForm1() {
     this.fname1 = this.form1.controls['firstName'].value;
     this.lname1 = this.form1.controls['lastName'].value;
+    this.birthdate1 = this.form1.controls['birthDate'].value;
     this.mobile1 = this.form1.controls['mobileNo'].value;
     this.email1 = this.form1.controls['emailAddress'].value;
     this.pass1 = this.form1.controls['password'].value;
     console.error('Form 1 Values');
     console.warn('first name = ', this.fname1);
     console.warn('last name = ', this.lname1);
+    console.warn('birth date = ', this.birthdate1);
     console.warn('mobile number = ', this.mobile1);
     console.warn('email address = ', this.email1);
     console.warn('password = ', this.pass1);
@@ -76,6 +81,7 @@ export class ReactiveFormComponent {
   /***** Form 2 Value Store Variable *****/
   fname2?: string;
   lname2?: string;
+  birthdate2: any;
   mobile2?: number;
   email2?: any;
   pass2?: any;
@@ -96,12 +102,14 @@ export class ReactiveFormComponent {
   SubmitForm2() {
     this.fname2 = this.form2.controls['firstName'].value;
     this.lname2 = this.form2.controls['lastName'].value;
+    this.birthdate2 = this.form2.controls['birthDate'].value;
     this.mobile2 = this.form2.controls['mobileNo'].value;
     this.email2 = this.form2.controls['emailAddress'].value;
     this.pass2 = this.form2.controls['password'].value;
     console.error('Form 2 Values');
     console.warn('first name = ', this.fname2);
     console.warn('last name = ', this.lname2);
+    console.warn('birth date = ', this.birthdate2);
     console.warn('mobile number = ', this.mobile2);
     console.warn('email address = ', this.email2);
     console.warn('password = ', this.pass2);
@@ -110,6 +118,7 @@ export class ReactiveFormComponent {
   resetForm() {
     this.form2.controls['firstName'].clearValidators();
     this.form2.controls['lastName'].clearValidators();
+    this.form2.controls['birthDate'].clearValidators();
     this.form2.controls['mobileNo'].clearValidators();
     this.form2.controls['emailAddress'].clearValidators();
     this.form2.controls['password'].clearValidators();

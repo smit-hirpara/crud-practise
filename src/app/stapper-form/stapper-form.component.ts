@@ -32,6 +32,7 @@ export class StapperFormComponent {
   /******* Form Values Store Variables ********/
   firstname?: any;
   lastname?: any;
+  birthdate?: any;
   mobilenumber?: any;
   emailaddress?: any;
   password?: any;
@@ -41,6 +42,7 @@ export class StapperFormComponent {
   SubmitFirstForm() {
     this.firstname = this.firstFormGroup.controls['firstName'].value;
     this.lastname = this.firstFormGroup.controls['lastName'].value;
+    this.birthdate = this.firstFormGroup.controls['birthDate'].value;
     this.mobilenumber = this.firstFormGroup.controls['mobileNo'].value;
     this.emailaddress = this.firstFormGroup.controls['emailAddress'].value;
     this.password = this.firstFormGroup.controls['password'].value;
@@ -60,6 +62,7 @@ export class StapperFormComponent {
     this.firstFormGroup = this._formBuilder.group({
       firstName: ['', Validators.compose([Validators.required])],
       lastName: ['', Validators.compose([Validators.required])],
+      birthDate: ['', Validators.compose([Validators.required])],
       mobileNo: ['', Validators.compose([Validators.required, Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")])],
       emailAddress: ['', Validators.compose([Validators.required, Validators.email])],
       password: ['', Validators.compose([Validators.required, Validators.minLength(4)])],

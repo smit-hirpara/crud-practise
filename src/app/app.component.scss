@@ -11,3 +11,13 @@
     color: #3f51b5;
     transition: all 0.2s ease-in;
 }
+
+@media screen and (max-width:500px) {
+    .toolbar-heading {
+        display: none;
+    }
+
+    .navbar-buttons {
+        margin: 0 5px;
+    }
+}

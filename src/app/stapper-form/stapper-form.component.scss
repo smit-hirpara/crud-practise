@@ -17,10 +17,6 @@
     width: auto;
 }
 
-.email-field {
-    grid-column: span 2;
-}
-
 .buttons-section {
     padding: 0 10px;
     display: flex;
@@ -57,6 +53,18 @@
     color: #219a00;
     font-size: 20px;
     font-weight: 700;
+}
+
+.example-full-width-1 {
+    position: relative;
+}
+
+.time-icon-section {
+    position: absolute;
+    right: 0;
+    left: 95%;
+    top: 15px;
+    color: rgba(0, 0, 0, 0.6);
 }
 
 @supports (animation: grow .5s cubic-bezier(.25, .25, .25, 1) forwards) {
@@ -110,6 +118,12 @@
     --theme-color: var(--color-purple);
 }
 
+@media screen and (max-width:1400px) {
+    .time-icon-section {
+        left: 90%;
+    }
+}
+
 @media screen and (max-width:600px) {
     .formfields-group {
         grid-template-columns: repeat(2, 50%);
@@ -129,5 +143,9 @@
 
     .button {
         width: 40%;
+    }
+
+    .time-icon-section {
+        left: 80%;
     }
 }

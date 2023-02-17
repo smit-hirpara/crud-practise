@@ -416,4 +416,19 @@
         <button class="btn btn-info btn-sm" (click)="submitfun3(timePicker3.value)">Submit</button>
         <p>{{date3}}</p>
     </div>
+    <div class="boxes">
+        <div class="title">Time Picker</div>
+        <hr class="custom-hr">
+        <div class="input-group">
+            <mat-form-field class="example-full-width">
+                <mat-label>Barth Date</mat-label>
+                <input type="text" matInput [owlDateTime]="dt42" [owlDateTimeTrigger]="dt42"
+                    placeholder="Ex. pat@example.com">
+                <i class="material-icons time-icon-section time-icon" style="font-size: 24px;"
+                    [owlDateTimeTrigger]="dt42">&#xe916;</i>
+                <owl-date-time #dt42 [pickerType]="'calendar'"></owl-date-time>
+            </mat-form-field>
+        </div>
+
+    </div>
 </div>
