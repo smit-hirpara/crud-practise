@@ -22,4 +22,29 @@ export class OwlDatePickersComponent {
     new Date(2018, 1, 12, 10, 30),
     new Date(2018, 3, 21, 20, 30)
   ];
+
+  date1: any;
+  submitfun1(value: any) {
+    this.date1 = new Date(value);
+    console.warn(this.date1);
+  }
+
+  date2: any;
+  submitfun2(value: any) {
+    this.date2 = new Date(value);
+    console.warn(this.date2);
+  }
+
+
+  /******** For Time Picker (Get Time And Rrturn Full String) *********/
+  date3: any;
+  submitfun3(value: any) {
+    let FullTime = value.split(' ');
+    let horMin = FullTime[0].split(':');
+    this.date3 = new Date();
+
+    this.date3.setHours(horMin[0]);
+    this.date3.setMinutes(horMin[1]);
+    this.date3.setSeconds(0)
+  }
 }

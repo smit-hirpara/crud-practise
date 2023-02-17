@@ -54,12 +54,48 @@
     border: 0;
 }
 
-.custom-date-picker-input-2 {
-    text-indent: -69px; /////////////////////////////////////////////////////////////////////////////////////////
+input:hover {
+    box-shadow: 0;
+    border: 1px solid #59b2c9;
 }
 
 .custom-date-picker-input-2 {
     text-indent: -69px; /////////////////////////////////////////////////////////////////////////////////////////
+}
+
+.custom-date-picker-input-3 {
+    border: 0;
+}
+
+/* ======================================================= For Time Picker (Select Time And Get Full String) ======================================================== */
+// ::ng-deep .owl-dt-calendar {
+//     display: none;
+// }
+
+/* ======================================================== For Date Picker (Sleect Date And Get Full String) ======================================================== */
+// ::ng-deep .owl-dt-timer {
+//     display: none;
+// }
+
+/* =================== Modify Date And Time Card  ====================== */
+::ng-deep .owl-dt-container {
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+/* =================== Modify Time Section ====================== */
+// ::ng-deep .owl-dt-timer {
+//     background-color: #59b2c9;
+// }
+
+// ::ng-deep .owl-dt-control-button-content {
+//     background-color: #59b2c9;
+//     border: 1px solid white;
+//     color: white;
+// }
+
+.date-picker-box {
+    text-indent: -50px;
 }
 
 @media screen and (max-width:'1450px') {

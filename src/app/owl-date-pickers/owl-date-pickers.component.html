@@ -372,4 +372,48 @@
             </div>
         </div>
     </div>
+    <div class="boxes">
+        <div class="title">Time Picker</div>
+        <hr class="custom-hr">
+        <div class="input-group my-1 custom-date-picker">
+            <input [owlDateTime]="dt39" [owlDateTimeTrigger]="dt39" placeholder="Time"
+                class="form-control form-control-sm custom-date-picker-input" #timePicker>
+            <owl-date-time #dt39></owl-date-time>
+            <div class="input-group-append" [owlDateTimeTrigger]="dt39">
+                <span class="input-group-text time-picker-text" style="margin: 0; padding:0 10px;"><i
+                        class="material-icons time-icon" style="font-size: 24px;">&#xe192;</i></span>
+            </div>
+        </div>
+        <button class="btn btn-info btn-sm" (click)="submitfun1(timePicker.value)">Submit</button>
+        <p>{{date1}}</p>
+    </div>
+    <div class="boxes">
+        <div class="title">Time Picker</div>
+        <hr class="custom-hr">
+        <div class="input-group my-1 custom-date-picker">
+            <input [owlDateTime]="dt40" [owlDateTimeTrigger]="dt40" placeholder="Date"
+                class="form-control form-control-sm custom-date-picker-input-3" #timePicker2>
+            <owl-date-time #dt40></owl-date-time>
+            <div class="input-group-append" [owlDateTimeTrigger]="dt40">
+                <span class="input-group-text time-picker-text" style="margin: 0; padding:0 10px;"><i
+                        class="material-icons time-icon" style="font-size: 24px;">&#xe916;</i></span>
+            </div>
+        </div>
+        <button class="btn btn-info btn-sm" (click)="submitfun2(timePicker2.value)">Submit</button>
+        <p>{{date2}}</p>
+    </div>
+    <div class="boxes">
+        <div class="title">Time Picker</div>
+        <hr class="custom-hr">
+        <div class="input-group my-1 custom-date-picker">
+            <input [owlDateTime]="dt41" [owlDateTimeTrigger]="dt41" placeholder="Date"
+                class="form-control form-control-sm custom-date-picker-input-3" #timePicker3>
+            <owl-date-time #dt41 [pickerType]="'timer'"></owl-date-time>
+            <span class="input-group-text time-picker-text" style="margin: 0; padding:0 10px;"
+                [owlDateTimeTrigger]="dt41"><i class="material-icons time-icon"
+                    style="font-size: 24px;">&#xe192;</i></span>
+        </div>
+        <button class="btn btn-info btn-sm" (click)="submitfun3(timePicker3.value)">Submit</button>
+        <p>{{date3}}</p>
+    </div>
 </div>
