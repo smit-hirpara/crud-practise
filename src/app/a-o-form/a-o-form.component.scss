@@ -1,0 +1,619 @@
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:wght@400;700&display=swap');
+
+
+/* ============= body =================*/
+.admisiion-form-full-body {
+    background-color: rgb(212, 209, 209);
+    padding: 10px 0;
+}
+
+/* ============= profile background image =================*/
+.profile-bg-image {
+    padding: 35px;
+    background-color: #116ebf7e;
+}
+
+/* ============= profile content full box =================*/
+.profile-content {
+    display: flex;
+    // 1 justify-content: left;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 0;
+    position: relative;
+}
+
+.student-info-groups {
+    display: flex;
+}
+
+/*============= studnet details box =================*/
+.student-details-section {
+    // background-color: #116ebf4b;
+    padding: 0; // 2
+    margin: 0 20px 0 20px;
+    text-align: center;
+}
+
+/*============= studnet details box icons =================*/
+.student-details-section>i {
+    background-color: #116ebf;
+    padding: 5px;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+/*============= studnet details box texts =================*/
+.student-details-section>p {
+    padding: 0;
+    margin: 5px 0 0 0;
+    color: #7C7C7C;
+    font-size: 15px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: 'Amaranth', sans-serif !important;
+}
+
+/* ============= student image, eadit icon ,name, branch box =================*/
+.student-image-box {
+    text-align: center;
+    width: max-content;
+    margin: 0 0 0 50px;
+    display: flex;
+}
+
+/* ============= student image and eadit icon section =================*/
+.student-image-and-icon {
+    width: 95px;
+    height: 95px !important;
+    border: 2px solid #116ebf;
+    border-radius: 50%;
+    outline: 10px solid #ffff;
+    margin: -67px auto 0 auto; // 2
+    position: relative;
+}
+
+/* ============= student image =================*/
+.student-image {
+    width: 100%;
+    height: 100%;
+    margin: 0 0 10px 0;
+}
+
+
+/* ============= eadit profile img btn =================*/
+.profile-img-btn {
+    position: absolute;
+    bottom: -0%;
+    right: -0%;
+    display: none;
+}
+
+/*============= eadit profile img btn icon =================*/
+.profile-img-btn>i {
+    border: 2px solid #116FBF;
+    border-radius: 50px;
+    padding: 2px;
+    font-size: 20px;
+    background-color: #ffff;
+    cursor: pointer;
+}
+
+/*============= after hover eadit button =================*/
+.profile-img-btn>i:hover {
+    background-color: #116FBF;
+    color: #ffff;
+    transition: all 0.3s ease-in-out;
+}
+
+/*============= after hover student image =================*/
+.student-image-and-icon:hover .profile-img-btn {
+    display: block;
+}
+
+/*============= image left corner =================*/
+.rounded-image-cornar-1 {
+    position: absolute;
+    background-color: transparent;
+    padding: 20px;
+    top: 4px;
+    left: -49px;
+    border-radius: 50%;
+    transform: rotate(140deg);
+    box-shadow: -1px -20px 0 -10px #ffffff;
+    // border-top: 10px solid #ffffff;
+}
+
+/*============= image right corner =================*/
+.rounded-image-cornar-2 {
+    position: absolute;
+    background-color: transparent;
+    padding: 20px;
+    top: 4px;
+    right: -49px;
+    border-radius: 50%;
+    box-shadow: -1px -20px 0 -10px #ffffff;
+    transform: rotate(230deg);
+    // border-top: 10px solid #ffffff;
+}
+
+/* ============= stucent name =================*/
+.student-image-box>p {
+    color: #1C82AD;
+    font-size: 24px;
+    font-family: 'Brawler', serif;
+    // font-family: 'Amaranth', sans-serif !important;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 0 0 0 20px; // 2
+}
+
+/*============= local guardian check boc setion =================*/
+.locla-guardian-checkbox {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 30px;
+    font-weight: 500;
+}
+
+/* ============ header ============== */
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+    align-items: center;
+}
+
+/* ============ header text ============== */
+.form-header>span {
+    width: 400px;
+    font-size: 20px;
+    border-bottom: 1px solid black !important;
+}
+
+/* ============ header boxes group ============== */
+.form-header>div {
+    display: flex;
+}
+
+/* ============ header boxes ============== */
+.header-boxes {
+    background-color: #ffff;
+    padding: 5px;
+    box-shadow: 1px 3px 5px gray;
+    margin: 0 10px;
+    padding: 4px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(121, 121, 121);
+    font-size: 13px;
+}
+
+/* ============ header boxes badge ============== */
+.header-boxes>span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    padding: 2.5px 3px;
+}
+
+/* ============ header boxes badge icon ============== */
+.header-boxes>span>i {
+    font-size: 14px;
+    margin: 0 !important;
+}
+
+/* ============ header boxes status ============== */
+.header-boxes>div {
+    margin: 0;
+    padding: 0 5px;
+    color: #116FBF;
+    font-weight: 500;
+}
+
+/* ============ header boxes app no ============== */
+.header-boxes>.app-no {
+    margin: 0;
+    padding: 0 5px;
+    color: #080808;
+    font-weight: 500;
+}
+
+/* ============ Forms Group ============== */
+.forms-group {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    // padding: 10px;
+}
+
+/* ============ all forms body ============== */
+.forms-body {
+    background-color: #ffff;
+    padding: 10px;
+    margin: 15px;
+    position: relative;
+    text-align: center;
+    // border-radius: 20px;
+}
+
+/* ============ all forms header ============== */
+.form-header-section {
+    border-bottom: 1px solid #49a4f3;
+    text-align: center;
+    margin: 0 0 10px 0;
+}
+
+/* ============ all forms header icon ============== */
+.form-header-section>i {
+    background-color: #116ebf;
+    padding: 5px;
+    color: #ffff;
+    border-radius: 50%;
+    border: 5px solid #ffff;
+    // border-bottom: 0;
+}
+
+/* ============ all forms header text ============== */
+.form-header-section>p {
+    font-size: 20px;
+    margin: 0;
+}
+
+/* ============================== 
+mat selectbox, 
+form filed and 
+date picker filed 
+================================ */
+.mat-select-box,
+.mat-form-filed,
+.mat-date-picker {
+    width: 98%;
+    margin: 5px auto;
+}
+
+/* ========== Change mat select bg color ============ */
+::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+    background-color: transparent;
+}
+
+/* ========== Change mat select border ============ */
+::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::before {
+    border-bottom: 2px solid #7C7C7C;
+}
+
+/* ========== Change mat select label color ============ */
+::ng-deep .mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label {
+    color: #7C7C7C;
+}
+
+/* ========== Change mat select Drop icon color ============ */
+::ng-deep .mat-mdc-select-arrow svg {
+    color: #7C7C7C;
+}
+
+::ng-deep .mat-mdc-form-field-subscript-wrapper {
+    display: none;
+}
+
+/* ============ form done symbol ============== */
+.form-edit-icon {
+    background-color: #ffff;
+    border: 2px solid #116ebf;
+    color: #116ebf;
+    border-radius: 50%;
+    padding: 2px;
+    position: absolute;
+    top: -13px;
+    right: -13px;
+    transition: all 0.3s ease-in-out;
+    display: none;
+    font-size: 20px;
+}
+
+.form-edit-icon:hover {
+    background-color: #116ebf;
+    color: #fff;
+}
+
+.forms-body:hover .form-edit-icon {
+    display: block;
+}
+
+/* ========== mini Input Fields Group ============ */
+.input-fileds-group {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    margin: 0 auto;
+}
+
+/*==============================
+mat mini selectbox,
+mini form filed
+================================*/
+.mini-select-box,
+.mini-form-filed {
+    width: 97%;
+    margin: 5px auto;
+}
+
+/* ========== Mobile and uplode file field ============ */
+.custom-icon-field {
+    width: 97%;
+    position: relative;
+    margin: 5px auto;
+}
+
+/* ========== Mobile and uplode icon ============ */
+.mobile-icon {
+    // position: absolute;
+    // top: 10%;
+    // right: -5px;
+    color: #7C7C7C;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 25px;
+}
+
+.mobilecode {
+    margin: 5px auto;
+    padding: 0;
+    width: 100px;
+}
+
+/* ========== after hover Mobile and uplode icon ============ */
+.mobile-icon:hover {
+    background-color: #c7c7c769;
+    color: #3F51B5;
+}
+
+/* ========== radio button group field ============ */
+.radio-btn-group {
+    display: flex;
+    width: 98%;
+    height: 56px;
+    border-radius: 5px;
+    margin: 5px auto;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #9e9e9e;
+}
+
+/* ========== radio button group bord text ============ */
+.radio-btn-group>p {
+    margin: 0;
+    color: #7C7C7C;
+    border-right: 1px solid rgba(0, 0, 0, 0.6);
+    padding: 0 5px 0 15px;
+    font-size: 16px;
+}
+
+/* ========== radio buttons group ============ */
+.radio-group {
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* ========== radio buttons labels ============ */
+::ng-deep label {
+    margin: 0;
+}
+
+
+.parents-forms-group {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+}
+
+/* ========== Uplode File Input Field ============ */
+.uplode-file-input input {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+/* ========== Uplode File Input Box ============ */
+.uplode-file-input label {
+    outline: 2px dashed #3F51B5;
+    border-radius: 6px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    background: #EDEDED;
+    color: rgb(2, 2, 2);
+    font-size: 20px;
+    font-weight: 500;
+    margin: 20px 10px;
+}
+
+/* ========== Uplode File Icon ============ */
+.drop-box-texts>i {
+    color: #3F51B5;
+    font-size: 30px;
+}
+
+
+/* ========== Uplode File images priview box ============ */
+.priview-image-section {
+    background-color: #ffffff;
+    border: 2px solid #116ebf;
+    width: 40%;
+    height: auto;
+    margin: 10px 10px 10px 0;
+    position: relative;
+}
+
+/* ========== Uplode File Privew image ============ */
+.uplode-file-priview {
+    width: 100%;
+}
+
+/* ========== Uplode File images close btn ============ */
+.close-btn {
+    position: absolute;
+    top: -13px;
+    right: -13px;
+}
+
+/* ========== images close btn icon ============ */
+.close-btn>i {
+    background-color: #ffffff;
+    border: 2px solid #116ebf;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+.save-doucments-btn>i {
+    font-size: 20px;
+    margin: 0 5px 0 0;
+}
+
+.downlod-btn {
+    background-color: #116ebf;
+    border: 2px solid #3F51B5;
+    color: #ffffff !important;
+    margin: 0 10px 5px 10px;
+}
+
+.downlod-btn>i {
+    margin: 0 10px 0 0;
+}
+
+
+
+.savedDocuemtnsGroup {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    margin: 5px;
+}
+
+.savedocuemnt {
+    width: 90%;
+    height: max-content;
+    margin: 0 auto 10px auto;
+    box-shadow: -0px 5px 5px rgb(212, 212, 212);
+    border-radius: 12px;
+}
+
+.documents-images-section {
+    // border: 2px solid #116ebf;
+    border-radius: 0 0 10px 10px;
+    padding: 3px;
+}
+
+.documents-images-section>img {
+    width: 100%;
+    height: auto;
+}
+
+.image-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2px 0;
+}
+
+.image-details>span:first-child {
+    font-size: 11px;
+    margin: 0 0 0 5px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.image-details>span:last-child {
+    margin: 0 5px 0 0;
+    height: max-content;
+    font-size: 10px;
+    color: #7C7C7C;
+}
+
+.documents-details-box {
+    background-color: rgb(236, 236, 236);
+    padding: 6px;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons-group {
+    display: flex;
+    align-items: center;
+    user-select: none;
+}
+
+.icons-group>i {
+    cursor: pointer;
+}
+
+.icons-group>a {
+    color: #0289ff;
+    text-decoration: none;
+}
+
+.icons-group>i:last-child {
+    color: red;
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .forms-group {
+        grid-template-columns: repeat(3, 33.33%);
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .forms-group {
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    .form-header>span {
+        width: 350px;
+    }
+
+    .form-header>div {
+        flex-wrap: wrap;
+        justify-content: end;
+    }
+
+    .header-boxes {
+        margin: 10px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .student-info-groups {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 580px) {
+    .forms-group {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .form-header>span {
+        width: 500px;
+    }
+
+    .parents-forms-group {
+        display: block;
+    }
+}

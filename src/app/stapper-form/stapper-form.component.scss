@@ -149,3 +149,79 @@
         left: 80%;
     }
 }
+
+
+/* ========== Mat Stapper Header Edit Icon And Done Icon ============ */
+::ng-deep .mat-step-header .mat-step-icon-state-done,
+::ng-deep .mat-step-header .mat-step-icon-state-edit {
+    background-color: rgb(11, 139, 11) !important;
+    transition: all 0.5s ease-in-out;
+}
+
+/* ============ Header Icon Effect ============ */
+::ng-deep .mat-step-header .mat-step-icon-selected {
+    background-color: #3f51b5;
+    color: #fff;
+    outline: 2px solid #3f51b5;
+    outline-offset: 2px;
+}
+
+/* ========== Set Done Icon ============ */
+::ng-deep .mat-step-header .mat-step-icon-state-edit {
+    // background-image: url(https://static.vecteezy.com/system/resources/previews/009/664/308/non_2x/tick-icon-transparent-free-png.png);
+    // background-image: url(https://static.vecteezy.com/system/resources/previews/009/664/305/original/tick-icon-transparent-free-png.png);
+    // background-image: url(https://p.kindpng.com/picc/s/578-5787278_white-check-mark-icon-hd-png-download.png);
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/White_check.svg/768px-White_check.svg.png);
+    background-size: 13px;
+    background-position-y: 5px;
+    background-position-x: 5px;
+    transform: rotate(20deg);
+    background-repeat: no-repeat;
+    outline: 2px solid green;
+    outline-offset: 2px;
+}
+
+/* ============ Remove Edit Icon ============ */
+::ng-deep .mat-step-icon .mat-icon {
+    display: none;
+}
+
+::ng-deep .mat-step-text-label {
+    color: #fff;
+}
+
+::ng-deep .mat-stepper-vertical-line::before {
+    background: #ffff;
+}
+
+mat-stepper {
+    background-color: rgba(0, 0, 0, 0.356);
+    backdrop-filter: blur(4px);
+}
+
+.stapper-background-image {
+    // background-image: url(https://cdn.pixabay.com/photo/2017/03/25/17/55/colorful-2174045__340.png);
+    background-image: url(https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?cs=srgb&dl=pexels-pixabay-268533.jpg&fm=jpg);
+    background-size: cover;
+    padding: 30px;
+    background-position: 0px -1750px;
+}
+
+
+.done-logo {
+    transition: all 0.5s ease-in-out;
+    background-color: #219a00;
+    width: max-content;
+    padding: 5px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffff;
+    margin: 0 0 0 auto;
+    transform: rotate(360deg);
+}
+
+.done-logo:hover {
+    transform: rotate(360deg);
+}

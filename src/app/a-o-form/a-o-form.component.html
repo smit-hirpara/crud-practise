@@ -1,0 +1,614 @@
+<div class="admisiion-form-full-body">
+    <!----------- Profile section start ----------->
+    <div class="prifile-section">
+        <div class="profile-bg-image"></div>
+        <!--------------------- Centered Header --------------------------->
+        <!-- <div class="profile-content">
+            <div class="student-info-groups">
+                <div class="student-details-section">
+                    <i class="material-icons">book</i>
+                    <p>IV - Day School</p>
+                </div>
+                <div class="student-details-section">
+                    <i class="material-icons">today</i>
+                    <p>2023 - 2024</p>
+                </div>
+            </div>
+            <div class="student-image-box">
+                <div class="student-image-and-icon">
+                    <img src="https://assets.webiconspng.com/uploads/2016/12/User-Icon.png" class="student-image"
+                        alt="student image">
+                    <div class="profile-img-btn"><i class="material-icons">camera_alt</i></div>
+                    <div class="rounded-image-cornar-1"></div>
+                    <div class="rounded-image-cornar-2"></div>
+                </div>
+                <p>Jenil Patel</p>
+                <div class="badge badge-success">Hydarabad</div>
+            </div>
+            <div class="student-info-groups">
+                <div class="student-details-section">
+                    <i class="material-icons">call</i>
+                    <p>6234567563</p>
+                </div>
+                <div class="student-details-section">
+                    <i class="material-icons">email</i>
+                    <p>Test@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="locla-guardian-checkbox badge badge-primary"><input type="checkbox" class="mx-1"
+                    (change)="showLoclaGuardian()">Locak
+                Guardian</div>
+        </div> -->
+
+        <!--------------------- Left Header --------------------------->
+        <div class="profile-content">
+            <div class="student-image-box">
+                <div class="student-image-and-icon">
+                    <img src="https://assets.webiconspng.com/uploads/2016/12/User-Icon.png" class="student-image"
+                        alt="student image">
+                    <div class="profile-img-btn"><i class="material-icons">camera_alt</i></div>
+                    <div class="rounded-image-cornar-1"></div>
+                    <div class="rounded-image-cornar-2"></div>
+                </div>
+                <p>Jenil Patel</p>
+            </div>
+            <div class="student-info-groups ml-3">
+                <div class="student-details-section">
+                    <i class="material-icons">location_pin</i>
+                    <p>Hydarabad</p>
+                </div>
+                <div class="student-details-section">
+                    <i class="material-icons">book</i>
+                    <p>IV - Day School</p>
+                </div>
+                <div class="student-details-section">
+                    <i class="material-icons">today</i>
+                    <p>2023 - 2024</p>
+                </div>
+            </div>
+            <div class="student-details-section">
+                <i class="material-icons">call</i>
+                <p>6234567563</p>
+            </div>
+            <div class="student-details-section">
+                <i class="material-icons">email</i>
+                <p>Test@gmail.com</p>
+            </div>
+
+            <div class="locla-guardian-checkbox badge badge-primary"><input type="checkbox" class="mx-1"
+                    (change)="showLoclaGuardian()">Locak
+                Guardian</div>
+        </div>
+    </div>
+    <!----------- Profile section end ----------->
+
+
+    <!----------- header start ----------->
+    <div class="form-header">
+        <span>Admission Details</span>
+        <div>
+            <div class="header-boxes">Pay Fee : <span class="badge badge-danger"><i
+                        class="material-icons my-1">attach_money</i>100 Due</span></div>
+            <div class="header-boxes">Status : <div>Scheduled</div>
+            </div>
+            <div class="header-boxes">App No : <div class="app-no">BDR/01250</div>
+            </div>
+        </div>
+    </div>
+    <!----------- header End ----------->
+
+
+    <!----------- Forms group start ----------->
+    <div class="forms-group">
+        <!-- Application Details form -->
+        <div class="forms-body">
+            <div class="form-header-section">
+                <i class="material-icons">school</i>
+                <p>Application Details</p>
+            </div>
+            <mat-form-field appearance="outline" class="mat-select-box">
+                <mat-label>Select Branch</mat-label>
+                <mat-select name="food">
+                    <mat-option *ngFor="let food of foods" [value]="food.value">
+                        {{food.viewValue}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="mat-form-filed">
+                <mat-label>Acadamic Year</mat-label>
+                <input matInput>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="mat-select-box">
+                <mat-label>Select Standard</mat-label>
+                <mat-select name="food">
+                    <mat-option *ngFor="let food of foods" [value]="food.value">
+                        {{food.viewValue}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <i class="material-icons form-edit-icon">edit</i>
+        </div>
+
+        <!-- Studnet Details form -->
+        <div class="forms-body">
+            <div class="form-header-section">
+                <i class="material-icons">person</i>
+                <p>Student Profile</p>
+            </div>
+            <mat-form-field appearance="outline" class="mat-form-filed">
+                <mat-label>Name AS Previous School Offical Record</mat-label>
+                <input matInput>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="mat-select-box">
+                <mat-label>Gender</mat-label>
+                <mat-select name="food">
+                    <mat-option *ngFor="let food of foods" [value]="food.value">
+                        {{food.viewValue}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="mat-date-picker">
+                <mat-label>Date Of Birth</mat-label>
+                <input matInput [matDatepicker]="picker2">
+                <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+                <mat-datepicker #picker2 color="primary"></mat-datepicker>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="mat-form-filed">
+                <mat-label>Place Of Birth</mat-label>
+                <input matInput>
+            </mat-form-field>
+            <i class="material-icons form-edit-icon">edit</i>
+        </div>
+
+        <!-- Studnet Inofrmation form -->
+        <div class="forms-body">
+            <div class="form-header-section">
+                <i class="material-icons">person</i>
+                <p>Student Information</p>
+            </div>
+            <div class="input-fileds-group">
+                <mat-form-field appearance="outline" class="mini-form-filed">
+                    <mat-label>Nationality</mat-label>
+                    <input matInput>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="mini-form-filed">
+                    <mat-label>Mother Tongue</mat-label>
+                    <input matInput>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="mini-form-filed">
+                    <mat-label>Riligion</mat-label>
+                    <input matInput>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="mini-form-filed">
+                    <mat-label>Caste</mat-label>
+                    <input matInput>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="mini-form-filed">
+                    <mat-label>Category</mat-label>
+                    <input matInput>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="mini-form-filed">
+                    <mat-label>Sub Category</mat-label>
+                    <input matInput>
+                </mat-form-field>
+            </div>
+            <mat-form-field appearance="outline" class="mat-form-filed">
+                <mat-label>Achievements</mat-label>
+                <input matInput>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="mat-form-filed">
+                <mat-label>Interests And Hobbies</mat-label>
+                <input matInput>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="mat-form-filed">
+                <mat-label>Indefication Marks</mat-label>
+                <input matInput>
+            </mat-form-field>
+            <i class="material-icons form-edit-icon">edit</i>
+        </div>
+
+        <!-- Medical Inofrmation form -->
+        <div class="forms-body">
+            <div class=" form-header-section">
+                <i class="material-icons">medical_services</i>
+                <!-- <i class="material-icons">local_hospital</i> -->
+                <p>Medical Information</p>
+            </div>
+            <div class="input-fileds-group">
+                <mat-form-field appearance="outline" class="mini-form-filed">
+                    <mat-label>Height</mat-label>
+                    <input matInput>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="mini-form-filed">
+                    <mat-label>Weight</mat-label>
+                    <input matInput>
+                </mat-form-field>
+            </div>
+            <mat-form-field appearance="outline" class="mat-form-filed">
+                <mat-label>Special Attention</mat-label>
+                <input matInput>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="mat-select-box">
+                <mat-label>Select Blood Group</mat-label>
+                <mat-select name="food">
+                    <mat-option *ngFor="let food of foods" [value]="food.value">
+                        {{food.viewValue}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="mat-form-filed">
+                <mat-label>Other</mat-label>
+                <input matInput>
+            </mat-form-field>
+            <i class="material-icons form-edit-icon">edit</i>
+        </div>
+
+
+        <!-- Primary Contact form -->
+        <div class="forms-body">
+            <div class=" form-header-section">
+                <i class="material-icons">person</i>
+                <p>Primary Contact</p>
+            </div>
+            <mat-form-field appearance="outline" class="mat-form-filed">
+                <mat-label>Name</mat-label>
+                <input matInput>
+            </mat-form-field>
+            <div class="input-fileds-group">
+                <mat-form-field appearance="outline" class="mini-select-box">
+                    <mat-label>Relation</mat-label>
+                    <mat-select name="food">
+                        <mat-option *ngFor="let food of foods" [value]="food.value">
+                            {{food.viewValue}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <!-- <mat-form-field appearance="outline" class="custom-icon-field">
+                    <mat-label>Mobile</mat-label>
+                    <input type="text" matInput>
+                    <i class="material-icons mobile-icon">mobile_screen_share</i>
+                </mat-form-field> -->
+                <mat-form-field appearance="outline" class="mini-select-box">
+                    <mat-label>Mobile No</mat-label>
+                    <input type="tel" matInput placeholder="555-555-1234">
+                    <mat-icon matSuffix class="mobile-icon">mobile_screen_share</mat-icon>
+                </mat-form-field>
+            </div>
+            <mat-form-field appearance="outline" class="mat-form-filed">
+                <mat-label>Email</mat-label>
+                <input matInput>
+            </mat-form-field>
+            <div class="input-fileds-group">
+                <mat-form-field appearance="outline" class="mini-form-filed">
+                    <mat-label>Lendline</mat-label>
+                    <input matInput>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="mini-select-box">
+                    <mat-label>Country</mat-label>
+                    <mat-select name="food">
+                        <mat-option *ngFor="let food of foods" [value]="food.value">
+                            {{food.viewValue}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="mini-select-box">
+                    <mat-label>State</mat-label>
+                    <mat-select name="food">
+                        <mat-option *ngFor="let food of foods" [value]="food.value">
+                            {{food.viewValue}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="mini-form-filed">
+                    <mat-label>District</mat-label>
+                    <input matInput>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="mini-form-filed">
+                    <mat-label>City</mat-label>
+                    <input matInput>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="mini-form-filed">
+                    <mat-label>Zipcode</mat-label>
+                    <input matInput>
+                </mat-form-field>
+            </div>
+            <mat-form-field appearance="outline" class="mat-form-filed">
+                <mat-label>Adderss 1</mat-label>
+                <input matInput>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="mat-form-filed">
+                <mat-label>Address 2</mat-label>
+                <input matInput>
+            </mat-form-field>
+            <i class="material-icons form-edit-icon">edit</i>
+        </div>
+
+
+        <!-- Previous School form -->
+        <div class="forms-body">
+            <div class=" form-header-section">
+                <i class="material-icons">location_city</i>
+                <p>Previous School</p>
+            </div>
+            <mat-form-field appearance="outline" class="mat-form-filed">
+                <mat-label>Name Of Previous School</mat-label>
+                <input matInput>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="mat-form-filed">
+                <mat-label>Location</mat-label>
+                <input matInput>
+            </mat-form-field>
+            <div class="input-fileds-group">
+                <mat-form-field appearance="outline" class="mini-form-filed">
+                    <mat-label>Medium</mat-label>
+                    <input matInput>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="mini-form-filed">
+                    <mat-label>Standard</mat-label>
+                    <input matInput>
+                </mat-form-field>
+            </div>
+            <div class="radio-btn-group">
+                <p>Board:</p>
+                <mat-radio-group aria-label="Select an option" class="radio-group">
+                    <mat-radio-button value="1" color="primary" class="radio-button">ICSE</mat-radio-button>
+                    <mat-radio-button value="2" color="primary" class="radio-button">CBSE</mat-radio-button>
+                    <mat-radio-button value="3" color="primary" class="radio-button">SSC</mat-radio-button>
+                    <mat-radio-button value="4" color="primary" class="radio-button">OTHER
+                    </mat-radio-button>
+                </mat-radio-group>
+            </div>
+            <mat-form-field appearance="outline" class="mat-form-filed">
+                <mat-label>Marks And Pacentage</mat-label>
+                <input type="text" matInput>
+                <mat-icon matSuffix class="mobile-icon">upload_file</mat-icon>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="mat-form-filed">
+                <mat-label>Current School Year</mat-label>
+                <input matInput>
+            </mat-form-field>
+            <i class="material-icons form-edit-icon">edit</i>
+        </div>
+
+
+        <!-- Parents Information form -->
+        <div class="forms-body" style="grid-column: span 2;">
+            <div class="form-header-section">
+                <i class="material-icons">family_restroom</i>
+                <p>Parents Information</p>
+            </div>
+            <div class="parents-forms-group">
+                <div class="form-body" style="margin: 15px 5px 0 0;">
+                    <div class="form-header-section">
+                        <p>Father Information</p>
+                    </div>
+                    <mat-form-field appearance="outline" class="mat-form-filed">
+                        <mat-label>Name</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="mat-form-filed">
+                        <mat-label>Profession</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="mat-form-filed">
+                        <mat-label>Cualifacation</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="mat-form-filed">
+                        <mat-label>Mobile No</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="mat-form-filed">
+                        <mat-label>Email</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                </div>
+                <div class="form-body" style="margin: 15px 0 0 5px;">
+                    <div class=" form-header-section">
+                        <p>Mother Information</p>
+                    </div>
+                    <mat-form-field appearance="outline" class="mat-form-filed">
+                        <mat-label>Name</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="mat-form-filed">
+                        <mat-label>Profession</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="mat-form-filed">
+                        <mat-label>Cualifacation</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="mat-form-filed">
+                        <mat-label>Mobile No</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="mat-form-filed">
+                        <mat-label>Email</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                </div>
+                <div class="form-body w-50" style="grid-column: span 4; margin: 0 auto 0 auto;">
+                    <mat-form-field appearance="outline" class="mini-select-box">
+                        <mat-label>Marital State</mat-label>
+                        <mat-select name="food">
+                            <mat-option *ngFor="let food of foods" [value]="food.value">
+                                {{food.viewValue}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>
+            <i class="material-icons form-edit-icon">edit</i>
+        </div>
+
+
+        <!-- Local Guardian form -->
+        <div class="forms-body" *ngIf="localguardian">
+            <div class="form-header-section">
+                <i class="material-icons">family_restroom</i>
+                <p>Local Guardian</p>
+            </div>
+            <mat-form-field appearance="outline" class="mat-form-filed">
+                <mat-label>Name</mat-label>
+                <input matInput #localguardianfield>
+            </mat-form-field>
+            <div class="input-fileds-group">
+                <mat-form-field appearance="outline" class="mini-select-box">
+                    <mat-label>Relation</mat-label>
+                    <mat-select name="food">
+                        <mat-option *ngFor="let food of foods" [value]="food.value">
+                            {{food.viewValue}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="custom-icon-field">
+                    <mat-label>Mobile</mat-label>
+                    <input type="text" matInput>
+                    <mat-icon matSuffix class="mobile-icon">mobile_screen_share</mat-icon>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="mat-form-filed">
+                    <mat-label>Email</mat-label>
+                    <input matInput>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="mini-form-filed">
+                    <mat-label>Qualifacation</mat-label>
+                    <input matInput>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="mini-form-filed">
+                    <mat-label>Profession</mat-label>
+                    <input matInput>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="mini-select-box">
+                    <mat-label>Country</mat-label>
+                    <mat-select name="food">
+                        <mat-option *ngFor="let food of foods" [value]="food.value">
+                            {{food.viewValue}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="mini-select-box">
+                    <mat-label>State</mat-label>
+                    <mat-select name="food">
+                        <mat-option *ngFor="let food of foods" [value]="food.value">
+                            {{food.viewValue}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="mini-form-filed">
+                    <mat-label>District</mat-label>
+                    <input matInput>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="mini-form-filed">
+                    <mat-label>City</mat-label>
+                    <input matInput>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="mini-form-filed">
+                    <mat-label>Zipcode</mat-label>
+                    <input matInput>
+                </mat-form-field>
+            </div>
+            <mat-form-field appearance="outline" class="mat-form-filed">
+                <mat-label>Adderss 1</mat-label>
+                <input matInput>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="mat-form-filed">
+                <mat-label>Address 2</mat-label>
+                <input matInput>
+            </mat-form-field>
+        </div>
+
+        <!-- Uplode File Section -->
+        <div class="forms-body">
+            <div class="form-header-section">
+                <i class="material-icons">file_upload</i>
+                <p>Document Uplode</p>
+            </div>
+            <div class="formbold-mb-5 uplode-file-input">
+                <input type="file" name="file" id="file" #file multiple
+                    (change)="uploadFile(file.files); selectfile($event);showdocumentbtn()">
+                <label for="file">
+                    <div class="drop-box-texts">
+                        <i class="material-icons mx-3">cloud_upload</i>
+                        <div class="formbold-drop-file">Choose File</div>
+                    </div>
+                </label>
+            </div>
+            <ng-container *ngFor="let i = index;let image of images">
+                <!-- <ng-container *ngFor="let imgname of uploader;">  Image Name -->
+                <div class="d-flex align-items-center">
+                    <div class="priview-image-section">
+                        <img [src]="image" class="uplode-file-priview">
+                        <div class="close-btn" (click)="DeleteFiles(i)"><i class="material-icons">close</i></div>
+                    </div>
+                    <div style="width: 60%;">
+                        <!-- <p>{{imgname.name}}</p> -->
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>Select Document Type</mat-label>
+                            <mat-select name="food" #selectboxes (selectionChange)="getvalue(selectboxes.value,i)">
+                                <mat-option *ngFor=" let doctype of documenttype" [value]="doctype.value">
+                                    {{doctype.value}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+            </ng-container>
+            <div class="savedDocuemtnsGroup">
+                <!-- <ng-container *ngFor="let document of finalarray; let i = index">
+                    <div class="savedocuemnt" style="height: max-content;">
+                        <div class="documents-details-box">
+                            <span class="badge badge-primary d-flex align-items-center mr-1"
+                                style="height: max-content;">Aadhaar Card</span>
+                            <div class="icons-group">
+                                <a class="material-icons mr-1" [href]="document" download="image">cloud_download</a>
+                                <a class="material-icons mr-1">cloud_download</a>
+                                <i class="material-icons mr-1" (click)="setvisibleimg(i)"
+                                    (dblclick)="removeimg()">visibility</i>
+                                <i class="material-icons" (click)="deleteimage(i)">delete</i>
+                            </div>
+                        </div>
+                        <div class="documents-images-section">
+                            <img [src]="document" *ngIf="visibleimg(i)" alt="">
+                            <div class="image-details">
+                                <span>{{finlafilenames[i]}}</span>
+                                <span>{{ finalfilesize[i] | filesize}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </ng-container> -->
+                <ng-container *ngFor="let document of finalImgInfoArray; let i = index">
+                    <div class="savedocuemnt" style="height: max-content;">
+                        <div class="documents-details-box">
+                            <!-- <span class="badge badge-primary d-flex align-items-center mr-1"
+                                style="height: max-content;">{{document.documentTpye}}</span> -->
+                            <span class="badge badge-primary d-flex align-items-center mr-1"
+                                style="height: max-content;">Aadhar card</span>
+                            <div class="icons-group">
+                                <a class="material-icons mr-1">cloud_download</a>
+                                <i class="material-icons mr-1" (click)="setvisibleimg(i)"
+                                    (dblclick)="removeimg()">visibility</i>
+                                <i class="material-icons" (click)="deleteimage(i)">delete</i>
+                            </div>
+                        </div>
+                        <div class="documents-images-section">
+                            <img [src]="document[i].img" *ngIf="visibleimg(i)" alt="">
+                            <div class="image-details">
+                                <span>{{ document[i].imgname}}</span>
+                                <span>{{ document[i].imgsize | filesize}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+            <button mat-raised-button color="primary" class="my-2 save-doucments-btn" *ngIf="savedocumentbtn"
+                (click)="savedocuments()"><i class="material-icons">save</i>Save
+                Document</button>
+            <!-- </ng-container> -->
+        </div>
+
+    </div>
+    <!----------- Forms group end ----------->
+    <button mat-stroked-button class="downlod-btn"><i class="material-icons">archive</i>Downlod Form</button>
+</div>

@@ -20,6 +20,15 @@ import { StapperFormComponent } from './stapper-form/stapper-form.component';
 import { OwlDatePickersComponent } from './owl-date-pickers/owl-date-pickers.component';
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 import { FlexBoxExamplesComponent } from './flex-box-examples/flex-box-examples.component';
+import { MatSelectModule } from '@angular/material/select';
+import { AODesignComponent } from './a-o-design/a-o-design.component';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { AOStapperComponent } from './a-o-stapper/a-o-stapper.component';
+import { MatRadioModule } from '@angular/material/radio';
+import { AOFormComponent } from './a-o-form/a-o-form.component';
+import { MatNativeDateModule } from '@angular/material/core';
+import { NgxFilesizeModule } from 'ngx-filesize';
+
 
 @NgModule({
   declarations: [
@@ -29,6 +38,9 @@ import { FlexBoxExamplesComponent } from './flex-box-examples/flex-box-examples.
     StapperFormComponent,
     OwlDatePickersComponent,
     FlexBoxExamplesComponent,
+    AODesignComponent,
+    AOStapperComponent,
+    AOFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,11 +53,16 @@ import { FlexBoxExamplesComponent } from './flex-box-examples/flex-box-examples.
     MatFormFieldModule,
     MatStepperModule,
     MatDatepickerModule,
+    MatNativeDateModule,
     MatTooltipModule,
     ReactiveFormsModule,
     HttpClientModule,
     OwlNativeDateTimeModule, // Owl Date Picker
-    OwlDateTimeModule // Owl Date Picker
+    OwlDateTimeModule, // Owl Date Picker
+    MatSelectModule,
+    MatProgressBarModule,
+    MatRadioModule,
+    NgxFilesizeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

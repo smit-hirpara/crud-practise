@@ -35,64 +35,45 @@
       "emailAddress": "meet123@gmial.com",
       "password": "meet397t",
       "id": 4
-    }
-  ],
-  "StapperUserDetails": [
-    {
-      "firstName": "utsav",
-      "lastName": "hirpara",
-      "birthDate": "2015-10-11T18:30:00.000Z",
-      "mobileNo": "1234567898",
-      "emailAddress": "utsav123@gmial.com",
-      "password": "utsav3946t",
-      "State": "india",
-      "City": "junagadh",
-      "pinCode": "362001",
-      "Area": "joshipara",
-      "lendMark": "swaminarayan gurukul",
-      "id": 1
-    },
-    {
-      "firstName": "shivam",
-      "lastName": "hirpaar",
-      "birthDate": "2023-02-08T18:30:00.000Z",
-      "mobileNo": "1234567898",
-      "emailAddress": "shivam123@gmial.com",
-      "password": "shivam129370t",
-      "State": "india",
-      "City": "junagadh",
-      "pinCode": "362001",
-      "Area": "joshipara",
-      "lendMark": "swaminarayan gurukul",
-      "id": 2
-    },
-    {
-      "firstName": "jenil",
-      "lastName": "hirpaa",
-      "birthDate": "2023-02-19T18:30:00.000Z",
-      "mobileNo": "1234567898",
-      "emailAddress": "jenil123@gmail.com",
-      "password": "jenil1247t",
-      "State": "india",
-      "City": "junagadh",
-      "pinCode": "362001",
-      "Area": "joshipara",
-      "lendMark": "swaminarayan gurukul",
-      "id": 3
     },
     {
       "firstName": "meet",
       "lastName": "rathod",
-      "birthDate": "2005-12-15T18:30:00.000Z",
-      "mobileNo": "1234567898",
+      "birthDate": "2023-03-06T18:30:00.000Z",
+      "mobileNo": "1234566543",
       "emailAddress": "meet123@gmial.com",
-      "password": "meet239-t",
-      "State": "india",
+      "password": "mnet353rf",
+      "id": 5
+    }
+  ],
+  "StapperUserDetails": [
+    {
+      "firstName": "meet",
+      "lastName": "rathod",
+      "birthDate": "2023-03-12T18:30:00.000Z",
+      "mobileNo": "1233211232",
+      "emailAddress": "meet123@gmail.com",
+      "password": "easfc",
+      "State": "gujarat",
+      "City": "junagadh",
+      "pinCode": "362201",
+      "Area": "joshipara",
+      "lendMark": "swaminarayan gurukul",
+      "id": 5
+    },
+    {
+      "firstName": "jenil",
+      "lastName": "hirpara",
+      "birthDate": "2023-03-01T18:30:00.000Z",
+      "mobileNo": "1234565432",
+      "emailAddress": "jenil123@gmail.com",
+      "password": "2rfet",
+      "State": "gujarat",
       "City": "junagadh",
       "pinCode": "362001",
       "Area": "joshipara",
       "lendMark": "swaminarayan gurukul",
-      "id": 4
+      "id": 6
     }
   ]
 }

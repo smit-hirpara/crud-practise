@@ -403,6 +403,20 @@
         <p>{{date2}}</p>
     </div>
     <div class="boxes">
+        <div class="title">Custom Mat Time Picker</div>
+        <hr class="custom-hr">
+        <div class="input-group">
+            <mat-form-field class="example-full-width">
+                <mat-label>Barth Date</mat-label>
+                <input type="text" matInput [owlDateTime]="dt42" [owlDateTimeTrigger]="dt42"
+                    placeholder="Ex. pat@example.com" class="mat-custom-date-picker">
+                <i class="material-icons time-icon-section time-icon" style="font-size: 24px;"
+                    [owlDateTimeTrigger]="dt42">&#xe916;</i>
+                <owl-date-time #dt42 [pickerType]="'calendar'"></owl-date-time>
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="boxes">
         <div class="title">Time Picker</div>
         <hr class="custom-hr">
         <div class="input-group my-1 custom-date-picker">
@@ -419,16 +433,45 @@
     <div class="boxes">
         <div class="title">Time Picker</div>
         <hr class="custom-hr">
-        <div class="input-group">
-            <mat-form-field class="example-full-width">
-                <mat-label>Barth Date</mat-label>
-                <input type="text" matInput [owlDateTime]="dt42" [owlDateTimeTrigger]="dt42"
-                    placeholder="Ex. pat@example.com">
-                <i class="material-icons time-icon-section time-icon" style="font-size: 24px;"
-                    [owlDateTimeTrigger]="dt42">&#xe916;</i>
-                <owl-date-time #dt42 [pickerType]="'calendar'"></owl-date-time>
-            </mat-form-field>
+        <div class="input-group my-1 custom-date-picker">
+            <input [owlDateTime]="dt43" [owlDateTimeTrigger]="dt43" placeholder="Date"
+                class="form-control form-control-sm custom-date-picker-input-3" #timePicker4>
+            <owl-date-time #dt43 [pickerType]="'timer'"></owl-date-time>
+            <span class="input-group-text time-picker-text" style="margin: 0; padding:0 10px;"
+                [owlDateTimeTrigger]="dt43"><i class="material-icons time-icon"
+                    style="font-size: 24px;">&#xe192;</i></span>
         </div>
-
+        <button class="btn btn-info btn-sm" (click)="submitfun4(timePicker4.value)">Submit</button>
+        <p>{{date4}}</p>
+    </div>
+    <div class="boxes">
+        <div class="title">Custom Select Box</div>
+        <hr class="custom-hr">
+        <div>
+            <select class='custom-select-box-1 remove-arrow'>
+                <option value='' disabled selected>Select an option</option>
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+                <option>Option 4</option>
+                <option>Option 5</option>
+            </select>
+            <img class='dropdown-image' src='https://cdn-icons-png.flaticon.com/512/60/60995.png' />
+            <img class='dropup-image' src='https://cdn-icons-png.flaticon.com/512/61/61148.png' />
+        </div>
+    </div>
+    <div class="boxes">
+        <div class="title">Custom Select Box</div>
+        <hr class="custom-hr">
+        <div>
+            <select class='custom-select-box-2 remove-arrow'>
+                <option value='' disabled selected>Select an option</option>
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+                <option>Option 4</option>
+                <option>Option 5</option>
+            </select>
+        </div>
     </div>
 </div>

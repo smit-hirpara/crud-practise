@@ -1,174 +1,181 @@
 <div class="full-body">
-    <mat-stepper sm-labelPosition="bottom" #stepper linear="true">
-        <mat-step [stepControl]="firstFormGroup">
-            <form [formGroup]="firstFormGroup">
-                <ng-template matStepLabel>Fill out your name</ng-template>
-                <div class="formfields-group">
-                    <!------ Fist Name Field ------->
-                    <mat-form-field class="stapperFormFields ">
-                        <mat-label>First Name</mat-label>
-                        <input type="text" matInput formControlName="firstName" placeholder="Enter First Name">
-                        <mat-error *ngIf="firstFormGroup.controls['firstName'].hasError('required')">
-                            First Name is <strong>required</strong>
-                        </mat-error>
-                    </mat-form-field>
+    <div class="stapper-background-image">
+        <mat-stepper labelPosition="bottom" #stepper linear="true">
+            <mat-step [stepControl]=" firstFormGroup" [editable]="true" autofocus>
+                <form [formGroup]="firstFormGroup">
+                    <ng-template matStepLabel>Fill out your name</ng-template>
+                    <!-- <div class="done-logo" *ngIf="firstFormGroup.valid"><i class="material-icons">done</i></div> -->
+                    <div class="formfields-group">
+                        <!------ Fist Name Field ------->
+                        <mat-form-field class="stapperFormFields ">
+                            <mat-label>First Name</mat-label>
+                            <input type="text" matInput formControlName="firstName" placeholder="Enter First Name">
+                            <mat-error *ngIf="firstFormGroup.controls['firstName'].hasError('required')">
+                                First Name is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
 
-                    <!------ Last Name Field ------->
-                    <mat-form-field class="stapperFormFields">
-                        <mat-label>Last Name</mat-label>
-                        <input type="text" matInput formControlName="lastName" placeholder="Enter Last Name">
-                        <mat-error *ngIf="firstFormGroup.controls['lastName'].hasError('required')">
-                            Last Name is <strong>required</strong>
-                        </mat-error>
-                    </mat-form-field>
+                        <!------ Last Name Field ------->
+                        <mat-form-field class="stapperFormFields">
+                            <mat-label>Last Name</mat-label>
+                            <input type="text" matInput formControlName="lastName" placeholder="Enter Last Name">
+                            <mat-error *ngIf="firstFormGroup.controls['lastName'].hasError('required')">
+                                Last Name is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
 
-                    <!-------- Birth Date ---------->
-                    <mat-form-field class="example-full-width-1 stapperFormFields">
-                        <mat-label>Barth Date</mat-label>
-                        <input type="text" matInput formControlName="birthDate" [owlDateTime]="dt42"
-                            [owlDateTimeTrigger]="dt42" placeholder="DD/MM/YYYY">
-                        <i class="material-icons time-icon-section time-icon" style="font-size: 24px;"
-                            [owlDateTimeTrigger]="dt42">&#xe916;</i>
-                        <owl-date-time #dt42 [pickerType]="'calendar'"></owl-date-time>
-                        <mat-error *ngIf="firstFormGroup.controls['birthDate'].hasError('required')">
-                            Barth Date is <strong>required</strong>
-                        </mat-error>
-                    </mat-form-field>
+                        <!-------- Birth Date ---------->
+                        <mat-form-field class="example-full-width-1 stapperFormFields" [owlDateTimeTrigger]="dt42">
+                            <mat-label>Barth Date</mat-label>
+                            <input type="text" matInput formControlName="birthDate" [owlDateTime]="dt42"
+                                placeholder="DD/MM/YYYY">
+                            <i class="material-icons time-icon-section time-icon" style="font-size: 24px;"
+                                [owlDateTimeTrigger]="dt42">&#xe916;</i>
+                            <owl-date-time #dt42 [pickerType]="'calendar'"></owl-date-time>
+                            <mat-error *ngIf="firstFormGroup.controls['birthDate'].hasError('required')">
+                                Barth Date is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
 
-                    <!------ Mobile Number Field ------->
-                    <mat-form-field class="stapperFormFields">
-                        <mat-label>Mobile Number</mat-label>
-                        <input type="text" matInput formControlName="mobileNo" placeholder="Enter Mobile Number">
-                        <mat-error *ngIf="firstFormGroup.controls['mobileNo'].hasError('required')">
-                            Mobile Number is <strong>required</strong>
-                        </mat-error>
-                    </mat-form-field>
+                        <!------ Mobile Number Field ------->
+                        <mat-form-field class="stapperFormFields">
+                            <mat-label>Mobile Number</mat-label>
+                            <input type="text" matInput formControlName="mobileNo" placeholder="Enter Mobile Number">
+                            <mat-error *ngIf="firstFormGroup.controls['mobileNo'].hasError('required')">
+                                Mobile Number is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
 
-                    <!------ Email Address Field ------->
-                    <mat-form-field class="stapperFormFields email-field">
-                        <mat-label>Email Address</mat-label>
-                        <input type="email" matInput formControlName="emailAddress" placeholder="Enter Email Address">
-                        <mat-error
-                            *ngIf="firstFormGroup.controls['emailAddress'].hasError('email') && !firstFormGroup.controls['emailAddress'].hasError('required')">
-                            Please enter a valid email address
-                        </mat-error>
-                        <mat-error *ngIf="firstFormGroup.controls['emailAddress'].hasError('required')">
-                            Email Address is <strong>required</strong>
-                        </mat-error>
-                    </mat-form-field>
+                        <!------ Email Address Field ------->
+                        <mat-form-field class="stapperFormFields email-field">
+                            <mat-label>Email Address</mat-label>
+                            <input type="email" matInput formControlName="emailAddress"
+                                placeholder="Enter Email Address">
+                            <mat-error
+                                *ngIf="firstFormGroup.controls['emailAddress'].hasError('email') && !firstFormGroup.controls['emailAddress'].hasError('required')">
+                                Please enter a valid email address
+                            </mat-error>
+                            <mat-error *ngIf="firstFormGroup.controls['emailAddress'].hasError('required')">
+                                Email Address is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
 
-                    <!------ Password Field ------->
-                    <mat-form-field class="stapperFormFields password-field">
-                        <mat-label>Password</mat-label>
-                        <input type="password" matInput formControlName="password" placeholder="Enter Password">
-                        <mat-error *ngIf="firstFormGroup.controls['password'].hasError('required')">
-                            Password is <strong>required</strong>
-                        </mat-error>
-                    </mat-form-field>
+                        <!------ Password Field ------->
+                        <mat-form-field class="stapperFormFields password-field">
+                            <mat-label>Password</mat-label>
+                            <input type="password" matInput formControlName="password" placeholder="Enter Password">
+                            <mat-error *ngIf="firstFormGroup.controls['password'].hasError('required')">
+                                Password is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="buttons-section">
+                        <button mat-raised-button color="primary" matStepperNext class="button"
+                            (click)="SubmitFirstForm()" [disabled]="firstFormGroup.invalid"
+                            matTooltip="Next Section">Next</button>
+                    </div>
+                </form>
+            </mat-step>
+            <mat-step [stepControl]="secondFormGroup" [editable]="true">
+                <form [formGroup]="secondFormGroup">
+                    <ng-template matStepLabel>Fill out your address</ng-template>
+                    <div class="formfields-group">
+
+                        <!------ State Field ------->
+                        <mat-form-field class="stapperFormFields">
+                            <mat-label>State</mat-label>
+                            <input type="text" matInput formControlName="State" placeholder="Enter State">
+                            <mat-error *ngIf="secondFormGroup.controls['State'].hasError('required')">
+                                State is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
+
+                        <!------ City Field ------->
+                        <mat-form-field class="stapperFormFields">
+                            <mat-label>City</mat-label>
+                            <input type="text" matInput formControlName="City" placeholder="Enter City">
+                            <mat-error *ngIf="secondFormGroup.controls['City'].hasError('required')">
+                                City is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
+
+                        <!------ Pin Cod Field ------->
+                        <mat-form-field class="stapperFormFields">
+                            <mat-label>Pin Code</mat-label>
+                            <input type="text" matInput formControlName="pinCode" placeholder="Enter Pin Code">
+                            <mat-error *ngIf="secondFormGroup.controls['pinCode'].hasError('required')">
+                                Pin Code is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
+
+                        <!------ Area Field ------->
+                        <mat-form-field class="stapperFormFields">
+                            <mat-label>Area</mat-label>
+                            <input type="text" matInput formControlName="Area" placeholder="Enter Area">
+                            <mat-error *ngIf="secondFormGroup.controls['Area'].hasError('required')">
+                                Area is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
+
+                        <!------ Area Field ------->
+                        <mat-form-field class="stapperFormFields" style="grid-column: span 2;">
+                            <mat-label>Lend Mark</mat-label>
+                            <input type="text" matInput formControlName="lendMark" placeholder="Enter Pend Mark">
+                            <mat-error *ngIf="secondFormGroup.controls['lendMark'].hasError('required')">
+                                Lend Mark is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="buttons-section">
+                        <button mat-raised-button color="primary" matStepperPrevious class="button">Back</button>
+                        <button mat-raised-button color="primary" matStepperNext class="button"
+                            (click)="SubmitSecondForm()" [disabled]="secondFormGroup.invalid">Next</button>
+                    </div>
+                </form>
+            </mat-step>
+            <mat-step>
+                <ng-template matStepLabel>Done</ng-template>
+                <div class="svg-container" *ngIf="SubmitSuccessfullyLogo">
+                    <p>User Submit SuccessFully</p>
+                    <svg class="ft-green-tick" xmlns="http://www.w3.org/2000/svg" height="100" width="100"
+                        viewBox="0 0 48 48" aria-hidden="true">
+                        <circle class="circle" fill="#5bb543" cx="24" cy="24" r="22" />
+                        <path class="tick" fill="none" stroke="#FFF" stroke-width="6" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-miterlimit="10" d="M14 27l5.917 4.917L34 17" />
+                    </svg>
                 </div>
-                <div class="buttons-section">
-                    <button mat-raised-button color="primary" matStepperNext class="button" (click)="SubmitFirstForm()"
-                        [disabled]="firstFormGroup.invalid" matTooltip="Next Section">Next</button>
+                <div class="svg-container" *ngIf="UpdtaeSuccessfullyLogo">
+                    <p>User Updated SuccessFully</p>
+                    <svg class="ft-green-tick" xmlns="http://www.w3.org/2000/svg" height="100" width="100"
+                        viewBox="0 0 48 48" aria-hidden="true">
+                        <circle class="circle" fill="#5bb543" cx="24" cy="24" r="22" />
+                        <path class="tick" fill="none" stroke="#FFF" stroke-width="6" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-miterlimit="10" d="M14 27l5.917 4.917L34 17" />
+                    </svg>
                 </div>
-            </form>
-        </mat-step>
-        <mat-step [stepControl]="secondFormGroup">
-            <form [formGroup]="secondFormGroup">
-                <ng-template matStepLabel>Fill out your address</ng-template>
-                <div class="formfields-group">
-
-                    <!------ State Field ------->
-                    <mat-form-field class="stapperFormFields">
-                        <mat-label>State</mat-label>
-                        <input type="text" matInput formControlName="State" placeholder="Enter State">
-                        <mat-error *ngIf="secondFormGroup.controls['State'].hasError('required')">
-                            State is <strong>required</strong>
-                        </mat-error>
-                    </mat-form-field>
-
-                    <!------ City Field ------->
-                    <mat-form-field class="stapperFormFields">
-                        <mat-label>City</mat-label>
-                        <input type="text" matInput formControlName="City" placeholder="Enter City">
-                        <mat-error *ngIf="secondFormGroup.controls['City'].hasError('required')">
-                            City is <strong>required</strong>
-                        </mat-error>
-                    </mat-form-field>
-
-                    <!------ Pin Cod Field ------->
-                    <mat-form-field class="stapperFormFields">
-                        <mat-label>Pin Code</mat-label>
-                        <input type="text" matInput formControlName="pinCode" placeholder="Enter Pin Code">
-                        <mat-error *ngIf="secondFormGroup.controls['pinCode'].hasError('required')">
-                            Pin Code is <strong>required</strong>
-                        </mat-error>
-                    </mat-form-field>
-
-                    <!------ Area Field ------->
-                    <mat-form-field class="stapperFormFields">
-                        <mat-label>Area</mat-label>
-                        <input type="text" matInput formControlName="Area" placeholder="Enter Area">
-                        <mat-error *ngIf="secondFormGroup.controls['Area'].hasError('required')">
-                            Area is <strong>required</strong>
-                        </mat-error>
-                    </mat-form-field>
-
-                    <!------ Area Field ------->
-                    <mat-form-field class="stapperFormFields" style="grid-column: span 2;">
-                        <mat-label>Lend Mark</mat-label>
-                        <input type="text" matInput formControlName="lendMark" placeholder="Enter Pend Mark">
-                        <mat-error *ngIf="secondFormGroup.controls['lendMark'].hasError('required')">
-                            Lend Mark is <strong>required</strong>
-                        </mat-error>
-                    </mat-form-field>
+                <div class="formsvalues" *ngIf="UserDetails">
+                    <p>First Name:- {{firstname}}</p>
+                    <p>Last Name:- {{lastname}}</p>
+                    <p>Mobile Number:- {{mobilenumber}}</p>
+                    <p>Email Address:- {{emailaddress}}</p>
+                    <p>Password:- {{password}}</p>
+                    <p>State:- {{state}}</p>
+                    <p>City:- {{city}}</p>
+                    <p>PinCode:- {{pincode}}</p>
+                    <p>Area:- {{area}}</p>
+                    <p>Lend Mark:- {{lendmark}}</p>
                 </div>
                 <div class="buttons-section">
                     <button mat-raised-button color="primary" matStepperPrevious class="button">Back</button>
-                    <button mat-raised-button color="primary" matStepperNext class="button" (click)="SubmitSecondForm()"
-                        [disabled]="secondFormGroup.invalid">Next</button>
+                    <button mat-raised-button color="primary" (click)="stepper.reset()" class="button">Reset</button>
+                    <button mat-raised-button color="primary" (click)="addUser()" class="button"
+                        [disabled]="firstFormGroup.invalid && secondFormGroup.invalid"
+                        *ngIf="SubmitButton">Submit</button>
+                    <button mat-raised-button color="primary" (click)="updateUser()" class="button"
+                        [disabled]="firstFormGroup.invalid && secondFormGroup.invalid"
+                        *ngIf="UpdateButton">Update</button>
                 </div>
-            </form>
-        </mat-step>
-        <mat-step>
-            <ng-template matStepLabel>Done</ng-template>
-            <div class="svg-container" *ngIf="SubmitSuccessfullyLogo">
-                <p>User Submit SuccessFully</p>
-                <svg class="ft-green-tick" xmlns="http://www.w3.org/2000/svg" height="100" width="100"
-                    viewBox="0 0 48 48" aria-hidden="true">
-                    <circle class="circle" fill="#5bb543" cx="24" cy="24" r="22" />
-                    <path class="tick" fill="none" stroke="#FFF" stroke-width="6" stroke-linecap="round"
-                        stroke-linejoin="round" stroke-miterlimit="10" d="M14 27l5.917 4.917L34 17" />
-                </svg>
-            </div>
-            <div class="svg-container" *ngIf="UpdtaeSuccessfullyLogo">
-                <p>User Updated SuccessFully</p>
-                <svg class="ft-green-tick" xmlns="http://www.w3.org/2000/svg" height="100" width="100"
-                    viewBox="0 0 48 48" aria-hidden="true">
-                    <circle class="circle" fill="#5bb543" cx="24" cy="24" r="22" />
-                    <path class="tick" fill="none" stroke="#FFF" stroke-width="6" stroke-linecap="round"
-                        stroke-linejoin="round" stroke-miterlimit="10" d="M14 27l5.917 4.917L34 17" />
-                </svg>
-            </div>
-            <div class="formsvalues" *ngIf="UserDetails">
-                <p>First Name:- {{firstname}}</p>
-                <p>Last Name:- {{lastname}}</p>
-                <p>Mobile Number:- {{mobilenumber}}</p>
-                <p>Email Address:- {{emailaddress}}</p>
-                <p>Password:- {{password}}</p>
-                <p>State:- {{state}}</p>
-                <p>City:- {{city}}</p>
-                <p>PinCode:- {{pincode}}</p>
-                <p>Area:- {{area}}</p>
-                <p>Lend Mark:- {{lendmark}}</p>
-            </div>
-            <div class="buttons-section">
-                <button mat-raised-button color="primary" matStepperPrevious class="button">Back</button>
-                <button mat-raised-button color="primary" (click)="stepper.reset()" class="button">Reset</button>
-                <button mat-raised-button color="primary" (click)="addUser()" class="button"
-                    [disabled]="firstFormGroup.invalid && secondFormGroup.invalid" *ngIf="SubmitButton">Submit</button>
-                <button mat-raised-button color="primary" (click)="updateUser()" class="button"
-                    [disabled]="firstFormGroup.invalid && secondFormGroup.invalid" *ngIf="UpdateButton">Update</button>
-            </div>
-        </mat-step>
-    </mat-stepper>
+            </mat-step>
+        </mat-stepper>
+    </div>
 </div>

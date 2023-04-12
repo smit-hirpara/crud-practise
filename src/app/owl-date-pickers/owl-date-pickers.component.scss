@@ -54,9 +54,9 @@
     border: 0;
 }
 
-.custom-date-picker-input:hover,
-.custom-date-picker-input-2,
-.custom-date-picker-input-3 {
+.custom-date-picker-input:focus,
+.custom-date-picker-input-2:focus,
+.custom-date-picker-input-3:focus {
     box-shadow: 0;
     border: 1px solid #59b2c9;
 }
@@ -113,6 +113,106 @@
     left: 90%;
     top: 15px;
     color: rgba(0, 0, 0, 0.6);
+}
+
+
+/********************************* Custom Select Box ********************************************/
+.remove-arrow::-ms-expand {
+    display: none;
+}
+
+.remove-arrow {
+    -webkit-appearance: none;
+    appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+
+.custom-select-box-1 {
+    border: 1px solid rgb(145, 145, 145);
+    border-radius: 10px;
+    background: rgb(196, 196, 196);
+    color: #474747;
+    cursor: pointer;
+    height: 40px;
+    outline: none;
+    padding: 0 0 0 20px;
+    width: 100%;
+}
+
+.custom-select-box-1 option {
+    color: #000000;
+    padding: 10px !important;
+    background-color: #ffff;
+}
+
+.custom-select-box-2 {
+    border: 1px solid rgb(145, 145, 145);
+    border-radius: 10px;
+    background: rgb(196, 196, 196);
+    color: #474747;
+    cursor: pointer;
+    height: 40px;
+    outline: none;
+    padding: 0 0 0 20px;
+    width: 100%;
+    background-image:
+        linear-gradient(45deg, transparent 50%, gray 50%),
+        linear-gradient(135deg, gray 50%, transparent 50%),
+        linear-gradient(to right, #ccc, #ccc);
+    background-position:
+        calc(100% - 20px) calc(1em + 2px),
+        calc(100% - 15px) calc(1em + 2px),
+        calc(100% - 2.5em) 0.5em;
+    background-size:
+        5px 5px,
+        5px 5px,
+        1px 1.5em;
+    background-repeat: no-repeat;
+}
+
+.custom-select-box-2:focus {
+    background-image:
+        linear-gradient(45deg, green 50%, transparent 50%),
+        linear-gradient(135deg, transparent 50%, green 50%),
+        linear-gradient(to right, #ccc, #ccc);
+    transition: all 0.3s ease-in-out;
+    background-position:
+        calc(100% - 15px) 1em,
+        calc(100% - 20px) 1em,
+        calc(100% - 2.5em) 0.5em;
+    background-size:
+        5px 5px,
+        5px 5px,
+        1px 1.5em;
+    background-repeat: no-repeat;
+    border-color: green;
+    outline: 0;
+}
+
+.custom-select-box-2 option {
+    color: #000000;
+    padding: 10px !important;
+    background-color: #ffff;
+}
+
+.dropdown-image {
+    height: auto;
+    pointer-events: none;
+    position: absolute;
+    transform: translateX(-100%);
+    width: 15px;
+    margin: 13px 0 0 -20px;
+}
+
+.dropup-image {
+    height: auto;
+    pointer-events: none;
+    position: absolute;
+    transform: translateX(-100%);
+    width: 15px;
+    margin: 13px 0 0 -20px;
+    display: none;
 }
 
 /*******************************************************************************************************************/

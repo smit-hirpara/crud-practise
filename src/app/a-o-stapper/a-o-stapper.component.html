@@ -1,0 +1,546 @@
+<div class="stapper-body">
+    <div class="save-pay-btn">
+        <button class="test-btn btn"><i class="material-icons doller-icon">attach_money</i>
+            <p class="pay-btn-text">Pay Fee</p>
+        </button>
+        <button class="test-btn-2 btn"><i class="material-icons">save</i>
+        </button>
+    </div>
+    <div class="stapper-header">
+        <span>Admission Details</span>
+        <!-- <div>
+            <div class="header-boxes">Pay Fee : <span class="badge badge-danger"><i
+                        class="material-icons my-1">attach_money</i>100 Due</span></div>
+            <div class="header-boxes">Status : <div>Scheduled</div>
+            </div>
+            <div class="header-boxes">App No : <div class="app-no">BDR/01250</div>
+            </div>
+        </div> -->
+    </div>
+    <div class="stapper-full-form">
+        <mat-stepper orientation="vertical" [linear]="false" #stepper labelPosition="bottom">
+            <mat-step [stepControl]="firstFormGroup">
+                <form [formGroup]="firstFormGroup">
+                    <ng-template matStepLabel>Applications Details</ng-template>
+                    <div class="input-fileds-group-3">
+                        <mat-form-field appearance="fill" class="mat-form-fileds">
+                            <mat-label>Select Branch</mat-label>
+                            <mat-select name="food" formControlName="branch">
+                                <mat-option *ngFor="let food of foods" [value]="food.value">
+                                    {{food.viewValue}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="mat-form-fileds">
+                            <mat-label>Acadamic Year</mat-label>
+                            <input matInput formControlName="acadamicYear" required>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="mat-form-fileds">
+                            <mat-label>Select Standard</mat-label>
+                            <mat-select name="food" formControlName="standard">
+                                <mat-option *ngFor="let food of foods" [value]="food.value">
+                                    {{food.viewValue}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <button mat-raised-button color="primary" class="mx-2" matStepperNext>Next</button>
+                    </div>
+                </form>
+            </mat-step>
+            <mat-step [stepControl]="secondFormGroup">
+                <form [formGroup]="secondFormGroup">
+                    <ng-template matStepLabel>Student Profile</ng-template>
+                    <div class="input-fileds-group">
+                        <mat-form-field appearance="fill" class="mat-form-fileds" style="grid-column: span 3;">
+                            <mat-label>Name as Pervious School Offical Record</mat-label>
+                            <input matInput formControlName="test1" required>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="example-full-width">
+                            <mat-label>Barth Date</mat-label>
+                            <input type="text" matInput [owlDateTime]="dt42" [owlDateTimeTrigger]="dt42"
+                                placeholder="Ex. pat@example.com" class="mat-custom-date-picker"
+                                formControlName="test2">
+                            <i class="material-icons time-icon-section time-icon" style="font-size: 24px;"
+                                [owlDateTimeTrigger]="dt42">&#xe916;</i>
+                            <owl-date-time #dt42 [pickerType]="'calendar'"></owl-date-time>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="mat-form-fileds">
+                            <mat-label>Gender</mat-label>
+                            <mat-select name="food" formControlName="test3">
+                                <mat-option *ngFor="let food of foods" [value]="food.value">
+                                    {{food.viewValue}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="mat-form-fileds">
+                            <mat-label>Nationality</mat-label>
+                            <input matInput formControlName="test4" required>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="mat-form-fileds">
+                            <mat-label>Mother Tongue</mat-label>
+                            <input matInput formControlName="test5" required>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="mat-form-fileds">
+                            <mat-label>Religion</mat-label>
+                            <input matInput formControlName="test6" required>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="mat-form-fileds">
+                            <mat-label>Caste</mat-label>
+                            <input matInput formControlName="test7" required>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="mat-form-fileds">
+                            <mat-label>Category</mat-label>
+                            <input matInput formControlName="test8" required>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="mat-form-fileds">
+                            <mat-label>Sub Category</mat-label>
+                            <input matInput formControlName="test9" required>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="mat-form-fileds">
+                            <mat-label>Place Of Birth</mat-label>
+                            <input matInput formControlName="test10" required>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="mat-form-fileds">
+                            <mat-label>Achievements</mat-label>
+                            <input matInput formControlName="test11" required>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="mat-form-fileds">
+                            <mat-label>Intrests And Hobbies</mat-label>
+                            <input matInput formControlName="test12" required>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="mat-form-fileds">
+                            <mat-label>Identification Marks</mat-label>
+                            <input matInput formControlName="test13" required>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="mat-form-fileds">
+                            <mat-label>Bus Pickup Point</mat-label>
+                            <input matInput formControlName="test14" required>
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <button mat-raised-button class="mx-2" matStepperPrevious>Back</button>
+                        <button mat-raised-button color="primary" class="mx-2" matStepperNext>Next</button>
+                    </div>
+                </form>
+            </mat-step>
+            <mat-step [stepControl]="thirdFormGroup">
+                <form [formGroup]="thirdFormGroup">
+                    <ng-template matStepLabel>Primary Contact</ng-template>
+                    <div class="input-fileds-group">
+                        <mat-form-field appearance="fill" class="mat-form-fileds" style="grid-column: span 3;">
+                            <mat-label>Name</mat-label>
+                            <input matInput formControlName="test1" required>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="mat-form-fileds">
+                            <mat-label>Relation</mat-label>
+                            <mat-select name="food" formControlName="test2">
+                                <mat-option *ngFor="let food of foods" [value]="food.value">
+                                    {{food.viewValue}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="example-full-width">
+                            <mat-label>Mobile</mat-label>
+                            <input type="text" matInput placeholder="Ex. pat@example.com" class="mat-custom-date-picker"
+                                formControlName="test3">
+                            <i class="material-icons time-icon-section time-icon"
+                                style="font-size: 24px;">mobile_screen_share</i>
+                            <owl-date-time #dt42 [pickerType]="'calendar'"></owl-date-time>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="mat-form-fileds">
+                            <mat-label>Email</mat-label>
+                            <input matInput formControlName="test4" required>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="mat-form-fileds">
+                            <mat-label>Landline</mat-label>
+                            <input matInput formControlName="test5" required>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="mat-form-fileds">
+                            <mat-label>Profession</mat-label>
+                            <input matInput formControlName="test6" required>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="mat-form-fileds">
+                            <mat-label>Annual Income</mat-label>
+                            <input matInput formControlName="test7" required>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="mat-form-fileds">
+                            <mat-label>City</mat-label>
+                            <input matInput formControlName="test8" required>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="mat-form-fileds">
+                            <mat-label>District</mat-label>
+                            <input matInput formControlName="test9" required>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="mat-form-fileds">
+                            <mat-label>Zipcode</mat-label>
+                            <input matInput formControlName="test10" required>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="mat-form-fileds">
+                            <mat-label>Country</mat-label>
+                            <mat-select name="food" formControlName="test11">
+                                <mat-option *ngFor="let food of foods" [value]="food.value">
+                                    {{food.viewValue}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="mat-form-fileds">
+                            <mat-label>State</mat-label>
+                            <mat-select name="food" formControlName="test12">
+                                <mat-option *ngFor="let food of foods" [value]="food.value">
+                                    {{food.viewValue}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="mat-form-fileds">
+                            <mat-label>Address 1</mat-label>
+                            <input matInput formControlName="test13" required>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="mat-form-fileds">
+                            <mat-label>Address 2</mat-label>
+                            <input matInput formControlName="test14" required>
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <button mat-raised-button class="mx-2" matStepperPrevious>Back</button>
+                        <button mat-raised-button color="primary" class="mx-2" matStepperNext>Next</button>
+                    </div>
+                </form>
+            </mat-step>
+            <mat-step [stepControl]="fourthFormGroup">
+                <form [formGroup]="fourthFormGroup">
+                    <ng-template matStepLabel>Previous School</ng-template>
+                    <div class="input-fileds-group">
+                        <mat-form-field appearance="fill" class="mat-form-fileds" style="grid-column: span 3;">
+                            <mat-label>Name Of Previous School</mat-label>
+                            <input matInput formControlName="test1" required>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="mat-form-fileds">
+                            <mat-label>Location</mat-label>
+                            <input matInput formControlName="test2" required>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="mat-form-fileds">
+                            <mat-label>Medium</mat-label>
+                            <input matInput formControlName="test3" required>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="mat-form-fileds">
+                            <mat-label>Standard</mat-label>
+                            <input matInput formControlName="test4" required>
+                        </mat-form-field>
+                        <div class="radio-btn-group">
+                            <p>Board :</p>
+                            <mat-radio-group aria-label="Select an option" class="radio-group">
+                                <mat-radio-button value="1" color="primary" class="radio-button">ICSE</mat-radio-button>
+                                <mat-radio-button value="2" color="primary" class="radio-button">CBSE</mat-radio-button>
+                                <mat-radio-button value="3" color="primary" class="radio-button">SSC</mat-radio-button>
+                                <mat-radio-button value="4" color="primary" class="radio-button">OTHER
+                                </mat-radio-button>
+                            </mat-radio-group>
+                        </div>
+                        <mat-form-field appearance="fill" class="mat-form-fileds">
+                            <mat-label>Marks & Parcentage</mat-label>
+                            <input matInput formControlName="test5" required>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="mat-form-fileds">
+                            <mat-label>Curent School Year</mat-label>
+                            <input matInput formControlName="test6" required>
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <button mat-raised-button class="mx-2" matStepperPrevious>Back</button>
+                        <button mat-raised-button color="primary" class="mx-2" matStepperNext>Next</button>
+                    </div>
+                </form>
+            </mat-step>
+            <mat-step [stepControl]="fifthFormGroup">
+                <form [formGroup]="fifthFormGroup">
+                    <ng-template matStepLabel>Parents Information</ng-template>
+                    <div class="forms-group">
+                        <div class="input-form-fileds-group">
+                            <div class="text-center py-2 mb-3 form-heading">Father
+                                Information
+                            </div>
+                            <mat-form-field appearance="fill" class="mat-form-fileds" style="grid-column: span 2;">
+                                <mat-label>Name</mat-label>
+                                <input matInput formControlName="test1" required>
+                            </mat-form-field>
+                            <mat-form-field appearance="fill" class="mat-form-fileds">
+                                <mat-label>Profession</mat-label>
+                                <input matInput formControlName="test2" required>
+                            </mat-form-field>
+                            <mat-form-field appearance="fill" class="mat-form-fileds">
+                                <mat-label>Qualifacation</mat-label>
+                                <input matInput formControlName="test3" required>
+                            </mat-form-field>
+                            <mat-form-field appearance="fill" class="mat-form-fileds">
+                                <mat-label>Mobile</mat-label>
+                                <input matInput formControlName="test4" required>
+                            </mat-form-field>
+                            <mat-form-field appearance="fill" class="mat-form-fileds">
+                                <mat-label>Email</mat-label>
+                                <input matInput formControlName="test5" required>
+                            </mat-form-field>
+                        </div>
+                        <div class="input-form-fileds-group">
+                            <div class="text-center py-2 mb-3 form-heading">Mother
+                                Information
+                            </div>
+                            <mat-form-field appearance="fill" class="mat-form-fileds" style="grid-column: span 2;">
+                                <mat-label>Name</mat-label>
+                                <input matInput formControlName="test6" required>
+                            </mat-form-field>
+                            <mat-form-field appearance="fill" class="mat-form-fileds">
+                                <mat-label>Profession</mat-label>
+                                <input matInput formControlName="test7" required>
+                            </mat-form-field>
+                            <mat-form-field appearance="fill" class="mat-form-fileds">
+                                <mat-label>Qualifacation</mat-label>
+                                <input matInput formControlName="test8" required>
+                            </mat-form-field>
+                            <mat-form-field appearance="fill" class="mat-form-fileds">
+                                <mat-label>Mobile</mat-label>
+                                <input matInput formControlName="test9" required>
+                            </mat-form-field>
+                            <mat-form-field appearance="fill" class="mat-form-fileds">
+                                <mat-label>Email</mat-label>
+                                <input matInput formControlName="test10" required>
+                            </mat-form-field>
+                        </div>
+                        <mat-form-field appearance="fill" class="mat-form-fileds w-50 mx-auto"
+                            style="grid-column: span 2;">
+                            <mat-label>Marital Status</mat-label>
+                            <mat-select name="food" formControlName="test12">
+                                <mat-option *ngFor="let food of foods" [value]="food.value">
+                                    {{food.viewValue}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <button mat-raised-button class="mx-2" matStepperPrevious>Back</button>
+                        <button mat-raised-button color="primary" class="mx-2" matStepperNext>Next</button>
+                    </div>
+                </form>
+            </mat-step>
+            <mat-step [stepControl]="sixthFormGroup">
+                <form [formGroup]="sixthFormGroup">
+                    <ng-template matStepLabel>Local Guardian (Optional)</ng-template>
+                    <div class="input-fileds-group">
+                        <mat-form-field appearance="fill" class="mat-form-fileds">
+                            <mat-label>Name</mat-label>
+                            <input matInput formControlName="test1" required>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="mat-form-fileds">
+                            <mat-label>Relation</mat-label>
+                            <input matInput formControlName="test2" required>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="mat-form-fileds">
+                            <mat-label>Qualification</mat-label>
+                            <input matInput formControlName="test3" required>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="mat-form-fileds">
+                            <mat-label>Profession</mat-label>
+                            <input matInput formControlName="test4" required>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="mat-form-fileds">
+                            <mat-label>Email</mat-label>
+                            <input matInput formControlName="test5" required>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="mat-form-fileds">
+                            <mat-label>Mobile</mat-label>
+                            <input matInput formControlName="test6" required>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="mat-form-fileds">
+                            <mat-label>City</mat-label>
+                            <input matInput formControlName="test7" required>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="mat-form-fileds">
+                            <mat-label>District</mat-label>
+                            <input matInput formControlName="test8" required>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="mat-form-fileds">
+                            <mat-label>Zipcode</mat-label>
+                            <input matInput formControlName="test9" required>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="mat-form-fileds">
+                            <mat-label>Country</mat-label>
+                            <mat-select name="food" formControlName="test10">
+                                <mat-option *ngFor="let food of foods" [value]="food.value">
+                                    {{food.viewValue}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="mat-form-fileds">
+                            <mat-label>State</mat-label>
+                            <mat-select name="food" formControlName="test11">
+                                <mat-option *ngFor="let food of foods" [value]="food.value">
+                                    {{food.viewValue}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="mat-form-fileds" style="grid-column: span 2;">
+                            <mat-label>Address 1</mat-label>
+                            <input matInput formControlName="test12" required>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="mat-form-fileds" style="grid-column: span 2;">
+                            <mat-label>Address 2</mat-label>
+                            <input matInput formControlName="test13" required>
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <button mat-raised-button class="mx-2" matStepperPrevious>Back</button>
+                        <button mat-raised-button color="primary" class="mx-2" matStepperNext>Next</button>
+                    </div>
+                </form>
+            </mat-step>
+            <mat-step [stepControl]="seventhFormGroup">
+                <form [formGroup]="seventhFormGroup">
+                    <ng-template matStepLabel>Medical Information</ng-template>
+                    <div class="input-fileds-group-2">
+                        <mat-form-field appearance="fill" class="mat-form-fileds">
+                            <mat-label>Height</mat-label>
+                            <input matInput formControlName="test1" required>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="mat-form-fileds">
+                            <mat-label>Weight</mat-label>
+                            <input matInput formControlName="test2" required>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="mat-form-fileds">
+                            <mat-label>Special Attention</mat-label>
+                            <input matInput formControlName="test3" required>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="mat-form-fileds">
+                            <mat-label>Select Blood Group</mat-label>
+                            <mat-select name="food" formControlName="test4">
+                                <mat-option *ngFor="let food of foods" [value]="food.value">
+                                    {{food.viewValue}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <mat-form-field appearance="fill" class="mat-form-fileds">
+                            <mat-label>Other</mat-label>
+                            <input matInput formControlName="test5" required>
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <button mat-raised-button class="mx-2" matStepperPrevious>Back</button>
+                        <button mat-raised-button color="primary" class="mx-2" matStepperNext>Next</button>
+                    </div>
+                </form>
+            </mat-step>
+            <mat-step [stepControl]="eaighthFormGroup">
+                <form [formGroup]="eaighthFormGroup">
+                    <ng-template matStepLabel>Document Uplode</ng-template>
+                    <div class="file-ulpode-section">
+                        <div class="formbold-mb-5 formbold-file-input">
+                            <input type="file" name="file" id="file" (change)="onSelectFile($event);">
+                            <label for="file">
+                                <div class="drop-box-texts">
+                                    <i class="material-icons mx-3">cloud_upload</i>
+                                    <!-- <i class="material-icons">insert_drive_file</i> -->
+                                    <div class="formbold-drop-file">Choode File</div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="priview-image-section" *ngIf="uplodeImage">
+                            <img [src]="url" class="uplode-file-priview">
+                            <div class="close-btn"><i class="material-icons" (click)="Closeimage()">close</i></div>
+                        </div>
+                        <mat-form-field appearance="fill" class="mat-form-fileds" *ngIf="documenttype">
+                            <mat-label>Select Document Type</mat-label>
+                            <mat-select name="food">
+                                <mat-option *ngFor="let food of foods" [value]="food.value">
+                                    {{food.viewValue}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <button mat-raised-button color="primary" class="mr-2" matStepperPrevious>Back</button>
+                        <button mat-raised-button (click)="stepper.reset()" class="mr-2">Reset</button>
+                    </div>
+                </form>
+            </mat-step>
+        </mat-stepper>
+        <button class="downlod-btn mx-5 mb-4" mat-raised-button><i class="material-icons mr-2">cloud_download</i>Downlod
+            Form</button>
+    </div>
+
+    <mat-form-field appearance="outline" class="mat-form-fileds" style="width: 50%;">
+        <input matInput required style="display: none;">
+        <div class="d-flex align-items-center">
+            <div style="border-right: 2px solid gray;" class="pr-3">board :</div>
+            <div class=" d-flex">
+                <mat-radio-group aria-label="Select an option" class="radio-group d-flex">
+                    <mat-radio-button value=" 1" color="primary" class="radio-button">ICSE</mat-radio-button>
+                    <mat-radio-button value="2" color="primary" class="radio-button">CBSE</mat-radio-button>
+                    <mat-radio-button value="3" color="primary" class="radio-button">SSC</mat-radio-button>
+                    <mat-radio-button value="4" color="primary" class="radio-button">OTHER
+                    </mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Leave a comment</mat-label>
+        <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+    </mat-form-field>
+
+
+    <div class="applied-cards-group mt-5">
+        <ng-container *ngFor="let a of [1,2,3,4,5,6,7,8]">
+            <div class="applied-card-body">
+                <div class="student-image-section">
+                    <!-- <i class="material-icons student-default-image">account_circle</i> -->
+                    <!-- <img src="https://assets.webiconspng.com/uploads/2016/12/User-Icon.png" class="student-image"
+                        alt="student image"> -->
+                    <!-- <img src="https://cdn-icons-png.flaticon.com/512/201/201818.png" class="student-image"
+                        alt="student image"> -->
+                    <!-- <img src="https://cdn.icon-icons.com/icons2/1879/PNG/512/iconfinder-8-avatar-2754583_120515.png"
+                        class="student-image" alt="student image"> -->
+                    <!-- <img src="https://cdn-icons-png.flaticon.com/512/4305/4305692.png" class="student-image"
+                        alt="student image"> -->
+                    <!-- <img src="https://cdn3d.iconscout.com/3d/premium/thumb/boy-avatar-6299533-5187865.png"
+                        class="student-image" alt="student image"> -->
+                    <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZZY_-tC3gzTuZbdQcAOfknEHdmtd55HtF4U0R4LoBqgyVdCRFT_z_2QibLrHQQAzXYq2krnuAhqE&usqp=CAU&ec=48665701"
+                            class="student-image" alt="student image"> -->
+                    <!-- <img src="https://static.vecteezy.com/system/resources/previews/016/766/342/non_2x/happy-smiling-young-man-avatar-3d-portrait-of-a-man-cartoon-character-people-illustration-isolated-on-transparent-background-png.png"
+                        class="student-image" alt="student image"> -->
+                    <img src="https://cdn3d.iconscout.com/3d/premium/thumb/student-5266576-4403850.png"
+                        class="student-image" alt="student image">
+                    <div class="eadit-profile-btn-section">
+                        <div class="eadit-btn"><i class="material-icons">camera_alt</i></div>
+                    </div>
+                </div>
+                <p class="student-name">Jenil patel</p>
+                <p class="student-branch"><span class="badge badge-success">Hydarabad</span></p>
+                <div class="full-details-box">
+                    <div class="details-sections">
+                        <i class="material-icons">class</i>
+                        <p>V ~ Day School</p>
+                    </div>
+                    <div class="details-sections">
+                        <i class="material-icons">email</i>
+                        <p>Test@gmail.com</p>
+                    </div>
+                    <div class="details-sections">
+                        <i class="material-icons">call</i>
+                        <p>1234567895</p>
+                    </div>
+                    <div class="details-sections">
+                        <i class="material-icons">date_range</i>
+                        <p>2022 - 2023</p>
+                    </div>
+                </div>
+                <div class="button-section">
+                    <button mat-raised-button class="fill-details-btn">Fill Details</button>
+                </div>
+                <div class="edit-card-btn-section">
+                    <div class="eadit-btn"><i class="material-icons">edit</i></div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>

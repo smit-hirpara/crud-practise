@@ -1,0 +1,1355 @@
+/* =====================================================================================================================================================
+                                                                    My CSS For Applied Cards
+===================================================================================================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Brawler:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:wght@400;700&display=swap');
+
+/* -------- Applied Application Body -------- */
+.applied-application-body {
+    background-color: #F1F1F1;
+    padding: 20px;
+    // margin-top: 80px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+/* -------- Apply Buttton Section -------- */
+.apply-button-section {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1;
+}
+
+/* -------- Apply Buttton -------- */
+.apply-button-section button {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #116FBF;
+    border-radius: 50%;
+    background-color: #F1F1F1;
+}
+
+/* -------- Apply Buttton Icon -------- */
+.apply-button-section button i {
+    margin: 2px 0 0 -3px;
+    font-size: 30px;
+    color: #116FBF;
+}
+
+/* -------- Hover Apply Buttton -------- */
+.apply-button-section button:hover {
+    background-color: #116FBF;
+}
+
+.apply-button-section button:hover i {
+    color: #ffff;
+}
+
+/* -------- Applied Application Text -------- */
+.alllead {
+    font-size: 30px;
+    font-family: TFArrowMedium;
+    text-shadow: 2px 2px 2px #b3cbeb;
+    font-weight: bolder;
+    margin: 0 0 10px 0;
+    width: 350px;
+    border-bottom: 1px solid black;
+    margin: 0 0 30px 0;
+}
+
+/* -------- Custom Grid -------- */
+.custom-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+}
+
+/* -------- Application Full Card -------- */
+.application-cards {
+    margin: 60px 15px 15px 15px;
+    border-radius: 8px;
+    background-color: #F2F2F2;
+    box-shadow: 1px 2px 5px rgb(172, 172, 172);
+    height: max-content;
+}
+
+/* -------- Image Section -------- */
+.student-image-section {
+    margin: -75px auto 0 auto;
+    width: max-content;
+}
+
+/* -------- Default Image -------- */
+.student-default-image {
+    font-size: 110px;
+    color: #116FBF;
+    background-color: #ffff;
+}
+
+/* -------- Student Image -------- */
+.student-image {
+    width: 95px;
+    height: 95px;
+    border: 1px solid #116FBF;
+    padding: 5px;
+    border-radius: 50%;
+    margin: 5px 0 10px 0;
+    box-shadow: 1px 5px 5px rgb(121, 121, 121);
+    background-color: #ffff;
+}
+
+/* -------- Student Name -------- */
+.student-name {
+    text-align: center;
+    color: #1C82AD;
+    font-size: 24px;
+    font-family: 'Brawler', serif;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* -------- Student Branch -------- */
+.branch-name {
+    text-align: center;
+    margin: -8px 0 0 0;
+}
+
+/* -------- Student Branch And AY -------- */
+.branch-name>span:last-child {
+    margin: 0 0 0 5px;
+    font-size: 12px;
+}
+
+/* -------- Student Details Section -------- */
+.student-details-section {
+    display: flex;
+    align-items: center;
+    margin: 4px 0;
+}
+
+/* -------- Student Details Section Icons -------- */
+.student-details-section i {
+    color: #2F2F2F;
+    margin: 0 10px;
+    font-size: 20px;
+}
+
+/* -------- Student Details Section Texts -------- */
+.student-details-section p {
+    color: #5F5E5E;
+    font-size: 15px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 2.4px 0;
+}
+
+/* -------- Fill Details Button Section -------- */
+.button-section {
+    text-align: center;
+    margin: 10px 0 0 0;
+}
+
+/* -------- Fill Details Button -------- */
+.fill-details-button {
+    margin: 0;
+    background-color: #116FBF;
+    color: white;
+}
+
+@media only screen and (max-width: 1200px) {
+    .custom-grid {
+        grid-template-columns: repeat(3, 33.33%);
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .student-image-section {
+        margin: -65px auto 0 auto;
+    }
+
+    .application-card-body {
+        padding: 10px 10px;
+        transition: all 0.5s ease-out;
+    }
+
+    .button-section {
+        margin: 10px 0 10px 0;
+    }
+
+    .alllead {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .custom-grid {
+        grid-template-columns: repeat(2, 50%);
+    }
+}
+
+@media only screen and (max-width: 580px) {
+    .custom-grid {
+        grid-template-columns: repeat(1, 100%);
+    }
+
+    .applied-application-body {
+        padding: 10px;
+        transition: all 0.5s ease-out;
+    }
+
+    .student-name {
+        font-size: 20px;
+    }
+
+    .branch-name {
+        font-size: 13px;
+    }
+
+    .student-details-section i {
+        font-size: 18px;
+    }
+
+    .student-details-section p {
+        font-size: 15px;
+        transition: all 0.5s ease-out;
+    }
+}
+
+
+
+/* ================================ Card 2 Design CSS ================================= */
+/* -------- Application Full Card -------- */
+.application-cards-2 {
+    margin: 60px 15px 15px 15px;
+    border-radius: 8px;
+    background-color: #F2F2F2;
+    box-shadow: 1px 2px 5px rgb(172, 172, 172);
+    border: 2px solid #116FBF;
+    height: max-content;
+}
+
+
+/* -------- Student Image -------- */
+.student-image-2 {
+    width: 95px;
+    height: 95px;
+    padding: 0;
+    border-radius: 50%;
+    margin: 5px auto 10px auto;
+    box-shadow: 1px 5px 5px rgb(121, 121, 121);
+    border: 2px solid #116FBF;
+    background-color: #ffff;
+}
+
+/* -------- Student Name -------- */
+.student-name-2 {
+    text-align: center;
+    color: #1C82AD;
+    font-size: 24px;
+    font-family: 'Brawler', serif;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.user-details-box {
+    width: max-content;
+    margin: 0 auto;
+}
+
+/* -------- Student Details Section -------- */
+.student-details-section-2 {
+    display: flex;
+    align-items: center;
+    margin: 4px 0;
+}
+
+/* -------- Student Details Section Icons -------- */
+.student-details-section-2 i {
+    color: #116FBF;
+    margin: 0 10px 0 0;
+    font-size: 20px;
+}
+
+/* -------- Student Details Section Texts -------- */
+.student-details-section-2 p {
+    color: #7C7C7C;
+    font-size: 15px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 2.4px 0;
+}
+
+/* -------- Fill Details Button -------- */
+.fill-details-button-2 {
+    margin: 0;
+    background-color: #116FBF !important;
+    color: #ffff !important;
+}
+
+
+/* ================================ Card 4 Design CSS ================================= */
+/* -------- Application Full Card -------- */
+.application-cards-4 {
+    margin: 60px 15px 15px 15px;
+    border-radius: 8px;
+    background-color: #F2F2F2;
+    box-shadow: 1px 2px 5px rgb(172, 172, 172);
+    border: 2px solid #116FBF;
+    position: relative;
+    height: max-content;
+    padding: 0 !important;
+}
+
+.application-cards:hover .edit-button-1 {
+    display: inline-flex;
+}
+
+.application-cards-2:hover .edit-button-1 {
+    display: inline-flex;
+}
+
+.application-cards-4:hover .edit-button-1 {
+    display: inline-flex;
+}
+
+.application-cards-5:hover .edit-button-1 {
+    display: inline-flex;
+}
+
+.user-details-box-4 {
+    display: grid;
+    grid-template-columns: repeat(3, 33.33%);
+    margin: 5px 0 15px 0;
+}
+
+/* -------- Student Details Section -------- */
+.student-details-section-4 {
+    text-align: center;
+    margin: 10px 0 0 0;
+}
+
+/* -------- Student Details Section Icons -------- */
+.student-details-section-4>i {
+    color: #116FBF;
+    font-size: 23px;
+}
+
+/* -------- Student Details Section Texts -------- */
+.student-details-section-4>p {
+    color: #7C7C7C;
+    font-size: 15px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 0;
+    border-right: 1px solid rgb(77, 77, 77);
+}
+
+.student-details-section-4:last-child>p {
+    border-right: 0;
+}
+
+.edit-button-1 {
+    border: 2px solid #116FBF;
+    height: 30px;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #ffff;
+    top: -13px;
+    right: -13px;
+    transition: all 0.3s ease-in-out;
+    display: none;
+}
+
+.edit-button-1>i {
+    font-size: 20px;
+}
+
+.edit-button-1:hover {
+    background-color: #116FBF;
+    color: #ffff;
+}
+
+
+/* ================================ Card 5 Design CSS ================================= */
+.application-card-body-5 {
+    padding: 0;
+}
+
+/* -------- Image Section -------- */
+.student-image-section-5 {
+    margin: 0 auto;
+    background: url(https://www.holidify.com/images/bgImages/1828.jpg) #116ebf7a;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    border-radius: 10px 10px 0 0;
+    padding: 10px 10px 40px 10px;
+}
+
+/* -------- Student Image -------- */
+.student-image-5 {
+    width: 95px;
+    height: 95px;
+    padding: 0;
+    border-radius: 50%;
+    margin: 5px auto 10px auto;
+    box-shadow: 1px 5px 5px rgb(121, 121, 121);
+    border: 2px solid #116FBF;
+    background-color: #71b5f0;
+}
+
+/* -------- Student Name -------- */
+.student-name-5 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 24px;
+    font-family: 'Brawler', serif;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* -------- Student Branch -------- */
+.branch-name-5 {
+    text-align: center;
+    margin: -8px 0 0 0;
+}
+
+/* -------- Student Branch And AY -------- */
+.branch-name-5>span:last-child {
+    margin: 0 0 0 5px;
+    font-size: 12px;
+    color: #ffff;
+}
+
+/* -------- Student Details Section -------- */
+.student-details-section-5 {
+    text-align: center;
+    margin: -25px 0 0 0;
+}
+
+/* -------- Student Details Section Icons -------- */
+.student-details-section-5>i {
+    color: #ffffff;
+    font-size: 23px;
+    background-color: #116FBF;
+    padding: 8px;
+    border-radius: 50px;
+    border-bottom: 0;
+}
+
+
+/* -------- Student Details Section Texts -------- */
+.student-details-section-5>p {
+    color: #7C7C7C;
+    font-size: 15px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 0;
+    border-right: 1px solid rgb(77, 77, 77);
+}
+
+.student-details-section-5:last-child>p {
+    border-right: 0;
+}
+
+
+/* ================================ Card 6 Design CSS ================================= */
+.icon-design {
+    color: #ffff !important;
+    margin: 5px 0;
+    font-size: 23px;
+    background-color: #116FBF;
+    padding: 8px;
+    border-radius: 50px;
+    border-bottom: 0;
+}
+
+.profile-img-box {
+    position: relative;
+    // margin: -65px auto 0 auto;
+    margin: 0 auto;
+    width: max-content;
+}
+
+.profile-img-btn {
+    position: absolute;
+    bottom: 10%;
+    right: -0%;
+    display: none;
+}
+
+.profile-img-btn>i {
+    border: 2px solid #116FBF;
+    border-radius: 50px;
+    padding: 2px;
+    font-size: 20px;
+    background-color: #ffff;
+    cursor: pointer;
+}
+
+.profile-img-btn>i:hover {
+    background-color: #116FBF;
+    color: #ffff;
+    transition: all 0.3s ease-in-out;
+}
+
+.profile-img-box:hover .profile-img-btn {
+    display: block;
+}
+
+.rounded-image-cornar-1 {
+    position: absolute;
+    background-color: transparent;
+    padding: 10px;
+    top: 43px;
+    left: -24px;
+    border-radius: 50%;
+    transform: rotate(45deg);
+    // box-shadow: -1px -5px 0 0 #f1f1f1;
+    border-top: 10px solid #f1f1f1;
+}
+
+.rounded-image-cornar-2 {
+    position: absolute;
+    background-color: transparent;
+    padding: 10px;
+    top: 43px;
+    border-radius: 50%;
+    right: -24px;
+    // box-shadow: -1px 2px 0 0 #f1f1f1;
+    transform: rotate(-45deg);
+    border-top: 10px solid #f1f1f1;
+}
+
+/* ================================ Card 7 Design CSS ================================= */
+.student-details-section-6 {
+    text-align: center;
+    margin: -25px 0 0 0;
+}
+
+.student-details-section-6>i {
+    color: #ffffff;
+    font-size: 23px;
+    background-color: #116FBF;
+    padding: 8px;
+    border-radius: 50%;
+    border: 3px solid #ffff;
+    border-bottom: 0;
+}
+
+.student-details-section-6>p {
+    color: #7C7C7C;
+    font-size: 15px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 0;
+    border-right: 1px solid rgb(77, 77, 77);
+}
+
+.student-details-section-6:last-child>p {
+    border-right: 0;
+}
+
+.student-image-section-6 {
+    margin: 0 auto;
+    background: url(https://www.holidify.com/images/bgImages/1828.jpg) #116ebf7a;
+    // background: url(https://m5.paperblog.com/i/282/2821611/nature-background-pictures-free-photo-nature--L-Al6OBw.jpeg) #116ebf7a;
+    // background-color: #116ebfa8;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    border-radius: 10px 10px 0 0;
+    padding: 10px 10px 40px 10px;
+}
+
+
+/* =====================================================================================================================================================
+                                                            Apply Online Form CSS
+===================================================================================================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Brawler:wght@300;400;500;600;700;800&display=swap');
+
+
+.apply-online-body {
+    padding: 70px;
+    background-image: url(https://gurukul.org/wp-content/uploads/2019/10/best-international-school.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+}
+
+.apply-form-body {
+    // background-color: #edededa9;
+    padding: 20px;
+    width: 600px;
+    backdrop-filter: blur(4px);
+    background-image: linear-gradient(to right top, #edededa9, #fdfdfd1e);
+    // background-color: #edededa9;
+    margin: 0 auto;
+    border: 10px solid #d1d1d1a9;
+}
+
+.eaducation-icon-section {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    background-color: #116FBF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.eaducation-icon-section>i {
+    font-size: 30px;
+    color: white;
+}
+
+.apply-admission-text {
+    margin: 10px auto;
+    border-bottom: 1px solid black;
+    width: 300px;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    font-family: 'Brawler', serif;
+}
+
+.input-fileds {
+    background-color: #F7F7F7;
+    border: 0;
+    border: 2px solid #868686;
+    margin: 20px auto;
+    border-radius: 9px;
+    color: black;
+    height: 38px;
+}
+
+.remove-arrow::-ms-expand {
+    display: none;
+}
+
+.remove-arrow {
+    -webkit-appearance: none;
+    appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+
+select:invalid,
+.input-fileds::placeholder {
+    color: #777777;
+}
+
+.custom-select-box {
+    background-color: #F7F7F7;
+    border: 0;
+    border: 2px solid #868686;
+    margin: 0 auto 20px auto;
+    border-radius: 9px;
+    color: black;
+    cursor: pointer;
+    padding: 0 0 0 10px;
+    width: 100%;
+    height: 38px !important;
+    background-image:
+        linear-gradient(45deg, transparent 50%, gray 50%),
+        linear-gradient(135deg, gray 50%, transparent 50%);
+    background-position:
+        calc(100% - 20px) calc(0.8em + 2px),
+        calc(100% - 15px) calc(0.8em + 2px);
+    background-size:
+        5px 5px,
+        5px 5px;
+    background-repeat: no-repeat;
+    overflow-y: scroll;
+    transition: all 0.5s ease-in-out;
+}
+
+.custom-select-box:focus {
+    background-image:
+        linear-gradient(45deg, #116FBF 50%, transparent 50%),
+        linear-gradient(135deg, transparent 50%, #116FBF 50%);
+    transition: all 0.3s ease-in-out;
+    background-position:
+        calc(100% - 15px) 0.9em,
+        calc(100% - 20px) 0.9em;
+    background-size:
+        5px 5px,
+        5px 5px;
+    transition: all 0.5s ease-in-out;
+    background-repeat: no-repeat;
+    border-color: #116FBF;
+    outline: 0;
+}
+
+.custom-select-box option {
+    color: #000000 !important;
+    padding: 10px !important;
+    background-color: #ffff;
+}
+
+.checkbox-section {
+    display: flex;
+    align-items: center;
+}
+
+.custom-checkbox {
+    height: 20px;
+    width: 20px;
+}
+
+.checkbox-section>p {
+    margin: 0 10px 0 10px;
+    font-weight: 500;
+}
+
+.info-icon {
+    margin: 5px 0 0 0;
+    color: #116FBF;
+}
+
+.buttons-section {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px 0;
+}
+
+.cancel-button {
+    border: 2px solid #116FBF;
+    border-radius: 50px;
+    width: 200px;
+    color: #116FBF;
+    margin: 0 10px 0 0;
+    font-weight: 500;
+    background-color: #ffff;
+}
+
+.apply-button {
+    background-color: #116FBF;
+    color: #ffff;
+    border-radius: 50px;
+    width: 200px;
+    margin: 0 0 0 10px;
+}
+
+.fill-lead-section {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0 0 0;
+}
+
+.fill-lead-section>p {
+    margin: 0 5px 0 0;
+}
+
+.fill-lead-section>a {
+    text-decoration: underline;
+    color: #000000;
+    font-weight: 500;
+}
+
+
+/* ==================================================== Apply For New Admission Form Design 2 CSS ====================================================== */
+.eaducation-icon-section-2 {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    background-color: #FF6161;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.eaducation-icon-section-2>i {
+    font-size: 30px;
+    color: white;
+}
+
+.cancel-button-2 {
+    border: 2px solid #FF6161;
+    border-radius: 50px;
+    width: 200px;
+    color: #FF6161;
+    margin: 0 10px 0 0;
+    font-weight: 500;
+    background-color: #ffff;
+}
+
+.apply-button-2 {
+    background-color: #ff6161;
+    color: #ffff;
+    border-radius: 50px;
+    width: 200px;
+    margin: 0 0 0 10px;
+}
+
+
+
+
+
+
+/* ================================================== Apply For New Admission Form Desing 3 CSS =============================================== */
+
+.apply-form-body-2 {
+    background-color: #23232391;
+    padding: 20px;
+    width: 600px;
+    backdrop-filter: blur(4px);
+    margin: 0 auto;
+    border: 10px solid #d1d1d1a9;
+}
+
+.apply-admission-text-2 {
+    margin: 10px auto;
+    border-bottom: 1px solid #ffff;
+    width: 300px;
+    text-align: center;
+    color: #ffff;
+    font-size: 20px;
+    font-family: 'Brawler', serif;
+}
+
+.checkbox-section-2 {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-section-2>p {
+    margin: 0 10px 0 10px;
+    font-weight: 500;
+    color: rgb(218, 216, 216);
+}
+
+.fill-lead-section-2 {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0 0 0;
+}
+
+.fill-lead-section-2>p {
+    margin: 0 5px 0 0;
+    color: rgb(218, 216, 216);
+}
+
+.fill-lead-section-2>a {
+    text-decoration: underline;
+    color: #000000;
+    font-weight: 500;
+}
+
+/* ================================================== Apply For New Admission Form Desing 4 CSS =============================================== */
+.apply-form-body-3 {
+    background-color: #2323231f;
+    padding: 20px;
+    width: 600px;
+    backdrop-filter: blur(4px);
+    margin: 0 auto;
+    box-shadow: 1px 5px 10px rgb(29, 28, 28);
+}
+
+
+/* ================================================== Apply For New Admission Form Desing 5 CSS =============================================== */
+.apply-form-body-4 {
+    background-color: #23232398;
+    padding: 20px;
+    width: 600px;
+    backdrop-filter: blur(4px);
+    margin: 0 auto;
+    box-shadow: 1px 5px 40px rgb(29, 28, 28);
+}
+
+
+/* ================================================== Apply For New Admission Form Desing 6 CSS =============================================== */
+.apply-form-body-5 {
+    background-color: #a8a8a821;
+    padding: 20px;
+    width: 600px;
+    backdrop-filter: blur(7px);
+    margin: 0 auto;
+    box-shadow: 1px 5px 10px rgb(29, 28, 28);
+}
+
+.input-fileds-6 {
+    background-color: #f7f7f700;
+    border: 0;
+    border-bottom: 2px solid #d4d4d4;
+    border-radius: 0;
+    margin: 20px auto;
+    color: rgb(255, 255, 255);
+    height: 38px;
+}
+
+.custom-select-box-6:invalid,
+.input-fileds-6::placeholder {
+    color: #d4d4d4;
+}
+
+::ng-deep .mat-mdc-form-field::placeholder {
+    color: #ffff
+}
+
+.custom-select-box-6 {
+    background-color: #f7f7f700;
+    border: 0;
+    border-bottom: 2px solid #d4d4d4;
+    margin: 0 auto 20px auto;
+    border-radius: 0;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    padding: 0 0 0 10px;
+    width: 100%;
+    height: 38px !important;
+    background-image:
+        linear-gradient(45deg, transparent 50%, #d4d4d4 50%),
+        linear-gradient(135deg, #d4d4d4 50%, transparent 50%);
+    background-position:
+        calc(100% - 20px) calc(0.8em + 2px),
+        calc(100% - 15px) calc(0.8em + 2px);
+    background-size:
+        5px 5px,
+        5px 5px;
+    background-repeat: no-repeat;
+    overflow-y: scroll;
+    transition: all 0.5s ease-in-out;
+}
+
+.custom-select-box-6:focus {
+    background-image:
+        linear-gradient(45deg, #116FBF 50%, transparent 50%),
+        linear-gradient(135deg, transparent 50%, #116FBF 50%);
+    transition: all 0.3s ease-in-out;
+    background-position:
+        calc(100% - 15px) 0.9em,
+        calc(100% - 20px) 0.9em;
+    background-size:
+        5px 5px,
+        5px 5px;
+    transition: all 0.5s ease-in-out;
+    background-repeat: no-repeat;
+    border-color: #116FBF;
+    outline: 0;
+}
+
+.custom-select-box-6 option {
+    color: #000000 !important;
+    padding: 10px !important;
+    background-color: #ffff;
+}
+
+.cancel-button-6 {
+    border: 2px solid #ffffff;
+    border-radius: 50px;
+    width: 200px;
+    color: #ffffff;
+    margin: 0 10px 0 0;
+    font-weight: 500;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.apply-button-6 {
+    border: 2px solid #ffffff;
+    border-radius: 50px;
+    width: 200px;
+    color: #ffff;
+    margin: 0 0 0 10px;
+    font-weight: 500;
+    background-color: #116FBF;
+}
+
+/* ================================================== Apply For New Admission Form With Mat Fields CSS =============================================== */
+.custom-mat-field {
+    width: 100%;
+    margin: 0 0 -15px 0;
+}
+
+/* -------- Mat Input Label --------- */
+::ng-deep .mat-mdc-form-field .mat-mdc-floating-label.mdc-floating-label {
+    color: #d4d4d4;
+}
+
+/* -------- Mat Input Border --------- */
+::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::before {
+    border-bottom-color: #d4d4d4;
+    border-bottom-width: 2px;
+}
+
+/* -------- Mat Input Body --------- */
+::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+    background-color: #8f393900;
+}
+
+/* -------- Mat Input Animated Border --------- */
+::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled):hover .mdc-line-ripple::before {
+    border-bottom-color: #d4d4d4;
+    border-bottom-width: 2px;
+}
+
+/* -------- Mat Input After Hover Border --------- */
+::ng-deep .mdc-text-field--filled .mdc-line-ripple::after {
+    border-bottom-width: 2px;
+}
+
+/* -------- Mat Input Text --------- */
+::ng-deep .mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
+    color: #ffff;
+}
+
+/* -------- Mat Input Drop Icon --------- */
+::ng-deep .mat-mdc-select-arrow svg {
+    color: #d4d4d4;
+}
+
+/* -------- Mat Input Select Box Text ---------- */
+::ng-deep .mat-mdc-select-value {
+    color: #ffff;
+}
+
+/* ================================================== Apply For New Admission Form Desing 7 CSS =============================================== */
+.apply-form-body-6 {
+    background-color: #23232327;
+    padding: 20px;
+    width: 600px;
+    backdrop-filter: blur(2px);
+    margin: 0 auto;
+    box-shadow: 1px 5px 25px rgb(29, 28, 28);
+}
+
+
+/* ================================================== Apply For New Admission Form Desing 8 CSS =============================================== */
+.apply-form-body-7 {
+    background-color: #23232327;
+    padding: 20px;
+    width: 600px;
+    backdrop-filter: blur(2px);
+    margin: 0 auto;
+    box-shadow: 1px 5px 25px rgb(29, 28, 28);
+
+}
+
+.input-fileds-8 {
+    background-color: #f7f7f700;
+    border: 0;
+    border: 2px solid #d4d4d4;
+    border-radius: 12px;
+    margin: 20px auto;
+    color: black;
+    height: 38px;
+}
+
+.custom-select-box-8:invalid,
+.input-fileds-8::placeholder {
+    color: #d4d4d4;
+}
+
+.custom-select-box-8 {
+    background-color: #f7f7f700;
+    border: 0;
+    border: 2px solid #d4d4d4;
+    margin: 0 auto 20px auto;
+    border-radius: 12px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    padding: 0 0 0 10px;
+    width: 100%;
+    height: 38px !important;
+    background-image:
+        linear-gradient(45deg, transparent 50%, #d4d4d4 50%),
+        linear-gradient(135deg, #d4d4d4 50%, transparent 50%);
+    background-position:
+        calc(100% - 20px) calc(0.8em + 2px),
+        calc(100% - 15px) calc(0.8em + 2px);
+    background-size:
+        5px 5px,
+        5px 5px;
+    background-repeat: no-repeat;
+    overflow-y: scroll;
+    transition: all 0.5s ease-in-out;
+}
+
+.custom-select-box-8:focus {
+    background-image:
+        linear-gradient(45deg, #116FBF 50%, transparent 50%),
+        linear-gradient(135deg, transparent 50%, #116FBF 50%);
+    transition: all 0.3s ease-in-out;
+    background-position:
+        calc(100% - 15px) 0.9em,
+        calc(100% - 20px) 0.9em;
+    background-size:
+        5px 5px,
+        5px 5px;
+    transition: all 0.5s ease-in-out;
+    background-repeat: no-repeat;
+    border-color: #116FBF;
+    outline: 0;
+}
+
+.custom-select-box-8 option {
+    color: #000000 !important;
+    padding: 10px !important;
+    background-color: #ffff;
+}
+
+
+
+
+/* ================================================== Apply For New Admission Form Desing 9 CSS =============================================== */
+.input-fileds-9 {
+    background-color: #f7f7f754;
+    border: 0;
+    border: 2px solid #d4d4d4;
+    border-radius: 12px;
+    margin: 20px auto;
+    color: black;
+    height: 38px;
+}
+
+.custom-select-box-9:invalid,
+.input-fileds-9::placeholder {
+    color: #d4d4d4;
+}
+
+.custom-select-box-9 {
+    background-color: #f7f7f754;
+    border: 0;
+    border: 2px solid #d4d4d4;
+    margin: 0 auto 20px auto;
+    border-radius: 12px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    padding: 0 0 0 10px;
+    width: 100%;
+    height: 38px !important;
+    background-image:
+        linear-gradient(45deg, transparent 50%, #d4d4d4 50%),
+        linear-gradient(135deg, #d4d4d4 50%, transparent 50%);
+    background-position:
+        calc(100% - 20px) calc(0.8em + 2px),
+        calc(100% - 15px) calc(0.8em + 2px);
+    background-size:
+        5px 5px,
+        5px 5px;
+    background-repeat: no-repeat;
+    overflow-y: scroll;
+    transition: all 0.5s ease-in-out;
+}
+
+.custom-select-box-9:focus {
+    background-image:
+        linear-gradient(45deg, #116FBF 50%, transparent 50%),
+        linear-gradient(135deg, transparent 50%, #116FBF 50%);
+    transition: all 0.3s ease-in-out;
+    background-position:
+        calc(100% - 15px) 0.9em,
+        calc(100% - 20px) 0.9em;
+    background-size:
+        5px 5px,
+        5px 5px;
+    transition: all 0.5s ease-in-out;
+    background-repeat: no-repeat;
+    border-color: #116FBF;
+    outline: 0;
+}
+
+.custom-select-box-9 option {
+    color: #000000 !important;
+    padding: 10px !important;
+    background-color: #ffff;
+}
+
+
+/* ================================================== Apply For New Admission Form Desing 10 CSS =============================================== */
+.apply-form-body-9 {
+    background-color: #232323a2;
+    padding: 20px;
+    width: 600px;
+    backdrop-filter: blur(2px);
+    margin: 0 auto;
+    box-shadow: 1px 5px 10px rgb(29, 28, 28);
+}
+
+.input-fileds-10 {
+    background-color: #232323a2;
+    border: 0;
+    border-radius: 0;
+    color: rgb(255, 255, 255);
+    height: 30px;
+}
+
+.custom-select-box-10:invalid,
+.input-fileds-10::placeholder {
+    color: #a1a1a1;
+}
+
+.custom-select-box-10 {
+    background-color: #232323a2;
+    border: 0;
+    border-radius: 0;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    padding: 0 0 0 10px;
+    width: 100%;
+    height: 30px !important;
+    background-image:
+        linear-gradient(45deg, transparent 50%, #d4d4d4 50%),
+        linear-gradient(135deg, #d4d4d4 50%, transparent 50%);
+    background-position:
+        calc(100% - 20px) calc(0.8em + 2px),
+        calc(100% - 15px) calc(0.8em + 2px);
+    background-size:
+        5px 5px,
+        5px 5px;
+    background-repeat: no-repeat;
+    overflow-y: scroll;
+    transition: all 0.5s ease-in-out;
+}
+
+.custom-select-box-10:focus {
+    background-image:
+        linear-gradient(45deg, #116FBF 50%, transparent 50%),
+        linear-gradient(135deg, transparent 50%, #116FBF 50%);
+    transition: all 0.3s ease-in-out;
+    background-position:
+        calc(100% - 15px) 0.9em,
+        calc(100% - 20px) 0.9em;
+    background-size:
+        5px 5px,
+        5px 5px;
+    transition: all 0.5s ease-in-out;
+    background-repeat: no-repeat;
+    border-color: #116FBF;
+    outline: 0;
+}
+
+.custom-select-box-10 option {
+    color: #000000 !important;
+    padding: 10px !important;
+    background-color: #ffff;
+}
+
+.input-field-outer {
+    background-color: #abc9e46e;
+    padding: 10px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+}
+
+.input-field-outer>i {
+    margin: 0 7px 0 0;
+    color: white;
+    font-size: 25px;
+}
+
+
+@media only screen and (max-width: 1500px) {}
+
+@media only screen and (max-width: 1200px) {
+    .apply-online-body {
+        display: block;
+    }
+
+    .apply-form-body,
+    .apply-form-body-2,
+    .apply-form-body-3,
+    .apply-form-body-4,
+    .apply-form-body-5,
+    .apply-form-body-6,
+    .apply-form-body-7,
+    .apply-form-body-9 {
+        margin: 20px auto 0 auto;
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+
+    .apply-form-body,
+    .apply-form-body-2,
+    .apply-form-body-3,
+    .apply-form-body-4,
+    .apply-form-body-5,
+    .apply-form-body-6,
+    .apply-form-body-7,
+    .apply-form-body-9 {
+        width: 80%;
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .apply-form-body,
+    .apply-form-body-2,
+    .apply-form-body-3,
+    .apply-form-body-4,
+    .apply-form-body-5,
+    .apply-form-body-6,
+    .apply-form-body-7,
+    .apply-form-body-9 {
+        width: 90%;
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+@media only screen and (max-width: 580px) {
+
+    .apply-form-body,
+    .apply-form-body-2,
+    .apply-form-body-3,
+    .apply-form-body-4,
+    .apply-form-body-5,
+    .apply-form-body-7,
+    .apply-form-body-9 {
+        width: 100%;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .apply-admission-text,
+    .apply-admission-text-2 {
+        font-size: 15px;
+        width: auto;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .eaducation-icon-section {
+        width: 40px;
+        height: 40px;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .eaducation-icon-section>i {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .apply-online-body {
+        padding: 20px;
+        transition: all 0.5s ease-in-out;
+    }
+}

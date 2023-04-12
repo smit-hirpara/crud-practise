@@ -42,12 +42,41 @@ export class OwlDatePickersComponent {
   submitfun3(value: any) {
     let FullTime = value.split(' ');
     let horMin = FullTime[0].split(':');
+    console.warn(FullTime);
+    console.warn(horMin[0]);
     this.date3 = new Date();
+    console.warn(this.date3);
 
     this.date3.setHours(horMin[0]);
     this.date3.setMinutes(horMin[1]);
-    this.date3.setSeconds(0)
+    this.date3.setSeconds(0);
+    this.date3.setDate(1);
+    this.date3.setMonth(0);
+    this.date3.setYear(2001);
+  }
+
+  date4: any;
+  submitfun4(value: any) {
+    let dateobj = new Date(value);
+    console.warn(dateobj);
+    this.date4 = dateobj;
   }
 
 
+
+
+
+  user: any = [
+    "pal", "deep", "raj", "om", "kayur"
+  ];
+  ages: any = [
+    15, 22, 12, 34, 50
+  ];
+  fulldetails: any = [
+    { name: 'pal', age: 20 },
+    { name: 'om', age: 30 },
+    { name: 'kayur', age: 20 },
+    { name: 'deep', age: 24 },
+    { name: 'raj', age: 29 },
+  ];
 }

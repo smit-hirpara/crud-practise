@@ -141,6 +141,8 @@ export class StapperFormComponent {
     this.UpdtaeSuccessfullyLogo = true;
     this.UserDetails = false;
   }
+
+
 }
 
 export class UsersDetails2 {
