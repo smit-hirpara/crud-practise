@@ -13,6 +13,7 @@ export class AOFormComponent {
 
   ngOnInit() {
     this.getfromlocalstorage();
+    this.getImgInfoArray = localStorage.getItem("filedetails");
   }
 
 
@@ -121,21 +122,21 @@ export class AOFormComponent {
 
 
     ////////////////////////////////////////////////////////////////////////////////////// Way 3 //////////////////////////////////////////////////////////////////////////////
-    // localStorage.setItem("filedetails", JSON.stringify(this.uploadedfileinfo));
-    // // this.getfromlocalstorage(); // get local storage array
-    // this.getImgInfoArray = localStorage.getItem("filedetails");
-    // this.setImgInfoArray = JSON.parse(this.getImgInfoArray);
-    // this.finalImgInfoArray.push(this.setImgInfoArray);
+    localStorage.setItem("filedetails", JSON.stringify(this.uploadedfileinfo));
+    // this.getfromlocalstorage(); // get local storage array
+    this.getImgInfoArray = localStorage.getItem("filedetails");
+    this.setImgInfoArray = JSON.parse(this.getImgInfoArray);
+    this.finalImgInfoArray.push(this.setImgInfoArray);
 
-    // localStorage.setItem("imageinformation", JSON.stringify(this.finalImgInfoArray));
+    localStorage.setItem("imageinformation", JSON.stringify(this.finalImgInfoArray));
 
 
-    this.getImgInfoArray = [this.uploadedfileinfo]; // 1. get image information array of object
-    localStorage.setItem("filedetails", JSON.stringify(this.getImgInfoArray)); // 2. set getImgInfoArray in local storage
-    this.setImgInfoArray = localStorage.getItem("filedetails"); // 3. get local storage stored getImgInfoArray array
-    this.finalImgInfoArray = JSON.parse(this.setImgInfoArray);
-    console.warn("setImageInfoArray", this.finalImgInfoArray);
-    localStorage.setItem("finalDetails", JSON.stringify(this.finalImgInfoArray));
+    // this.getImgInfoArray = [this.uploadedfileinfo]; // 1. get image information array of object
+    // localStorage.setItem("filedetails", JSON.stringify(this.getImgInfoArray)); // 2. set getImgInfoArray in local storage
+    // this.setImgInfoArray = localStorage.getItem("filedetails"); // 3. get local storage stored getImgInfoArray array
+    // this.finalImgInfoArray = JSON.parse(this.setImgInfoArray);
+    // console.warn("setImageInfoArray", this.finalImgInfoArray);
+    // localStorage.setItem("finalDetails", JSON.stringify(this.finalImgInfoArray));
 
 
     this.images = []; // images array blank

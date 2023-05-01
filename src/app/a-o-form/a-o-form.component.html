@@ -578,7 +578,7 @@
                         </div>
                     </div>
                 </ng-container> -->
-                <ng-container *ngFor="let document of finalImgInfoArray; let i = index">
+                <ng-container *ngFor="let document of setImgInfoArray; let i = index">
                     <div class="savedocuemnt" style="height: max-content;">
                         <div class="documents-details-box">
                             <!-- <span class="badge badge-primary d-flex align-items-center mr-1"
@@ -593,10 +593,10 @@
                             </div>
                         </div>
                         <div class="documents-images-section">
-                            <img [src]="document[i].img" *ngIf="visibleimg(i)" alt="">
+                            <img [src]="setImgInfoArray[i].img" *ngIf="visibleimg(i)" alt="">
                             <div class="image-details">
-                                <span>{{ document[i].imgname}}</span>
-                                <span>{{ document[i].imgsize | filesize}}</span>
+                                <span>{{ setImgInfoArray[i].imgname}}</span>
+                                <span>{{ setImgInfoArray[i].imgsize | filesize}}</span>
                             </div>
                         </div>
                     </div>

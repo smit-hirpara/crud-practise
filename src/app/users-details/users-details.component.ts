@@ -1,16 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ReactiveFormService } from '../reactive-form.service';
 import { UsersDetails } from '../reactive-form/reactive-form.component';
 import { UsersDetails2 } from '../stapper-form/stapper-form.component';
+import { timer, interval, Subscription } from "rxjs";
+
 
 @Component({
   selector: 'app-users-details',
   templateUrl: './users-details.component.html',
   styleUrls: ['./users-details.component.scss']
 })
-export class UsersDetailsComponent {
-  constructor(private service: ReactiveFormService, private route: Router) { }
+export class UsersDetailsComponent implements OnInit {
+  constructor(private service: ReactiveFormService, private navigate: Router) { }
   ngOnInit() {
     this.getUsers();
 
@@ -19,15 +21,21 @@ export class UsersDetailsComponent {
   }
   /***************************************************** Table 1 ***********************************************************/
   /***** Get Users Form Data Base *****/
+  // databaseValue: Subscription | any;
+  // databaseValue2: Subscription | any;
   databaseValue: any;
   databaseValue2: any;
+  usersDetails: any;
+  usersDetails2: any;
   getUsers() {
-    this.service.getUserDetails().subscribe((res) => {
+    this.service.getUserDetails().subscribe((res: any) => {
       this.databaseValue = res;
     });
     this.service.getUserDetails2().subscribe((res) => {
       this.databaseValue2 = res;
-    })
+    });
+    this.usersDetails = this.databaseValue;
+    this.usersDetails2 = this.databaseValue2;
   }
   /******* Delete User Form Data Base *******/
   deleteUser(id: number) {
@@ -47,7 +55,7 @@ export class UsersDetailsComponent {
 
   /************ Add New User With Reactive Form **************/
   addNewData1() {
-    this.route.navigate(['/reactiveForm']);
+    this.navigate.navigate(['/reactiveForm']);
   }
 
 
@@ -55,7 +63,7 @@ export class UsersDetailsComponent {
   /************ Add New User With Reactive Form With Stapper Form **************/
   addNewData2() {
     this.service.addStpperUser();
-    this.route.navigate(['/stapperForm']);
+    this.navigate.navigate(['/stapperForm']);
   }
 
   /********* Delete User Form Data Base ********/
@@ -71,5 +79,10 @@ export class UsersDetailsComponent {
     this.usersobj2.id = values1.id;
     this.service.editUserDetils2();
   }
+
+  // ngOnDestroy() {
+  //   this.databaseValue.unsubscribe();
+  //   this.databaseValue2.unsubscribe();
+  // }
 }
 
