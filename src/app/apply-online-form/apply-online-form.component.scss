@@ -1,0 +1,793 @@
+// @import url('https://fonts.googleapis.com/css2?family=Amaranth:wght@400;700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Amaranth:wght@400;700&family=Roboto+Slab:wght@100;200;300;400;500&display=swap');
+
+// /* ============= body =================*/
+// .admisiion-form-full-body {
+//     background-color: rgb(255, 255, 255);
+//     padding: 10px 0;
+// }
+
+// .prifile-section {
+//     box-shadow: 0 0 100px rgb(206, 206, 206);
+// }
+
+// /* ============= profile background image =================*/
+// .profile-bg-image {
+//     height: 80px;
+//     background-color: #116ebf7e;
+//     // background-image: url(https://c4.wallpaperflare.com/wallpaper/767/328/877/black-blue-purple-pink-wallpaper-thumb.jpg);
+//     background-image: url(https://cdn.wallpapersafari.com/4/42/Gh3gJx.png);
+//     background-repeat: no-repeat;
+//     background-size: cover;
+// }
+
+// .student-information-group {
+//     display: flex;
+//     justify-content: center;
+//     padding: 10px 10px 50px 10px;
+//     flex-wrap: wrap;
+//     display: none;
+// }
+
+// .student-information-group>div {
+//     background-color: #ffff;
+//     padding: 5px 10px 5px 0;
+//     border-radius: 10px;
+//     display: flex;
+//     margin: 5px 10px;
+//     transition: all 0.5s ease-in-out;
+//     align-items: center;
+// }
+
+// /* ============= profile content full box =================*/
+// .header-section {
+//     display: flex;
+//     align-items: center;
+//     background-color: #fff;
+//     position: relative;
+// }
+
+// /* ============= student image, eadit icon ,name, branch box =================*/
+// .student-image-box {
+//     text-align: center;
+//     width: max-content;
+//     margin: 0 0 0 50px;
+//     display: flex;
+//     transition: all 0.5s ease-in-out;
+//     align-items: center;
+// }
+
+// /* ============= student image and eadit icon section =================*/
+// .student-image-and-icon {
+//     width: 95px;
+//     height: 95px !important;
+//     border: 2px solid #F44336;
+//     border-radius: 50%;
+//     outline: 10px solid #ffff;
+//     margin: -65px auto 0 auto; // 2
+//     position: relative;
+//     transition: all 0.5s ease-in-out;
+
+// }
+
+// /* ============= student image =================*/
+// .student-image {
+//     width: 100%;
+//     height: 100%;
+//     margin: 0 0 10px 0;
+//     background-color: #ebb1ad;
+//     border-radius: 50%;
+// }
+
+// /* ============= eadit profile img btn =================*/
+// .profile-img-btn {
+//     position: absolute;
+//     bottom: -0%;
+//     right: -0%;
+//     display: none;
+// }
+
+// /*============= eadit profile img btn icon =================*/
+// .profile-img-btn>i {
+//     border: 2px solid #F44336;
+//     border-radius: 50px;
+//     padding: 2px;
+//     font-size: 20px;
+//     background-color: #ffff;
+//     cursor: pointer;
+// }
+
+// /*============= after hover eadit button =================*/
+// .profile-img-btn>i:hover {
+//     background-color: rgb(245, 183, 183)a9;
+//     color: #F44336;
+//     transition: all 0.3s ease-in-out;
+// }
+
+// /*============= after hover student image =================*/
+// .student-image-and-icon:hover .profile-img-btn {
+//     display: block;
+// }
+
+// /* ============= stucent name =================*/
+// .student-image-box>p {
+//     color: #F44336;
+//     font-size: 25px;
+//     font-family: 'Amaranth', sans-serif;
+//     max-width: 100%;
+//     overflow: hidden;
+//     text-overflow: ellipsis;
+//     white-space: nowrap;
+//     margin: 0;
+//     padding: 0 20px;
+//     height: max-content;
+//     border-right: 1px solid gray;
+//     transition: all 0.5s ease-in-out;
+// }
+
+// .student-image-box>p:last-child {
+//     border-right: 0;
+// }
+
+// /*============= studnet Information Group =================*/
+// .student-info-groups {
+//     display: flex;
+//     margin: 0 auto 0 auto;
+//     justify-content: center;
+// }
+
+// /*============= studnet details box =================*/
+// .student-details-section {
+//     padding: 10px 0;
+//     margin: 0;
+//     text-align: center;
+//     width: max-content;
+// }
+
+// /*============= studnet details box icons =================*/
+// .header-icon {
+//     padding: 0 5px;
+//     border-radius: 50%;
+//     color: #F44336;
+//     font-size: 25px;
+// }
+
+// .header-text {
+//     font-size: 15px;
+// }
+
+// /*============= Custom Icons =================*/
+// // .material-icons {
+// //     color: transparent !important;
+// //     -webkit-text-stroke-width: 1.5px;
+// //     -webkit-text-stroke-color: red;
+// // }
+
+// /*============= studnet details box texts =================*/
+// .student-details-section>p {
+//     padding: 0 20px;
+//     margin: 5px 0 0 0;
+//     color: #7C7C7C;
+//     font-size: 15px;
+//     max-width: 100%;
+//     overflow: hidden;
+//     text-overflow: ellipsis;
+//     white-space: nowrap;
+//     font-family: 'Amaranth', sans-serif !important;
+//     border-right: 1px solid gray;
+// }
+
+// .student-details-section:last-child>p {
+//     border-right: 0;
+// }
+
+
+// /* ============ header ============== */
+// .form-header {
+//     display: flex;
+//     justify-content: space-between;
+//     // margin: 15px;
+//     padding: 15px;
+//     align-items: center;
+//     border-bottom: 1px solid #F44336 !important;
+//     // background-color: #ffff;
+// }
+
+// /* ============ header text ============== */
+// .form-header>span {
+//     width: 400px;
+//     font-size: 25px;
+//     color: #1565C0;
+// }
+
+
+// /* ============ header boxes ============== */
+// .header-boxes {
+//     background-color: #ffff;
+//     padding: 5px;
+//     box-shadow: 1px 3px 5px gray;
+//     margin: 10px 10px;
+//     padding: 4px 10px;
+//     border-radius: 5px;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     color: rgb(121, 121, 121);
+//     font-size: 13px;
+// }
+
+// /* ============ header boxes badge ============== */
+// .header-boxes>span {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     margin: 0 5px;
+//     padding: 2.5px 3px;
+// }
+
+// /* ============ header boxes badge icon ============== */
+// .header-boxes>span>i {
+//     font-size: 14px;
+//     margin: 0 !important;
+// }
+
+// /* ============ header boxes status ============== */
+// .header-boxes>div {
+//     margin: 0;
+//     padding: 0 5px;
+//     color: #116FBF;
+//     font-weight: 500;
+// }
+
+// /* ============ header boxes app no ============== */
+// .header-boxes>.app-no {
+//     margin: 0;
+//     padding: 0 5px;
+//     color: #080808;
+//     font-weight: 500;
+// }
+
+
+// .download-btn {
+//     margin: 10px 10px;
+//     padding: 3px 10px !important;
+//     height: 30px;
+//     font-size: 12px;
+// }
+
+
+
+
+// /* ============= HD Screen For Laptop =================*/
+// @media screen and (max-width: 1024px) {
+//     .header-section {
+//         display: block;
+//     }
+
+//     .student-image-box {
+//         margin: 0 auto 10px auto;
+//     }
+
+//     .student-image-box>p {
+//         font-size: 20px;
+//         margin: 5px 0;
+//     }
+
+
+//     .student-image-and-icon {
+//         margin: -40px auto 0 auto;
+//     }
+
+//     .header-icon {
+//         font-size: 23px;
+//     }
+// }
+
+// /* ============= For Tablet =================*/
+// @media screen and (max-width: 768px) {
+//     .student-information-group {
+//         display: flex;
+//     }
+
+//     .student-information-group>div {
+//         margin: 5px;
+//     }
+
+//     .profile-bg-image {
+//         height: max-content;
+//     }
+
+//     .student-info-groups {
+//         display: none;
+//     }
+
+//     .student-image-box {
+//         margin: 0 auto 10px 30px;
+//         padding: 0 0 10px 0;
+//     }
+
+//     .header-icon {
+//         font-size: 20px;
+//     }
+// }
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:wght@400;700&family=Roboto+Slab:wght@100;200;300;400;500&display=swap');
+
+/*---------- Form Body ----------*/
+.form-body {
+    background-color: #F4F7FA;
+    margin: 10px 0;
+    font-family: 'Amaranth', sans-serif;
+
+}
+
+/*================================================== Form Header ==================================================*/
+/*---------- Form Header Bg Image ----------*/
+.header-bg-image {
+    height: 90px;
+    background-color: #116ebf7e;
+    // background-image: url(https://c4.wallpaperflare.com/wallpaper/767/328/877/black-blue-purple-pink-wallpaper-thumb.jpg);
+    background-image: url(https://cdn.wallpapersafari.com/4/42/Gh3gJx.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+}
+
+/*---------- Form Header Bg Image Info Group ----------*/
+.header-info-groups {
+    display: none;
+    justify-content: center;
+}
+
+/*---------- Form Header student Info Box ----------*/
+.header-details-section {
+    display: flex;
+    background-color: #ffffffb4;
+    margin: 5px;
+    padding: 7px;
+    border-radius: 6px;
+    align-items: center;
+}
+
+/*---------- Form Header student Info Text ----------*/
+.header-details-section>p {
+    margin: 0;
+    font-size: 13px;
+}
+
+/*---------- Form Header Information Row ----------*/
+.header-information-group {
+    box-shadow: 5px 10px 20px #ececec;
+    display: flex;
+    align-items: center;
+}
+
+/*---------- Form Header Student Image Section ----------*/
+.student-image-section {
+    padding: 0 0 10px 0;
+    display: flex;
+    width: max-content;
+    align-items: center;
+}
+
+/*---------- Form Header Student Image , icoon Section ----------*/
+.student-image-and-icon {
+    position: relative;
+    margin: -50px 10px 0 30px;
+    padding: 0 0 10px 0;
+}
+
+/*---------- Form Header Student Image ----------*/
+.student-image {
+    width: 110px;
+    border: 2px solid #F44336;
+    border-radius: 50%;
+    background-color: #f3c7c4;
+    outline: 10px solid #ffff;
+    transition: all 0.5s ease-in-out;
+}
+
+/*---------- Form Header Student Image Edit Button ----------*/
+.edit-profile-img-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 50%;
+    border: 2px solid #F44336;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffff;
+    display: none;
+}
+
+/*---------- Form Header Hover Student Image ----------*/
+.student-image-section:hover .edit-profile-img-btn {
+    display: flex;
+}
+
+/*---------- Form Header Hover Student Name ----------*/
+.student-image-section>p {
+    color: #F44336;
+    font-size: 20px;
+    margin: 0;
+    font-family: 'Amaranth', sans-serif;
+    padding: 0 10px;
+    border-right: 1px solid gray;
+    font-weight: 500;
+    transition: all 0.5s ease-in-out;
+}
+
+.student-image-section>p:last-child {
+    border-right: 0;
+}
+
+/*---------- Form Header student Info Group ----------*/
+.student-info-groups {
+    display: flex;
+    margin: 0 auto;
+}
+
+/*---------- Form Header student Info Box ----------*/
+.student-details-section {
+    text-align: center;
+    padding: 0;
+}
+
+/*---------- Form Header student Info icon ----------*/
+.header-icon {
+    color: #F44336;
+    font-size: 24px;
+}
+
+/*---------- Form Header student Info Text ----------*/
+.student-details-section>p {
+    margin: 0;
+    border-right: 1px solid gray;
+    padding: 0 18px;
+    font-size: 14px;
+    color: #020202bb;
+    font-weight: 500;
+}
+
+.student-details-section:last-child>p {
+    border-right: 0;
+}
+
+/*---------- Form student Fee Header ----------*/
+.header-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #F44336;
+    margin: 10px 20px;
+    padding: 10px;
+    background-color: #f4f7fa00;
+    transition: all 0.5s ease-in-out;
+}
+
+/*---------- Form student Fee Header Name ----------*/
+.header-details>span {
+    color: #1565C0;
+    font-size: 18px;
+    transition: all 0.5s ease-in-out;
+    width: 200px;
+}
+
+/*---------- Form student Fee Header Box Group ----------*/
+.details-box-group {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/*---------- Form student Fee Header Boxces ----------*/
+.header-boxes {
+    background-color: #FFFFFF;
+    box-shadow: 5px 10px 20px #ececec;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 5px 5px;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: #8D8D8D;
+}
+
+/*---------- Form student Fee Header Boxces Badges ----------*/
+.header-boxes>span {
+    display: flex;
+    align-items: center;
+    padding: 3px 5px;
+    margin: 0 5px 0 10px;
+    font-size: 10px;
+}
+
+/*---------- Form student Fee Header Boxces Badges Icon ----------*/
+.header-boxes>span>i {
+    font-size: 15px;
+}
+
+/*---------- Form student Fee Header Boxces status ----------*/
+.header-boxes>div {
+    color: #1565C0;
+    font-weight: 500;
+    margin: 0 5px 0 10px;
+}
+
+/*---------- Form student Fee Header Boxces App No ----------*/
+.header-boxes>.app-no {
+    color: black;
+}
+
+/*---------- Form student Fee Header Downlod Button ----------*/
+.download-btn {
+    font-size: 12px;
+    height: 31px;
+}
+
+
+
+
+
+/*================================================== Form Body ==================================================*/
+/*---------- Forms Group ----------*/
+.forms-group {
+    display: grid;
+    grid-template-columns: repeat(3, 33.33%);
+    margin: 10px;
+}
+
+/*---------- Form Body ----------*/
+.forms-body {
+    border: 1px solid #608FC5;
+    margin: 10px;
+    border-radius: 6px;
+    padding: 0 0 10px 0;
+    transition: all 0.5s ease-in-out;
+}
+
+/*---------- Form Header ----------*/
+.forms-header {
+    background-color: #608FC5;
+    padding: 5px;
+    border-radius: 4px 4px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/*---------- Form Header Icon ----------*/
+.forms-header>i {
+    color: #ffff;
+    font-size: 30px;
+}
+
+/*---------- Form Header Text ----------*/
+.forms-header>p {
+    font-size: 17px;
+    margin: 0 0 0 10px;
+    color: #ffff;
+}
+
+/*---------- Save Button ----------*/
+.mat-mdc-fab.mat-primary {
+    --mat-mdc-button-persistent-ripple-color: #007adc;
+    --mat-mdc-button-ripple-color: #0079dc3d;
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    right: 10px;
+}
+
+.mat-mdc-fab.mat-primary {
+    --mdc-fab-container-color: #ffffff;
+    --mdc-fab-icon-color: #608FC5;
+    --mat-mdc-fab-color: #608FC5;
+}
+
+.mat-mdc-fab.mat-primary mat-icon {
+    font-size: var(--mdc-typography-button-font-size, 20px);
+    padding: 2.4px;
+}
+
+
+
+/* ============= HD Screen For Laptop =================*/
+@media screen and (max-width: 1024px) {
+    .header-info-groups {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 0 40px 0;
+    }
+
+    .student-info-groups {
+        display: none;
+    }
+
+    .header-bg-image {
+        height: max-content;
+        padding: 10px;
+    }
+
+    .header-icon {
+        font-size: 20px;
+    }
+
+    .header-details-section>p {
+        margin: 0 5px;
+    }
+
+    .student-image {
+        width: 90px;
+    }
+
+    .student-image-and-icon {
+        margin-top: -40px;
+    }
+
+
+    .forms-group {
+        grid-template-columns: repeat(2, 50%);
+    }
+}
+
+
+/* ============= For Tablet =================*/
+@media screen and (max-width: 768px) {
+    .student-image-section>p {
+        font-size: 20px;
+        font-family: 'Amaranth', sans-serif;
+    }
+
+    .header-details {
+        display: block;
+        text-align: center;
+        margin: 10px 10px;
+    }
+
+    .header-details>span {
+        border-bottom: 1px solid #1565C0;
+        display: block;
+        width: 100%;
+    }
+
+    .details-box-group {
+        justify-content: center;
+    }
+
+    .forms-group {
+        grid-template-columns: repeat(1, 100%);
+        margin: 10px 10px;
+    }
+
+    .forms-body {
+        margin: 10px 0;
+    }
+
+    .details-box-group {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+// change mat-label color & background & font-size on Focus
+::ng-deep .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
+    color: rgb(22, 160, 130);
+    // background-color: red!important;
+    // font-size: 16px!important;
+}
+
+// change mat-input floating lable color
+::ng-deep .mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label {
+    color: rgb(22, 160, 130);
+}
+
+// Change Lable Font Position
+::ng-deep .mat-mdc-text-field-wrapper .mat-mdc-form-field-flex .mat-mdc-floating-label {
+    top: 26px !important;
+}
+
+// change mat lable position
+::ng-deep .mat-mdc-text-field-wrapper .mat-mdc-form-field-flex .mat-mdc-floating-label {
+    top: 15px !important;
+    font-size: 15px;
+}
+
+// change mat-input Value color When Typing...
+::ng-deep .mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
+    color: rgb(231, 31, 31) !important;
+}
+
+// change mat-input placeholder color
+::ng-deep .mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input::placeholder {
+    // color: rgb(22, 160, 130);
+    color: rgb(113, 5, 255);
+    font-size: 15px;
+}
+
+// change caret-color on focus (|)
+::ng-deep .mdc-text-field .mdc-text-field__input {
+    caret-color: red;
+}
+
+// Add padding-right & color in input icon & add background color
+::ng-deep .mat-mdc-form-field-has-icon-suffix .mat-mdc-text-field-wrapper {
+    background-color: rgb(255, 234, 238);
+    color: rgb(255, 81, 0);
+}
+
+// change icon position
+::ng-deep .mat-mdc-form-field-icon-suffix>.mat-icon {
+    padding: 1px !important;
+    top: 4px !important;
+    right: 7px !important;
+    position: absolute !important;
+    z-index: 5 !important;
+}
+
+// change border color
+::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__leading,
+::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__notch,
+::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__trailing {
+    border-color: rgb(162, 0, 255);
+}
+
+// hover to change outline color same as border color in mat-form-field
+::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__leading,
+::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__notch,
+::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__trailing {
+    border-color: rgb(162, 0, 255);
+}
+
+// Focus to change border color on mat-form-field
+::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__leading,
+::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__notch,
+::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__trailing {
+    border-color: rgb(22, 160, 130);
+    border-width: 1px;
+}
+
+// change label color, background & font when focus after change lable position
+::ng-deep .mat-mdc-form-field .mdc-text-field--outlined .mdc-notched-outline--upgraded .mdc-floating-label--float-above {
+    font-size: 16px;
+    color: red;
+    top: 28px !important;
+    position: relative !important;
+    font-weight: 300 !important;
+    background: rgb(255, 209, 123);
+}
+
+// change mat-form-field height
+::ng-deep .mat-mdc-text-field-wrapper {
+    height: 35px !important;
+}
+
+// change mat-form-field inside input with text
+::ng-deep .mat-mdc-input-element {
+    top: -10px !important;
+    position: relative !important;
+}

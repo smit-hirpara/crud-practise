@@ -8,6 +8,7 @@ import { OwlDatePickersComponent } from './owl-date-pickers/owl-date-pickers.com
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { StapperFormComponent } from './stapper-form/stapper-form.component';
 import { UsersDetailsComponent } from './users-details/users-details.component';
+import { ApplyOnlineFormComponent } from './apply-online-form/apply-online-form.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'userdetails', pathMatch: 'full' },
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'A-O-design', component: AODesignComponent },
   { path: 'A-O-stapper', component: AOStapperComponent },
   { path: 'A-O-form', component: AOFormComponent },
+  { path: 'apply-online-form', component: ApplyOnlineFormComponent },
 ];
 
 @NgModule({
