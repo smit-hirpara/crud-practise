@@ -1,369 +1,90 @@
-// @import url('https://fonts.googleapis.com/css2?family=Amaranth:wght@400;700&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Amaranth:wght@400;700&family=Roboto+Slab:wght@100;200;300;400;500&display=swap');
-
-// /* ============= body =================*/
-// .admisiion-form-full-body {
-//     background-color: rgb(255, 255, 255);
-//     padding: 10px 0;
-// }
-
-// .prifile-section {
-//     box-shadow: 0 0 100px rgb(206, 206, 206);
-// }
-
-// /* ============= profile background image =================*/
-// .profile-bg-image {
-//     height: 80px;
-//     background-color: #116ebf7e;
-//     // background-image: url(https://c4.wallpaperflare.com/wallpaper/767/328/877/black-blue-purple-pink-wallpaper-thumb.jpg);
-//     background-image: url(https://cdn.wallpapersafari.com/4/42/Gh3gJx.png);
-//     background-repeat: no-repeat;
-//     background-size: cover;
-// }
-
-// .student-information-group {
-//     display: flex;
-//     justify-content: center;
-//     padding: 10px 10px 50px 10px;
-//     flex-wrap: wrap;
-//     display: none;
-// }
-
-// .student-information-group>div {
-//     background-color: #ffff;
-//     padding: 5px 10px 5px 0;
-//     border-radius: 10px;
-//     display: flex;
-//     margin: 5px 10px;
-//     transition: all 0.5s ease-in-out;
-//     align-items: center;
-// }
-
-// /* ============= profile content full box =================*/
-// .header-section {
-//     display: flex;
-//     align-items: center;
-//     background-color: #fff;
-//     position: relative;
-// }
-
-// /* ============= student image, eadit icon ,name, branch box =================*/
-// .student-image-box {
-//     text-align: center;
-//     width: max-content;
-//     margin: 0 0 0 50px;
-//     display: flex;
-//     transition: all 0.5s ease-in-out;
-//     align-items: center;
-// }
-
-// /* ============= student image and eadit icon section =================*/
-// .student-image-and-icon {
-//     width: 95px;
-//     height: 95px !important;
-//     border: 2px solid #F44336;
-//     border-radius: 50%;
-//     outline: 10px solid #ffff;
-//     margin: -65px auto 0 auto; // 2
-//     position: relative;
-//     transition: all 0.5s ease-in-out;
-
-// }
-
-// /* ============= student image =================*/
-// .student-image {
-//     width: 100%;
-//     height: 100%;
-//     margin: 0 0 10px 0;
-//     background-color: #ebb1ad;
-//     border-radius: 50%;
-// }
-
-// /* ============= eadit profile img btn =================*/
-// .profile-img-btn {
-//     position: absolute;
-//     bottom: -0%;
-//     right: -0%;
-//     display: none;
-// }
-
-// /*============= eadit profile img btn icon =================*/
-// .profile-img-btn>i {
-//     border: 2px solid #F44336;
-//     border-radius: 50px;
-//     padding: 2px;
-//     font-size: 20px;
-//     background-color: #ffff;
-//     cursor: pointer;
-// }
-
-// /*============= after hover eadit button =================*/
-// .profile-img-btn>i:hover {
-//     background-color: rgb(245, 183, 183)a9;
-//     color: #F44336;
-//     transition: all 0.3s ease-in-out;
-// }
-
-// /*============= after hover student image =================*/
-// .student-image-and-icon:hover .profile-img-btn {
-//     display: block;
-// }
-
-// /* ============= stucent name =================*/
-// .student-image-box>p {
-//     color: #F44336;
-//     font-size: 25px;
-//     font-family: 'Amaranth', sans-serif;
-//     max-width: 100%;
-//     overflow: hidden;
-//     text-overflow: ellipsis;
-//     white-space: nowrap;
-//     margin: 0;
-//     padding: 0 20px;
-//     height: max-content;
-//     border-right: 1px solid gray;
-//     transition: all 0.5s ease-in-out;
-// }
-
-// .student-image-box>p:last-child {
-//     border-right: 0;
-// }
-
-// /*============= studnet Information Group =================*/
-// .student-info-groups {
-//     display: flex;
-//     margin: 0 auto 0 auto;
-//     justify-content: center;
-// }
-
-// /*============= studnet details box =================*/
-// .student-details-section {
-//     padding: 10px 0;
-//     margin: 0;
-//     text-align: center;
-//     width: max-content;
-// }
-
-// /*============= studnet details box icons =================*/
-// .header-icon {
-//     padding: 0 5px;
-//     border-radius: 50%;
-//     color: #F44336;
-//     font-size: 25px;
-// }
-
-// .header-text {
-//     font-size: 15px;
-// }
-
-// /*============= Custom Icons =================*/
-// // .material-icons {
-// //     color: transparent !important;
-// //     -webkit-text-stroke-width: 1.5px;
-// //     -webkit-text-stroke-color: red;
-// // }
-
-// /*============= studnet details box texts =================*/
-// .student-details-section>p {
-//     padding: 0 20px;
-//     margin: 5px 0 0 0;
-//     color: #7C7C7C;
-//     font-size: 15px;
-//     max-width: 100%;
-//     overflow: hidden;
-//     text-overflow: ellipsis;
-//     white-space: nowrap;
-//     font-family: 'Amaranth', sans-serif !important;
-//     border-right: 1px solid gray;
-// }
-
-// .student-details-section:last-child>p {
-//     border-right: 0;
-// }
-
-
-// /* ============ header ============== */
-// .form-header {
-//     display: flex;
-//     justify-content: space-between;
-//     // margin: 15px;
-//     padding: 15px;
-//     align-items: center;
-//     border-bottom: 1px solid #F44336 !important;
-//     // background-color: #ffff;
-// }
-
-// /* ============ header text ============== */
-// .form-header>span {
-//     width: 400px;
-//     font-size: 25px;
-//     color: #1565C0;
-// }
-
-
-// /* ============ header boxes ============== */
-// .header-boxes {
-//     background-color: #ffff;
-//     padding: 5px;
-//     box-shadow: 1px 3px 5px gray;
-//     margin: 10px 10px;
-//     padding: 4px 10px;
-//     border-radius: 5px;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     color: rgb(121, 121, 121);
-//     font-size: 13px;
-// }
-
-// /* ============ header boxes badge ============== */
-// .header-boxes>span {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     margin: 0 5px;
-//     padding: 2.5px 3px;
-// }
-
-// /* ============ header boxes badge icon ============== */
-// .header-boxes>span>i {
-//     font-size: 14px;
-//     margin: 0 !important;
-// }
-
-// /* ============ header boxes status ============== */
-// .header-boxes>div {
-//     margin: 0;
-//     padding: 0 5px;
-//     color: #116FBF;
-//     font-weight: 500;
-// }
-
-// /* ============ header boxes app no ============== */
-// .header-boxes>.app-no {
-//     margin: 0;
-//     padding: 0 5px;
-//     color: #080808;
-//     font-weight: 500;
-// }
-
-
-// .download-btn {
-//     margin: 10px 10px;
-//     padding: 3px 10px !important;
-//     height: 30px;
-//     font-size: 12px;
-// }
-
-
-
-
-// /* ============= HD Screen For Laptop =================*/
-// @media screen and (max-width: 1024px) {
-//     .header-section {
-//         display: block;
-//     }
-
-//     .student-image-box {
-//         margin: 0 auto 10px auto;
-//     }
-
-//     .student-image-box>p {
-//         font-size: 20px;
-//         margin: 5px 0;
-//     }
-
-
-//     .student-image-and-icon {
-//         margin: -40px auto 0 auto;
-//     }
-
-//     .header-icon {
-//         font-size: 23px;
-//     }
-// }
-
-// /* ============= For Tablet =================*/
-// @media screen and (max-width: 768px) {
-//     .student-information-group {
-//         display: flex;
-//     }
-
-//     .student-information-group>div {
-//         margin: 5px;
-//     }
-
-//     .profile-bg-image {
-//         height: max-content;
-//     }
-
-//     .student-info-groups {
-//         display: none;
-//     }
-
-//     .student-image-box {
-//         margin: 0 auto 10px 30px;
-//         padding: 0 0 10px 0;
-//     }
-
-//     .header-icon {
-//         font-size: 20px;
-//     }
-// }
-
-
-
-
-
-
-
-@import url('https://fonts.googleapis.com/css2?family=Amaranth:wght@400;700&family=Roboto+Slab:wght@100;200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200;300;400;500&display=swap');
 
 /*---------- Form Body ----------*/
 .form-body {
     background-color: #F4F7FA;
     margin: 10px 0;
-    font-family: 'Amaranth', sans-serif;
-
+    font-family: 'Amaranth', sans-serif !important;
+    // font-family: 'JetBrains Mono', monospace;
 }
 
 /*================================================== Form Header ==================================================*/
+/*======================= Form Full Header =======================*/
+.form-header {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background-color: #F4F7FA;
+    padding-bottom: 5px;
+}
+
+/*======================= Header 1 (bg Image) =======================*/
 /*---------- Form Header Bg Image ----------*/
 .header-bg-image {
-    height: 90px;
+    height: 100px !important;
     background-color: #116ebf7e;
-    // background-image: url(https://c4.wallpaperflare.com/wallpaper/767/328/877/black-blue-purple-pink-wallpaper-thumb.jpg);
     background-image: url(https://cdn.wallpapersafari.com/4/42/Gh3gJx.png);
+    // background-image: url(https://cdn.wallpapersafari.com/68/39/HkFnZs.jpg);
+    // background-image: url(https://ohcbrands.com/wp-content/uploads/2018/04/69648590-header-wallpapers.jpg);
+    // background-image: url(../assets/Background-Img.png);
+    // background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAW5PAADtRJ2VTzZN5fOsbVocCVWRD_oclkJRCXtLWbdkMPzTEVkXFz02atI6jP2a4mg&usqp=CAU);
+    // background-image: url(https://img.freepik.com/premium-vector/abstract-colorful-hexagons-banner-background-vector-abstract-graphic-design-banner-pattern-background-template-wallpaper-template-poster-backdrop-book-cover-brochure-leaflet-flyer_181182-18925.jpg?w=360);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: end;
     transition: all 0.5s ease-in-out;
+    position: relative;
 }
+
 
 /*---------- Form Header Bg Image Info Group ----------*/
 .header-info-groups {
     display: none;
-    justify-content: center;
+    justify-content: end;
+    transition: all 0.5s ease-in-out;
 }
 
 /*---------- Form Header student Info Box ----------*/
 .header-details-section {
     display: flex;
-    background-color: #ffffffb4;
+    background-color: #ffffffcb;
     margin: 5px;
-    padding: 7px;
-    border-radius: 6px;
+    padding: 3px 10px;
+    border-radius: 3px;
     align-items: center;
+}
+
+/*---------- Form Header student Info icon ----------*/
+.header-icon {
+    color: #F44336;
+    font-size: 22px;
+    height: max-content;
+    width: 16px;
+    margin: 0 0 6px 0;
 }
 
 /*---------- Form Header student Info Text ----------*/
 .header-details-section>p {
     margin: 0;
-    font-size: 13px;
+    font-size: 15px;
+    transition: all 0.5s ease-in-out;
 }
 
+.header-bg-image>.header-details-section>.header-icon {
+    margin: 0 6px 0 0;
+}
+
+.header-bg-image>.header-details-section {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+
+/*======================= Header 2 (student Image, Info) =======================*/
 /*---------- Form Header Information Row ----------*/
 .header-information-group {
     box-shadow: 5px 10px 20px #ececec;
@@ -373,17 +94,40 @@
 
 /*---------- Form Header Student Image Section ----------*/
 .student-image-section {
-    padding: 0 0 10px 0;
+    padding: 0;
     display: flex;
     width: max-content;
     align-items: center;
 }
 
-/*---------- Form Header Student Image , icoon Section ----------*/
+/*---------- Form Header Student Name And Standard ----------*/
+.student-image-section>p {
+    color: #F44336;
+    font-size: 20px;
+    margin: 0;
+    padding: 0 10px;
+    border-right: 2px solid black;
+    font-weight: 600;
+    transition: all 0.5s ease-in-out;
+    // letter-spacing: 0.5px;
+    width: 350px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.student-image-section>p:last-child,
+.student-details-section:last-child>p {
+    border-right: 0;
+    width: max-content;
+}
+
+/*---------- Form Header Student Image , icon Section ----------*/
 .student-image-and-icon {
     position: relative;
     margin: -50px 10px 0 30px;
     padding: 0 0 10px 0;
+    transition: all 0.5s ease-in-out;
 }
 
 /*---------- Form Header Student Image ----------*/
@@ -392,11 +136,11 @@
     border: 2px solid #F44336;
     border-radius: 50%;
     background-color: #f3c7c4;
-    outline: 10px solid #ffff;
+    outline: 7px solid #ffff;
     transition: all 0.5s ease-in-out;
 }
 
-/*---------- Form Header Student Image Edit Button ----------*/
+/*---------- Form Header Edit Student Image Button ----------*/
 .edit-profile-img-btn {
     position: absolute;
     bottom: 10px;
@@ -409,28 +153,17 @@
     justify-content: center;
     align-items: center;
     background-color: #ffff;
-    display: none;
-}
-
-/*---------- Form Header Hover Student Image ----------*/
-.student-image-section:hover .edit-profile-img-btn {
-    display: flex;
-}
-
-/*---------- Form Header Hover Student Name ----------*/
-.student-image-section>p {
     color: #F44336;
-    font-size: 20px;
-    margin: 0;
-    font-family: 'Amaranth', sans-serif;
-    padding: 0 10px;
-    border-right: 1px solid gray;
-    font-weight: 500;
-    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    user-select: none;
 }
 
-.student-image-section>p:last-child {
-    border-right: 0;
+.edit-profile-img-btn>i {
+    font-size: 20px;
+}
+
+.edit-profile-img-btn:hover {
+    background-color: #f0aeaa;
 }
 
 /*---------- Form Header student Info Group ----------*/
@@ -445,44 +178,38 @@
     padding: 0;
 }
 
-/*---------- Form Header student Info icon ----------*/
-.header-icon {
-    color: #F44336;
-    font-size: 24px;
-}
-
 /*---------- Form Header student Info Text ----------*/
 .student-details-section>p {
     margin: 0;
     border-right: 1px solid gray;
-    padding: 0 18px;
-    font-size: 14px;
+    padding: 0 35px;
+    font-size: 15px;
     color: #020202bb;
     font-weight: 500;
+    transition: all 0.5s ease-in-out;
 }
 
-.student-details-section:last-child>p {
-    border-right: 0;
-}
 
+/*======================= Header 3 (Details,downlode) =======================*/
 /*---------- Form student Fee Header ----------*/
 .header-details {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid #F44336;
     margin: 10px 20px;
+    border-bottom: 1px solid #F44336;
     padding: 10px;
     background-color: #f4f7fa00;
     transition: all 0.5s ease-in-out;
 }
 
-/*---------- Form student Fee Header Name ----------*/
+
+/*---------- Header Name ----------*/
 .header-details>span {
     color: #1565C0;
-    font-size: 18px;
+    font-size: 26px;
     transition: all 0.5s ease-in-out;
-    width: 200px;
+    font-family: 600;
 }
 
 /*---------- Form student Fee Header Box Group ----------*/
@@ -493,76 +220,124 @@
     flex-wrap: wrap;
 }
 
-/*---------- Form student Fee Header Boxces ----------*/
+.form-body>.details-box-group {
+    display: none;
+}
+
+/*---------- Form student Fee Header Boxes ----------*/
 .header-boxes {
     background-color: #FFFFFF;
-    box-shadow: 5px 10px 20px #ececec;
-    padding: 5px 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    padding: 8px 10px;
     border-radius: 5px;
     margin: 5px 5px;
     display: flex;
     align-items: center;
-    font-size: 12px;
+    font-size: 15px;
     color: #8D8D8D;
+    transition: all 0.5s ease-in-out;
+    height: 35px;
 }
 
-/*---------- Form student Fee Header Boxces Badges ----------*/
+/*---------- Form student Fee Header Boxes Badges ----------*/
 .header-boxes>span {
     display: flex;
     align-items: center;
-    padding: 3px 5px;
+    padding: 5px;
     margin: 0 5px 0 10px;
-    font-size: 10px;
+    font-size: 12px;
+    transition: all 0.5s ease-in-out;
+    color: #ffff;
 }
 
-/*---------- Form student Fee Header Boxces Badges Icon ----------*/
-.header-boxes>span>i {
+/*---------- Boxes Paid Badge ----------*/
+.header-boxes>.paid-fee-badge {
+    background-color: #19D177;
+}
+
+/*---------- Boxes Due Badge ----------*/
+.header-boxes>.due-fee-badge {
+    background-color: #F44336;
+}
+
+/*---------- Form student Fee Header Boxes Badges Icon ----------*/
+.header-boxes>span>svg {
     font-size: 15px;
+    width: 8px;
+    margin: 0 2px 0 0;
+    height: max-content;
 }
 
-/*---------- Form student Fee Header Boxces status ----------*/
+/*---------- Form student Fee Header Boxes Text ----------*/
 .header-boxes>div {
     color: #1565C0;
     font-weight: 500;
     margin: 0 5px 0 10px;
+    transition: all 0.5s ease-in-out;
 }
 
-/*---------- Form student Fee Header Boxces App No ----------*/
+/*---------- Form student Fee Header Boxes App No ----------*/
 .header-boxes>.app-no {
     color: black;
 }
 
-/*---------- Form student Fee Header Downlod Button ----------*/
+/*---------- Header Form Downlod Button ----------*/
 .download-btn {
-    font-size: 12px;
-    height: 31px;
+    font-size: 15px;
+    height: 34px;
+    font-family: 'Amaranth', sans-serif !important;
+}
+
+/*---------- Header Form Downlod Button Icon ----------*/
+.download-btn>i {
+    margin: 0 7px 0 0;
+    font-size: 20px;
+}
+
+.Pay-Fee-btn {
+    background-color: #608FC5 !important;
+    color: #ffff !important;
+    height: 35px;
+    font-size: 14px;
+    font-family: 'Amaranth', sans-serif !important;
 }
 
 
 
-
-
 /*================================================== Form Body ==================================================*/
-/*---------- Forms Group ----------*/
+/*=================== Student Profile Form Groups ===================*/
+/*---------- Forms Group 3 Columns ----------*/
 .forms-group {
     display: grid;
     grid-template-columns: repeat(3, 33.33%);
-    margin: 10px;
+    padding: 0 10px;
+}
+
+/*---------- Forms Group 2 Columns ----------*/
+.forms-group-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    padding: 0 10px;
 }
 
 /*---------- Form Body ----------*/
 .forms-body {
     border: 1px solid #608FC5;
-    margin: 10px;
+    margin: 10px 10px;
     border-radius: 6px;
     padding: 0 0 10px 0;
     transition: all 0.5s ease-in-out;
 }
 
+.forms-body>.info-group>.uplode-file-input {
+    border: 0;
+    padding: 0 10px;
+}
+
 /*---------- Form Header ----------*/
 .forms-header {
     background-color: #608FC5;
-    padding: 5px;
+    padding: 7px;
     border-radius: 4px 4px 0 0;
     display: flex;
     justify-content: center;
@@ -571,9 +346,8 @@
 }
 
 /*---------- Form Header Icon ----------*/
-.forms-header>i {
-    color: #ffff;
-    font-size: 30px;
+.form-header-icons {
+    width: 17px;
 }
 
 /*---------- Form Header Text ----------*/
@@ -581,16 +355,18 @@
     font-size: 17px;
     margin: 0 0 0 10px;
     color: #ffff;
+    // letter-spacing: 0.5px;
 }
 
-/*---------- Save Button ----------*/
+/*---------- Form Header Save Button ----------*/
 .mat-mdc-fab.mat-primary {
     --mat-mdc-button-persistent-ripple-color: #007adc;
     --mat-mdc-button-ripple-color: #0079dc3d;
-    height: 25px;
-    width: 25px;
+    height: 22px;
+    width: 22px;
     position: absolute;
     right: 10px;
+    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0), 0px 6px 10px 0px rgba(0, 0, 0, 0), 0px 1px 18px 0px rgba(0, 0, 0, 0);
 }
 
 .mat-mdc-fab.mat-primary {
@@ -600,194 +376,1011 @@
 }
 
 .mat-mdc-fab.mat-primary mat-icon {
-    font-size: var(--mdc-typography-button-font-size, 20px);
-    padding: 2.4px;
+    font-size: var(--mdc-typography-button-font-size, 15px);
+    margin: 15px auto 5px auto;
+}
+
+/*---------- Form Input Fields Group ----------*/
+.form-content {
+    width: 100%;
+    padding: 15px 25px;
+    transition: all 0.5s ease-in-out;
+}
+
+/*---------- Form Fields Group ----------*/
+.Input-fields {
+    width: 100%;
+    margin: 0 0 15px 0;
+}
+
+/*---------- Mat-input Default lable ----------*/
+::ng-deep .mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label {
+    color: #929292;
+}
+
+/*---------- Mat-input Default lable Position ----------*/
+::ng-deep .mat-mdc-text-field-wrapper .mat-mdc-form-field-flex .mat-mdc-floating-label {
+    top: 15px !important;
+    font-size: 15px;
+}
+
+/*---------- Mat-input Value When Typing... ----------*/
+::ng-deep .mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
+    color: rgb(0, 0, 0) !important;
+}
+
+
+/*---------- Mat-input Placeholder When Focus ----------*/
+::ng-deep .mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input::placeholder {
+    color: #797979;
+    font-size: 15px;
+}
+
+/*---------- Mat-input caret on focus (|) ----------*/
+::ng-deep .mdc-text-field .mdc-text-field__input {
+    caret-color: #777777;
+}
+
+/*---------- Mat-input Border color ----------*/
+::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__leading,
+::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__notch,
+::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__trailing {
+    border-color: #c0c0c0;
+}
+
+/*---------- Mat-input Border color When Hover ----------*/
+::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__leading,
+::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__notch,
+::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__trailing {
+    border-color: #c0c0c0;
+}
+
+/*---------- Mat-input Border color When Focus ----------*/
+::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__leading,
+::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__notch,
+::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__trailing {
+    border-color: rgb(0, 0, 0);
+    border-width: 1px;
+}
+
+/*---------- Mat-input Lable When Focus ----------*/
+::ng-deep .mat-mdc-form-field .mdc-text-field--outlined .mdc-notched-outline--upgraded .mdc-floating-label--float-above {
+    font-size: 16px;
+    color: #050505;
+    top: 28px !important;
+    position: relative !important;
+    font-weight: 300 !important;
+}
+
+/*---------- Mat-input Height ----------*/
+::ng-deep .mat-mdc-text-field-wrapper {
+    height: 35px !important;
+}
+
+/*---------- Mat-input Extra Filed ----------*/
+::ng-deep .mat-mdc-form-field-subscript-wrapper {
+    display: none;
+}
+
+/*---------- Mat-input Value When Typing.. Position ----------*/
+::ng-deep {
+    top: -10px !important;
+    position: relative !important;
+}
+
+/*---------- Mat-Select, Mat-Input Value Position ----------*/
+::ng-deep .mat-mdc-select-value,
+::ng-deep .mat-mdc-input-element {
+    top: -10px !important;
+    position: relative !important;
+}
+
+/*---------- Mat-input Label When Focus ----------*/
+::ng-deep .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
+    color: #4A4A4A;
+    font-size: 16px !important;
+}
+
+/*---------- Mat-input Change Lable Font Position ----------*/
+::ng-deep .mat-mdc-text-field-wrapper .mat-mdc-form-field-flex .mat-mdc-floating-label {
+    top: 16px !important;
+}
+
+/*---------- Mat-Select Change Drop Icon Position ----------*/
+::ng-deep .mat-mdc-select-arrow svg {
+    transform: translate(-50%, -90%) !important;
+}
+
+/*=============== Mat-Date Picker Change Calender Icon Position ===============*/
+::ng-deep .mat-mdc-icon-button svg {
+    margin: -50px 0 0 0 !important;
+}
+
+::ng-deep .mat-mdc-icon-button .mat-mdc-button-persistent-ripple {
+    margin: -1px 0 0 1px !important;
+}
+
+::ng-deep .mat-mdc-icon-button .mat-mdc-button-touch-target {
+    transform: translate(-50%, 5%);
+}
+
+::ng-deep .mat-mdc-icon-button .mat-mdc-button-ripple,
+::ng-deep .mat-mdc-icon-button .mat-mdc-button-persistent-ripple,
+::ng-deep .mat-mdc-icon-button .mat-mdc-button-persistent-ripple::before {
+    top: -1px;
+    left: 2.5px;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    pointer-events: none;
+    border-radius: inherit;
+    height: 35px;
+    width: 35px;
+}
+
+/*---------- Mat Field With Info Icon ----------*/
+.input-with-icon {
+    display: flex;
+    height: max-content;
+    align-items: start;
+}
+
+
+/*---------- Mat-input Information Icon ----------*/
+.information-icon {
+    color: #608FC5;
+    margin: 7px 0 0 8px;
+    height: max-content;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/*---------- Primary Communacation Contacts Header ----------*/
+.primary-contact-header {
+    background-color: #e6e6e6;
+    color: #676767;
+    padding: 15px;
+    text-align: center;
+    margin: 0 0 15px 0;
+    font-size: 15px;
+}
+
+/*---------- Uplode File Box ----------*/
+.uplode-file-input {
+    border: 1px solid #c0c0c0;
+    padding: 10px;
+    margin: 0 0 15px 0;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.uplode-file-input>i {
+    transform: rotate(40deg);
+    color: #007adc;
+    margin: 2px 5px 2px 10px;
+}
+
+/*---------- Uplode File Input Field ----------*/
+.uplode-file-input>input {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+/*---------- Uplode File Label ----------*/
+.uplode-file-input>label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FF5252;
+    color: rgb(2, 2, 2);
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0 5px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+/*---------- Uplode File Label Icon ----------*/
+.uplode-file-input>label>i {
+    color: #ffffff;
+    font-size: 25px;
+    margin: -3px 10px 0 10px;
+}
+
+.uplode-file-input>.before-ouplode {
+    border: 0 !important;
+    // letter-spacing: 0.5px;
+}
+
+/*---------- Uplode File Priview Box ----------*/
+.uplode-file-input>.after-uplode,
+.uplode-file-input>.before-ouplode {
+    margin: 0 5px;
+    padding: 5px;
+    border: 1px solid #c0c0c0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.uplode-file-input>.before-ouplode>p:first-child,
+.uplode-file-input>.after-uplode>p:first-child {
+    color: #000000;
+    font-size: 16px;
+    margin: auto 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/*---------- Uplode File Priview Box Text ----------*/
+.uplode-file-input>.before-ouplode>p:first-child {
+    color: #929292;
+    margin: auto 0 auto auto;
+}
+
+/*---------- Uplode File Buttons Group ----------*/
+.action-btn-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+/*---------- Uplode File Buttons ----------*/
+.action-btn {
+    width: 20px;
+    height: 20px;
+    margin: 0 15px;
+}
+
+.action-btn:last-child>i {
+    margin: 0 0;
+    color: #D90000;
+}
+
+/*---------- Uplode File Buttons Icon ----------*/
+.action-btn>i {
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+
+/*=================== Primary Contact Form ===================*/
+/*---------- Header Info Icon ----------*/
+.forms-header>.information-icon {
+    position: absolute;
+    right: 40px;
+    top: 0px;
+    font-size: 20px;
+    color: #ffff;
+}
+
+/*---------- Mat Field Group ----------*/
+.inline-input {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+}
+
+.inline-input>mat-form-field:first-child {
+    padding: 0 5px 0 0;
+}
+
+.inline-input mat-form-field:last-child {
+    padding: 0 0 0 5px;
+}
+
+.inline-input>div:first-child {
+    padding: 0 5px 0 0;
+}
+
+.inline-input>div:last-child {
+    padding: 0 0 0 5px;
+}
+
+.varify-No-icon {
+    width: 30px;
+    color: #007adc;
+    margin: 5px 0 0 0;
+}
+
+/*---------- Mat Field Done Icon ----------*/
+.done-icon {
+    width: 30px;
+    margin: 5px 0 0 4px;
+    // background-color: #0079dc28;
+}
+
+/*---------- Mat Text Area ----------*/
+.text-area {
+    width: 100%;
+    height: 65px !important;
+    margin: 0 0 15px 0;
 }
 
 
 
-/* ============= HD Screen For Laptop =================*/
-@media screen and (max-width: 1024px) {
-    .header-info-groups {
-        display: flex;
-        flex-wrap: wrap;
-        padding: 0 0 40px 0;
+
+/*=================== Student Information Form ===================*/
+/*---------- Uplode Multiple File Box ----------*/
+.multiple-Uplode {
+    background-color: #DFF0FF;
+    border: 1px dotted #116FBF;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 15px 0;
+}
+
+/*---------- Uplode Multiple File Input Field ----------*/
+.multiple-Uplode>input {
+    display: none;
+}
+
+/*---------- Uplode Multiple File File Label ----------*/
+.multiple-Uplode>label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FF5252;
+    color: rgb(2, 2, 2);
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0 5px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+/*---------- Uplode Multiple File Label Icon ----------*/
+.multiple-Uplode>label>i {
+    color: #ffffff;
+    font-size: 25px;
+    margin: -3px 10px 0 10px;
+}
+
+/*---------- Uplode Multiple File Priview Box ----------*/
+.multiple-Uplode>div {
+    margin: 0 5px;
+    padding: 0 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+/*---------- Uplode File Priview Box Text ----------*/
+.multiple-Uplode>div>p {
+    color: #000000;
+    font-size: 15px;
+    margin: auto 0;
+    // letter-spacing: 0.5px;
+}
+
+/*---------- Uplodeed File Priview Section ----------*/
+.uploaded-images-section {
+    background-color: #F0F0F0;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    align-items: center;
+    width: 100%;
+}
+
+
+/*---------- Uplodeed File Priview Section Icon ----------*/
+.uploaded-images-section>i {
+    transform: rotate(40deg);
+    color: #007adc;
+    margin: 0 5px;
+    text-align: center;
+}
+
+/*---------- Uplodeed File Priview Section Form Fileds ----------*/
+.uploaded-images-section>div>mat-form-field {
+    padding: 0 5px 10px 5px;
+    width: 100%;
+    margin: 0;
+    min-width: 100px;
+}
+
+::ng-deep .uploaded-images-section>div>mat-form-field>mat-label {
+    font-size: 10px !important;
+}
+
+.uploaded-images-section>div>mat-form-field:last-child {
+    padding: 0 5px 0 5px;
+}
+
+
+/*=================== Previous School Form ===================*/
+/*---------- Select Bord Exam Box ----------*/
+.bord-selection-box {
+    border: 1px solid #C1C1C1;
+    margin: 0 0 15px 0;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    height: 35px;
+    align-items: center;
+    color: #929292;
+    transition: all 0.5s ease-in-out;
+}
+
+/*---------- Select Bord Exam Label ----------*/
+.bord-selection-box>p {
+    border-right: 1px solid #C1C1C1;
+    margin: 0 10px 0 0;
+    padding: 0 20px 0 7px;
+}
+
+/*---------- Select Bord Exam Button ----------*/
+.bord-selection-box>mat-radio-group>mat-radio-button {
+    margin: 0 15px 0 0;
+}
+
+/*---------- Select Bord Exam Button Text ----------*/
+::ng-deep .mdc-form-field>label {
+    margin: 0;
+}
+
+
+/*---------- Radio Button Border ----------*/
+::ng-deep .mat-mdc-radio-button .mdc-radio .mdc-radio__native-control:enabled:not(:checked)+.mdc-radio__background .mdc-radio__outer-circle {
+    border-color: #A4A4A4 !important;
+}
+
+/*---------- Radio Button Colors ----------*/
+::ng-deep .mat-mdc-radio-button.mat-accent {
+    --mdc-radio-selected-hover-icon-color: #0c7b97; // selected icon hover
+    --mdc-radio-selected-icon-color: #1565C0; // selected icon 
+    --mdc-radio-selected-pressed-icon-color: #b31010; // after click icon
+    --mat-mdc-radio-checked-ripple-color: #1565C0; // after click effect
+}
+
+
+
+/*=================== Parents Information Form ===================*/
+.parents-form {
+    grid-column: span 2;
+}
+
+.forms-group>.forms-body>.forms-group-2 {
+    padding: 10px 10px;
+}
+
+/*---------- Local Guardian Check Box ----------*/
+.Parents-info-footer {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    grid-column: span 2;
+    text-align: center;
+}
+
+/*---------- Material Status Select Box ----------*/
+.select-box {
+    width: 40%;
+    margin: 0 auto;
+}
+
+
+
+
+
+/* Dialog Box Component */
+::ng-deep .mdc-dialog__surface {
+    padding: 0 20px;
+    border-radius: 20px !important;
+    overflow: hidden;
+    width: 500px !important;
+}
+
+.DialogBox>.dialog-contant {
+    text-align: center;
+}
+
+.DialogBox>h1 {
+    font-size: 15px;
+    color: #116FBF;
+    margin: 0;
+    padding: 0 0 10px 0;
+}
+
+.DialogBox>.custom-hr {
+    border: 0;
+    border-bottom: 1px solid #116FBF;
+    margin: 0 -20px;
+}
+
+.DialogBox>div>.content-text {
+    font-size: 17px;
+    font-weight: 600;
+    margin: 10px auto 20px auto;
+}
+
+.dialog-contant>a {
+    text-align: center;
+    color: #116FBF;
+    display: block;
+    font-size: 13px;
+    margin: 10px 0 0 0;
+}
+
+.DialogBox>.action-group {
+    display: flex;
+    justify-content: center;
+}
+
+.Close-Btn {
+    background-color: #5A5A5A !important;
+    color: #ffff;
+}
+
+.Verify-Btn {
+    background-color: #116FBF !important;
+}
+
+.save-button {
+    width: max-content;
+    position: sticky;
+    left: 97%;
+    bottom: 20px;
+}
+
+/******* Accent FAB Button (Save Button)  *******/
+.mat-mdc-mini-fab.mat-accent {
+    --mat-mdc-button-persistent-ripple-color: #04CB6A;
+    --mat-mdc-button-ripple-color: #04cb6b49;
+}
+
+.mat-mdc-mini-fab.mat-accent {
+    --mdc-fab-container-color: #04CB6A;
+    --mdc-fab-icon-color: #fff;
+    --mat-mdc-fab-color: #fff;
+}
+
+/*======================================== Details Cards ========================================*/
+.info-group {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+}
+
+.column-2 {
+    grid-column: span 2;
+}
+
+/*---------- Complete View  ----------*/
+.details-with-cion {
+    display: flex;
+    align-items: center;
+    // background-color: rgb(226, 226, 226);
+    padding: 5px 10px;
+    margin: 2px 0;
+    // border-bottom: 1px solid gray;
+    transition: all 0.5s ease-in-out;
+}
+
+/*---------- Information Icon  ----------*/
+.details-with-cion>i {
+    color: #608FC5;
+    margin: 2px 5px 2px 10px;
+    font-size: 20px;
+}
+
+/*---------- Information SVG Icon  ----------*/
+.details-with-cion>svg {
+    height: 15px;
+    margin: 2px 5px 2px 10px;
+}
+
+/*---------- Information Text  ----------*/
+.details-with-cion>p {
+    margin: 0 20px 0 10px;
+    color: #787878;
+    font-size: 17px;
+}
+
+/*---------- Information Image view Icon  ----------*/
+.action-btn-group>.view-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+/*---------- Information Image view Icon ----------*/
+.action-btn-group>.view-icon>i {
+    color: #608FC5 !important;
+}
+
+/*---------- Material Status Text  ----------*/
+.Parents-info-footer>.Material-Status-text {
+    font-size: 20px;
+    color: #8E8E8E;
+}
+
+
+
+
+@media screen and (max-width: 1366px) {
+
+    /*=================== Header Image, Info (Header 2) ===================*/
+    .student-image-section>p {
+        width: 250px;
+        font-size: 19px;
     }
 
     .student-info-groups {
-        display: none;
+        margin: 0 0 0 auto;
     }
 
+    .student-details-section>p {
+        padding: 0 15px;
+        font-size: 13px;
+    }
+
+
+    /*======================= Header 3 (Details,downlode) =======================*/
+    .header-details>span {
+        font-size: 23px;
+    }
+
+    .header-boxes {
+        height: 30px;
+    }
+
+}
+
+
+@media screen and (max-width: 1280px) {
+
+    /*---------- Uplodeed File Priview Section Form Fileds ----------*/
+    .uploaded-images-section>div>mat-form-field {
+        width: 180px !important;
+    }
+
+    /*======================= Header 3 (Details,downlode) =======================*/
+    .header-boxes>span {
+        margin: 0 5px;
+    }
+
+    /*======================= Previous School Form =======================*/
+    .bord-selection-box {
+        height: max-content;
+    }
+
+    .details-with-cion>p {
+        margin: 0 10px 0 10px;
+        font-size: 15px;
+    }
+
+    .forms-body>.info-group>.uplode-file-input {
+        border: 0;
+        padding: 0 5px;
+    }
+}
+
+
+/*============= Tablete Screen =================*/
+@media screen and (max-width: 1024px) {
+
+    /*=================== Header Bg Image (Header 1) ===================*/
     .header-bg-image {
         height: max-content;
         padding: 10px;
     }
 
+    .header-info-groups {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .header-details-section>.header-icon {
+        width: 13px;
+    }
+
     .header-icon {
-        font-size: 20px;
+        width: 16px;
+        margin: 0;
     }
 
     .header-details-section>p {
         margin: 0 5px;
     }
 
-    .student-image {
-        width: 90px;
+    /*=================== Header Image, Info (Header 2) ===================*/
+    .student-image-section>p {
+        font-size: 18px;
     }
 
     .student-image-and-icon {
         margin-top: -40px;
     }
 
-
-    .forms-group {
-        grid-template-columns: repeat(2, 50%);
-    }
-}
-
-
-/* ============= For Tablet =================*/
-@media screen and (max-width: 768px) {
-    .student-image-section>p {
-        font-size: 20px;
-        font-family: 'Amaranth', sans-serif;
+    .student-image {
+        width: 90px;
     }
 
+    .student-info-groups {
+        display: none;
+        margin: 0 0 0 auto;
+    }
+
+    .student-info-groups>p {
+        padding: 0 15px;
+    }
+
+
+    /*======================= Header 3 (Details,downlode) =======================*/
     .header-details {
         display: block;
         text-align: center;
-        margin: 10px 10px;
+        margin: 0 10px;
+        border-bottom: 0;
     }
 
     .header-details>span {
         border-bottom: 1px solid #1565C0;
         display: block;
         width: 100%;
+        padding: 8px 0;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .header-details>.details-box-group {
+        display: none !important;
     }
 
     .details-box-group {
         justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(4, 25%);
     }
 
+    .form-body>.details-box-group {
+        display: grid;
+        margin: 0 10px;
+        padding: 0 0 10px 0;
+        border-bottom: 1px solid red;
+    }
+
+    .header-boxes {
+        justify-content: center;
+        padding: 5px 0;
+    }
+
+    .header-boxes>span,
+    .header-boxes>div {
+        margin: 0 0 0 10px;
+    }
+
+
+    /*=================== Student Profile Form Groups ===================*/
     .forms-group {
-        grid-template-columns: repeat(1, 100%);
-        margin: 10px 10px;
+        grid-template-columns: repeat(2, 50%);
     }
 
     .forms-body {
-        margin: 10px 0;
+        margin: 10px;
+        padding: 0;
     }
 
+
+    /*******************/
+    .bord-selection-box>mat-radio-group>mat-radio-button {
+        margin: 0 5px 0 0;
+    }
+
+    /*---------- Uplodeed File Priview Section Form Fileds ----------*/
+    .uploaded-images-section>div>mat-form-field {
+        width: 100% !important;
+    }
+
+    /*---------- Complete view ----------*/
+    .details-with-cion>i,
+    .details-with-cion>svg {
+        margin: 2px 5px 2px 5px;
+        font-size: 18px;
+        height: 13px;
+    }
+
+}
+
+
+
+/*============= Custom =================*/
+@media screen and (max-width: 820px) {
+
+    /*=================== Header Bg Image (Header 1) ===================*/
+    .header-info-groups {
+        margin-top: -40px;
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+    /*=================== Header Bg Image Header 1 ===================*/
+    .header-icon {
+        width: 16px;
+    }
+
+    /*=================== Header Image,Info (Header 2) ===================*/
+    .student-image-section>p {
+        font-size: 18px;
+        width: 280px;
+    }
+
+
+    /*======================= Header 3 (Details,downlode) =======================*/
     .details-box-group {
-        display: grid;
         grid-template-columns: repeat(2, 50%);
     }
+
+    .header-boxes {
+        margin: 8px;
+    }
+
+
+    /*=================== Student Profile Form Groups 1,2 ===================*/
+    .forms-group,
+    .forms-group-2 {
+        display: block;
+    }
+
+
+    .primary-contact-header {
+        font-size: 15px;
+    }
+
 }
 
 
 
 
+/*============= Custom =================*/
+@media screen and (max-width: 695px) {
 
+    /*=================== Header Bg Image (Header 1) ===================*/
+    .header-info-groups {
+        margin: 0;
+    }
 
+    /*======================= Header 3 (Details,downlode) =======================*/
+    .download-btn,
+    .Pay-Fee-btn {
+        font-size: 14px;
+        font-weight: 500;
+        // letter-spacing: 0.5px;
+    }
 
+    .details-with-cion>p {
+        margin: 0 5px;
+    }
 
-
-
-
-// change mat-label color & background & font-size on Focus
-::ng-deep .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
-    color: rgb(22, 160, 130);
-    // background-color: red!important;
-    // font-size: 16px!important;
+    /*---------- Complete view ----------*/
+    .details-with-cion>i,
+    .details-with-cion>svg {
+        margin: 2px 5px 2px 5px;
+        font-size: 17px;
+        height: 13px;
+    }
 }
 
-// change mat-input floating lable color
-::ng-deep .mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label {
-    color: rgb(22, 160, 130);
-}
 
-// Change Lable Font Position
-::ng-deep .mat-mdc-text-field-wrapper .mat-mdc-form-field-flex .mat-mdc-floating-label {
-    top: 26px !important;
-}
 
-// change mat lable position
-::ng-deep .mat-mdc-text-field-wrapper .mat-mdc-form-field-flex .mat-mdc-floating-label {
-    top: 15px !important;
-    font-size: 15px;
-}
 
-// change mat-input Value color When Typing...
-::ng-deep .mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
-    color: rgb(231, 31, 31) !important;
-}
+/*============= Mobile Screen =================*/
+@media screen and (max-width: 480px) {
 
-// change mat-input placeholder color
-::ng-deep .mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input::placeholder {
-    // color: rgb(22, 160, 130);
-    color: rgb(113, 5, 255);
-    font-size: 15px;
-}
+    /*=================== Header Bg Image (Header 1) ===================*/
+    .header-bg-image {
+        height: max-content !important;
+    }
 
-// change caret-color on focus (|)
-::ng-deep .mdc-text-field .mdc-text-field__input {
-    caret-color: red;
-}
+    .header-details-section {
+        padding: 3px 5px;
+        margin: 7px 5px;
+    }
 
-// Add padding-right & color in input icon & add background color
-::ng-deep .mat-mdc-form-field-has-icon-suffix .mat-mdc-text-field-wrapper {
-    background-color: rgb(255, 234, 238);
-    color: rgb(255, 81, 0);
-}
+    .header-details-section>p {
+        font-size: 13px;
+    }
 
-// change icon position
-::ng-deep .mat-mdc-form-field-icon-suffix>.mat-icon {
-    padding: 1px !important;
-    top: 4px !important;
-    right: 7px !important;
-    position: absolute !important;
-    z-index: 5 !important;
-}
+    /*=================== Header Image,Info (Header 2) ===================*/
+    .student-image-section>p {
+        font-size: 18px;
+        width: 200px;
+        padding: 0 5px;
+    }
 
-// change border color
-::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__leading,
-::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__notch,
-::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__trailing {
-    border-color: rgb(162, 0, 255);
-}
+    .student-image-and-icon {
+        margin-left: 15px;
+    }
 
-// hover to change outline color same as border color in mat-form-field
-::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__leading,
-::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__notch,
-::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__trailing {
-    border-color: rgb(162, 0, 255);
-}
+    .student-image-and-icon>.student-image {
+        outline-width: 4px;
+        width: 80px;
+    }
 
-// Focus to change border color on mat-form-field
-::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__leading,
-::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__notch,
-::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__trailing {
-    border-color: rgb(22, 160, 130);
-    border-width: 1px;
-}
+    /*======================= Header 3 (Details,downlode) =======================*/
+    .header-boxes>span,
+    .header-boxes>div {
+        margin: 0 0 0 5px;
+    }
 
-// change label color, background & font when focus after change lable position
-::ng-deep .mat-mdc-form-field .mdc-text-field--outlined .mdc-notched-outline--upgraded .mdc-floating-label--float-above {
-    font-size: 16px;
-    color: red;
-    top: 28px !important;
-    position: relative !important;
-    font-weight: 300 !important;
-    background: rgb(255, 209, 123);
-}
+    /*======================= Forms Body =======================*/
+    /*---------- Form Body ----------*/
+    .forms-body {
+        margin: 15px 5px;
+    }
 
-// change mat-form-field height
-::ng-deep .mat-mdc-text-field-wrapper {
-    height: 35px !important;
-}
+    .form-content {
+        padding: 10px;
+    }
 
-// change mat-form-field inside input with text
-::ng-deep .mat-mdc-input-element {
-    top: -10px !important;
-    position: relative !important;
+    /*=================== Primary Contact Form ===================*/
+    .inline-input {
+        display: block;
+    }
+
+    .inline-input mat-form-field:first-child {
+        padding: 0 0 0 0;
+    }
+
+    .inline-input mat-form-field:last-child {
+        padding: 0 0 0 0;
+    }
+
+    .inline-input>div:first-child {
+        padding: 0 0 0 0;
+    }
+
+    .inline-input>div:last-child {
+        padding: 0 0 0 0;
+    }
+
+
+    /*=================== Parents Information Form ===================*/
+    .Parents-info-footer {
+        justify-content: space-between;
+    }
+
+    ::ng-deep .mat-mdc-checkbox label {
+        font-size: 13px !important;
+    }
+
+    .Parents-info-footer>.select-box:last-child {
+        width: max-content;
+    }
+
+    .info-group {
+        display: block;
+    }
+
+    .details-with-cion>i,
+    .details-with-cion>svg {
+        margin: 0 5px 0 5px;
+    }
 }

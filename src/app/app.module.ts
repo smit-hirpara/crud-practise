@@ -28,7 +28,9 @@ import { MatRadioModule } from '@angular/material/radio';
 import { AOFormComponent } from './a-o-form/a-o-form.component';
 import { MatNativeDateModule } from '@angular/material/core';
 import { NgxFilesizeModule } from 'ngx-filesize';
-import { ApplyOnlineFormComponent } from './apply-online-form/apply-online-form.component';
+import { AppDialogBox2Component, ApplyOnlineFormComponent } from './apply-online-form/apply-online-form.component';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -43,6 +45,7 @@ import { ApplyOnlineFormComponent } from './apply-online-form/apply-online-form.
     AOStapperComponent,
     AOFormComponent,
     ApplyOnlineFormComponent,
+    AppDialogBox2Component
   ],
   imports: [
     BrowserModule,
@@ -64,7 +67,9 @@ import { ApplyOnlineFormComponent } from './apply-online-form/apply-online-form.
     MatSelectModule,
     MatProgressBarModule,
     MatRadioModule,
-    NgxFilesizeModule
+    NgxFilesizeModule,
+    MatCheckboxModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
